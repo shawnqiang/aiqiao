@@ -1,0 +1,226 @@
+<table class="menu_nav" >
+	<tr>
+	</tr>
+	<tr>
+	<td>
+		<!--{if $menu.offer}-->
+		<table class="menu_width167">
+		<tr>
+		  <td>
+          <table class="menu_nav">
+			  <tr>
+				<td width="30"><img src="images/left_pic1.gif" width=30 height=35 alt=""></td>
+				<td background="images/left_bg1.gif" class="title_bar" onclick="if($('#MenuTrade').length>0) $('#MenuTrade').toggle();"><a name="menu_top"></a>{lang business_information}</td>
+				<td width="55"><img src="images/left_bg11.gif" width=55 height=35 alt=""></td>
+			  </tr>
+		  </table>
+          </td>
+		</tr>
+		<tr>
+		  <td align="center" background="images/left_mid.gif">
+          <table class="menu_nav_content" id="MenuTrade">
+			  <tr>
+				<th><img src="images/sell_add.gif"></th>
+				<td><a href="offer.php?do=edit">{lang release_supply}</a></td>
+			  </tr>
+			  <tr>
+				<th><img src="images/buy.gif"></th>
+				<td><a href="offer.php">{lang our_offer}</a></td>
+			  </tr>
+			  <tr>
+				<th><img src="images/favor.gif"></th>
+				<td><a href="favor.php">{lang our_favorites}</a></td>
+			  </tr>
+			  <tr>
+				<th><img src="images/sell.gif" width="14" height="14"></th>
+				<td><a href="stat.php">{lang buy_statistics}</a></td>
+			  </tr>
+			<tr>
+			  <th><img src="images/message_in.gif" /></td>
+			  <td><a href="pms.php?type=inquery">{lang customer_inquiry}</a></td>
+			</tr>		  
+		  </table>
+         </td>
+		</tr>
+	  </table>
+		<!--{/if}-->
+		<!--{if $menu.product}-->
+		<table class="menu_width167">
+		  <tr>
+			<td>
+             <table class="menu_nav">
+				<tr>
+				  <td width="30"><img src="images/left_pic2.gif" width=30 height=35 alt=""></td>
+				  <td background="images/left_bg2.gif" class="title_bar" onclick="if($('#MenuProduct').length>0) $('#MenuProduct').toggle();"><a name="p"></a>{lang information_management}</td>
+				  <td width="55"><img src="images/left_bg21.gif" width=55 height=35 alt=""></td>
+				</tr>
+			</table></td>
+		  </tr>
+		  <tr>
+			<td align="center" background="images/left_mid.gif">
+			<table class="menu_nav_content" id="MenuProduct">
+				<tr>
+				  <th><img src="images/product.gif"></th>
+				  <td><a href="product.php?do=edit">{lang release_products}</a> </td>
+				</tr>
+				<tr>
+				  <th><img src="images/product2.gif"></th>
+				  <td><a href="product.php">{lang our_productse}</a></td>
+				</tr>
+				<tr>
+				  <th><img src="images/cal.gif"></th>
+				  <td><a href="price.php">{lang my_product_price}</a></td>
+				</tr>
+				<tr>
+				  <th><img src="images/sort.gif"></th>
+				  <td><a href="producttype.php">{lang categories_management}</a></td>
+				</tr>
+				<tr>
+				  <th><img src="images/brand.gif"></th>
+				  <td><a href="brand.php">{lang brand_manage}</a></td>
+				</tr>
+			</table></td>
+		  </tr>
+		</table>
+		<!--{/if}-->
+		<!--{if $menu.company}-->
+		<table class="menu_width167">
+		  <tr>
+			<td> <table class="menu_nav">
+				<tr>
+				  <td width="30"><img src="images/left_pic3.gif" width=30 height=35 alt=""></td>
+				  <td background="images/left_bg2.gif" class="title_bar" onclick="if($('#MenuCompany').length>0) $('#MenuCompany').toggle();">{lang company_information}</td>
+				  <td width="55"><img src="images/left_bg21.gif" width=55 height=35 alt=""></td>
+				</tr>
+			</table></td>
+		  </tr>
+		  <tr>
+			<td align="center" background="images/left_mid.gif">
+			<table class="menu_nav_content" id="MenuCompany" style="{$MenuHide}">
+				<tr> 
+				  <th><img src="images/company.gif"></th>
+				  <td><a href="company.php">{lang basic_information}</a> </td>
+				</tr>
+				<tr> 
+				  <th><img src="images/album.gif"></th>
+				  <td><a href="album.php">{lang company_album}</a> </td>
+				</tr>
+				<tr> 
+				  <th><img src="images/contact.gif"></th>
+				  <td><a href="card.php">{lang card_information}</a> </td>
+				</tr>
+				<tr> 
+				  <th><img src="images/alert.gif"></th>
+				  <td><a href="news.php">{lang company_news}</a></td>
+				</tr>
+				<tr>
+				  <th><img src="images/hr.gif" /></th>
+				  <td><a href="job.php">{lang hr}</a></td>
+				<tr> 
+				<tr> 
+				  <th><img src="images/link.gif"></th>
+				  <td><a href="link.php" title="{lang friendlink}">{lang link_exchange}</a></td>
+				</tr>
+			  </table></td>
+		  </tr>
+		</table>
+		<!--{/if}-->
+		<!--{if $menu.pms}-->
+		<table class="menu_width167">
+		  <tr>
+			<td> <table class="menu_nav">
+				<tr>
+				  <td width="30"><img src="images/left_pic4.gif" width=30 height=35 alt=""></td>
+				  <td background="images/left_bg2.gif" class="title_bar" onclick="if($('#MenuPMS').length>0) $('#MenuPMS').toggle();">{lang exchange_information}</td>
+				  <td width="55"><img src="images/left_bg21.gif" width=55 height=35 alt=""></td>
+				</tr>
+			</table></td>
+		  </tr>
+		  <tr>
+			<td align="center" background="images/left_mid.gif">
+			<table class="menu_nav_content" id="MenuPMS" style="{$MenuHide}">
+				<tr>
+				  <th><img src="images/message_out.gif" /></th>
+				  <td><a href="pms.php">{lang sms}</a></td>
+				</tr>			
+				<tr>
+				  <th><img src="images/message.gif"/></th>
+				  <td><a href="pms.php?do=send">{lang send_message}</a></td>
+				</tr>
+			</table>
+			</td>
+		  </tr>
+		</table>
+		<!--{/if}-->
+		<table class="menu_width167">
+		  <tr>
+			<td> <table class="menu_nav">
+				<tr>
+				  <td width="30"><img src="images/self_service.gif" width=30 height=35 alt=""></td>
+				  <td background="images/left_bg2.gif" class="title_bar" onclick="if($('#MenuService').length>0) $('#MenuService').toggle();">{lang self_service}</td>
+				  <td width="55"><img src="images/left_bg21.gif" width=55 height=35 alt=""></td>
+				</tr>
+			</table></td>
+		  </tr>
+		  <tr>
+			<td align="center" background="images/left_mid.gif">
+			<table class="menu_nav_content" id="MenuService" style="{$MenuHide}">
+				<tr>
+				  <th><img src="images/news.gif" /></th>
+				  <td><a href="ads.php">{lang site_advertising}</a></td>
+				</tr>
+				<tr>
+				  <th><img src="images/adword.gif" /></th>
+				  <td><a href="spread.php">{lang keyword_advertising}</a></td>
+				</tr>
+				<tr> 
+				  <th><img src="images/style.gif"></th>
+				  <td><a href="space.php">{lang diy_website}</a></td>
+				</tr>
+				<tr> 
+				  <th><img src="images/sell_add.gif"></th>
+				  <td><a href="order.php">{lang order_manage}</a></td>
+				</tr>
+			</table>
+			</td>
+		  </tr>
+		</table>
+		<!--{if $menu.basic}-->
+	   <table class="menu_width167">
+		  <tr>
+			<td><table class="menu_nav">
+				<tr>
+				  <td width="30"><img src="images/left_pic7.gif" width=30 height=35 alt=""></td>
+				  <td background="images/left_bg2.gif" class="title_bar" onclick="if($('#MenuBasic').length>0) $('#MenuBasic').toggle();">{lang system_settings}</td>
+				  <td width="55"><img src="images/left_bg21.gif" width=55 height=35 alt=""></td>
+				</tr>
+			</table></td>
+		  </tr>
+		  <tr>
+			<td align="center" background="images/left_mid.gif">
+			<table class="menu_nav_content" id="MenuBasic">
+				<tr>
+				  <th><img src="images/personals.gif"></th>
+				  <td><a href="personal.php">{lang profile}</a></td>
+				</tr>
+				<tr> 
+				  <th><img src="images/password.gif"></th>
+				  <td><a href="changepass.php">{lang change_password}</a></td>
+				</tr>
+				<tr> 
+				  <th><img src="images/code.gif"></th>
+				  <td><a href="invite.php">{lang our_invitation_code}</a></td>
+				</tr>
+			</table></td>
+		  </tr>
+		  <tr>
+			<td><div class="backtop"><a href="javascript:;" id="GoTop">{lang go_top}</a></div></td>
+		  </tr>
+	  </table>
+		<!--{/if}-->
+	  </td>
+	</tr>
+	<tr>
+	<td>&nbsp;</td>
+	</tr>
+</table>

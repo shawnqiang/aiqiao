@@ -1,0 +1,22 @@
+<!--{include file="header.html" PageTitle="`$_space_hr`" cur="space_hr"}-->
+<!-- {get_cache var="options" name="typeoption"} -->
+<div class="wrapper">
+	<!--{include file="banner.html"}-->
+	<div class="content">
+		<!--{include file="leftbar.html"}-->
+			<div class="rightbarcontact">
+					<div class="playercontact">
+					<div class="playerheadcontact"><span class="playlistcontact">{lang space_hr}</span><span class="player_head_concontact"></span><img src="{$SpaceUrl}images/contactus_13.jpg" /></div>
+					<div class="clear"></div>
+					<div class="hr_content">
+					<!--{job companyid="`$COMPANY.id`" row=10 status=1}-->
+						<p class="companytitle">{$job.link}</p>
+						<p title="{$item.content}">{$job.content|truncate:100}</p>
+					<!--{/job}-->					
+						<p class="page"><!-- {pager rowcount=`$paging.total`} --></p>
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+<!--{include file="footer.html"}-->

@@ -1,0 +1,28 @@
+# BEGIN REWRITE
+ErrorDocument 404 /404.php
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteBase /
+RewriteRule ^(.*)space/(.*)/([a-z]+)/list-([0-9]+)-([0-9]+)\.html$ space/index.php\?userid=$2&do=$3&typeid=$4&page=$5 [QSA,L]
+RewriteRule ^(.*)space/(.*)/([a-z]+)/detail-([0-9]+)\.html$ space/index.php\?userid=$2&do=$3&nid=$4[QSA,L]
+RewriteRule ^(.*)space/(.*)/([a-z]+)/$ space/index.php\?userid=$2&do=$3 [QSA,L]
+RewriteRule ^(.*)space/(.*)/$ space/index.php\?userid=$2 [QSA,L]
+RewriteRule ^(.*)-list-([0-9]+)-([0-9]+)-([0-9]+)-([0-9]+)\.html\?*(.*)$ search/index.php\?do=$1&pos=$2&typeid=$3&areaid=$4&industryid=$5&$6 [QSA,L]
+RewriteRule ^(.*)search/([a-zA-Z]+)/$ search/index.php\?do=$2 [QSA,L]
+RewriteRule ^(.*)offer/(.*)/detail/([0-9]+)\.html$ offer/detail.php\?id=$3 [QSA,L]
+RewriteRule ^(.*)offer/([a-zA-Z]+)/$ offer/index.php\?mod=$2 [QSA,L]
+RewriteRule ^(.*)detail/([0-9]+)\.html\?*(.*)$ $1\/detail.php\?id=$2 [QSA,L]
+RewriteRule ^(.*)topic/([a-zA-Z]+)/([0-9]+)/$ special/\?type=$2&id=$3 [QSA,L]
+RewriteRule ^(.*)topic/(.*)/$ special/\?type=topic&name=$2 [QSA,L]
+RewriteRule ^(.*)tag/([a-zA-Z]+)-(.*)/$ search/index.php\?do=$2&q=$3 [QSA,L]
+RewriteRule ^(.*)page/(.*)/$ page.php\?title=$2 [QSA,L]
+RewriteRule ^(.*)wap-([a-zA-Z]+)/(.*)$ wap/index.php\?do=$2 [QSA,L]
+RewriteCond %{HTTP_HOST} ^(www.)?(?!/.|www|bbs|demo)(.*)\.yourdomain.com$
+RewriteRule ^/?$ %{HTTP_HOST}
+RewriteRule ([^.]+)\.yourdomain.com$ space/index.php\?userid=$1
+RewriteRule ^(.*)space/([a-z]+)\.html$ space/index.php\?do=$2
+RewriteRule ^(.*)space/([a-z]+)/type-([0-9]+)\.html$ space/index.php\?do=$2&typeid=$3
+RewriteRule ^(.*)space/([a-z]+)/list-([0-9]+)\.html$ space/index.php\?do=$2&page=$3
+RewriteRule ^(.*)space/([a-z]+)/detail-([0-9]+)\.html$ space/index.php\?do=$2&nid=$3
+</IfModule>
+# END REWRITE

@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={$charset}">
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<title>{$page_title} - {lang office_room} - {$site_name}</title>
+<link href="../css/common.css" rel="stylesheet" type="text/css">
+<link href="images/style.css" rel="stylesheet" type="text/css">
+<script src="../scripts/jquery.js"></script>
+<script src="../scripts/langs/{$JsLanguage}.js" charset="{$charset}"></script>
+<script src="../scripts/jquery/jquery.validate.js"></script>
+<script src="../scripts/general.js"></script>
+<!--{literal}-->
+<script>
+$(document).ready(function() {
+	$("#GoTop").click(function(){
+		$('html, body').animate({scrollTop: '0px'}, 300);return false;
+	});
+	$("#check_all").click(function(){
+		var isCheckAll=$(this).attr("checked");
+		$('input[type="checkbox"][rel="check_item"]').each(function(){
+		   $(this).attr("checked",isCheckAll);
+		});
+	});
+});
+</script>
+<!--{/literal}-->
+</head>
+<body>
+<div id="content_bkg">
+<div id="basePageFrame">
+    <div class="header clearfix">
+        <div class="header_nav">
+          <a href="{$SiteUrl}index.php"><span>{lang home_page}</span></a>
+          <a href="{$SiteUrl}news/"><span>{lang info}</span></a>
+          <a href="{$SiteUrl}product/"><span>{lang product_center}</span></a>
+          <a href="{$SiteUrl}company/"><span>{lang yellow_page}</span></a>
+          <a href="{$SiteUrl}fair/"><span>{lang fair}</span></a>
+          <a href="{$SiteUrl}hr/"><span>{lang hr}</span></a>
+          <a href="{$SiteUrl}dict/"><span>{lang dictionary}</span></a>
+        </div>
+       <div class="login_info">{$_hello|sprintf:$UserName}(<a href="personal.php" style="text-decoration:underline;">{$smarty.session.MemberName}</a>)
+       <!--{if $menu.pms and $newpm}--><a href="pms.php" title=""><img src="../images/message.gif" alt="{$newpm}" /></a><!--{/if}-->
+       </div>
+    </div>
+    <div class="header_txt">
+       <div class="welcome_txt">
+	   <span class="title" id="welcome-to">{lang welcome_to_office}</span>
+	   <form name="searchFrm" id="HeadSearchFrm" action="../offer/list.php" target="_blank" method="get">
+	   <input type="hidden" name="do" value="search" />
+	   <span class="search"><input name="q" type="text"  id="SearchKeyword" value="{lang input_keywords}" onfocus="if(this.value=='{lang input_keywords}') this.value='';" onblur="if(this.value=='') this.value='{lang input_keywords}';" class="input_white" /><input type="submit" value="{lang search}" onclick="if($('#SearchKeyword').val()=='{lang input_keywords}') alert('{lang input_keywords}');$('#SearchKeyword').focus();return false;" /></span>
+	   </form>
+	   </div>
+       <div class="welcome_txt_small"><span>{lang service_hotline}{$service_tel}</span></div>
+   </div>
+   <div id="main-nav">
+	 <div class="nav-wrapper">
+		<ul>
+		  <li><a href="index.php" id="home-page"><span>{lang office_homepage}</span></a></li>
+		  <li><a class="current_nav" href="offer.php" id="info-manage"><span>{lang info_manage}</span></a></li>
+		  <!--{if $COMPANYINFO.cache_spacename and $COMPANYINFO.status==1}--><li><a href="{$COMPANYINFO.space_url}" target="_blank"><span>{lang access}{lang space_name}</span></a></li><!--{/if}-->
+		  <li><a href="../logging.php?action=logout"><span>{lang login_out}</span></a></li>
+		</ul>
+	</div>
+  </div>

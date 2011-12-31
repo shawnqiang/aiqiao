@@ -1,0 +1,21 @@
+<!--{include file="header.html" PageTitle="`$_space_news`" cur="space_news"}-->
+<div class="wrapper">
+	<!--{include file="banner.html"}-->
+	<div class="content">
+		<!--{include file="leftbar.html"}-->
+			<div class="rightbarcontact">
+					<div class="playercontact">
+					<div class="playerheadcontact"><span class="playlistcontact">{lang space_news}</span><span class="player_head_concontact"></span><img src="{$SpaceUrl}images/contactus_13.jpg" /></div>
+					<div class="clear"></div>
+					<div class="player_concontact">
+					<!--{companynews companyid=`$COMPANY.id` row=10}-->
+						<p class="companytitle">{$companynews.link}</p>
+						<p>{$companynews.content|truncate:100}</p>
+					<!--{/companynews}-->					
+						<p><div class="pagination"><!-- {pager rowcount=`$paging.total`} --></div></p>
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+<!--{include file="footer.html"}-->

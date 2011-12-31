@@ -1,0 +1,38 @@
+/*
+ *简体中文语言包
+ */
+var pb_lang = {     
+	PLEASE_SELECT : "请选择",
+	INPUT_CORRECT_UNAME : "请输入正确的用户名",
+	INPUT_PASSWD : "请输入密码",
+	INPUT_BT_UNAME : "请输入介于5-20个字符的用户名",
+	INPUT_BT_PASSWD : "请输入介于6-20个字符的密码",
+	RE_INPUT_PASSWD : "密码不一致请重新输入",
+	UNAME_EXIST : "用户名已经存在",
+	INPUT_EMAIL : "请输入Email",
+	INPUT_CORRECT_EMAIL : "请输入正确的Email",
+	EMAIL_EXIST : "Email已经存在",
+	CHECK_FAIL : "验证失败",
+	MUST_INPUT : "该项为必填",
+	CORRECT_THE_COL : "请修正该字段",
+	INPUT_FORMAT_EMAIL : "请输入正确格式的电子邮件",
+	INPUT_CORRECT_URL : "请输入合法的网址",
+	INPUT_CORRECT_DATE : "请输入合法的日期",
+	INPUT_CORRECT_DATE_SAMP : "请输入合法的日期 (ISO)，例如：2009-06-23",
+	INPUT_NUM_ONLY : "请输入合法的数字",
+	INPUT_INT_ONLY : "该项只能输入整数",
+	INPUT_CORRECT_CARD : "请输入合法的信用卡号",
+	VALUE_NOT_EQUAL : "前后值输入不一致",
+	FILE_FORBID : "文件名不合法",
+	INPUT_MAX_STRING : "请输入一个长度最多是 {0} 的字符串",
+	INPUT_MIN_STRING : "请输入一个长度最少是 {0} 的字符串",
+	INPUT_BT_STRING : "请输入一个长度介于 {0} 和 {1} 之间的字符串",
+	INPUT_BT_VAL : "请输入一个介于 {0} 和 {1} 之间的值",
+	INPUT_MAX_VAL : "请输入一个最大为 {0} 的值",
+	INPUT_MIN_VAL : "请输入一个最小为 {0} 的值",
+	SUPER_ADMIN_UNAME : "超级管理员帐号不能少于2个字符或者大于20个字符",
+	SUPER_ADMIN_PASSWD : "超级管理员密码不能少于3个字符或者大于20个字符",
+	NOT_EQUAL_PASSWD : "两次输入密码不一致！",
+	DO_PROCESSING : "处理中...",
+	INPUT_DB_NAME : "请输入数据库名称！"
+};

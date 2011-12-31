@@ -1,0 +1,311 @@
+<!--{include file="`$theme_name`/header.html" page_title="`$page_title`"}-->
+<link href="{$theme_img_path}css/topic.css" rel="stylesheet"/>
+<div id="doc" class="w952 supplier-portal">
+      <div id="main_content">
+                <div class="layout-p32a24" id="supplier-portal-1st">
+                    <div class="grid-24">
+                        <div class="mod-notice">
+    <div class="cell-header">
+        <h4 class="title">{lang announce}</h4>								
+    </div>
+    <div class="topic_content" id="noticeContainer">
+        <ul class="list">
+			<!-- {announce row=4} -->
+            <li>{$announce.link}</li>
+			<!-- {/announce} -->
+        </ul>
+    </div>
+</div>                    </div>
+                </div>
+                <div class="layout-p32a24" id="supplier-portal-2nd">
+                    <div class="grid-4">
+                        <div class="mod-serverportal">
+    <div class="cell-header common-header-2nd">
+        <h3 class="title">{lang service_entrance}</h3>
+    </div>
+    <div class="topic_content">
+        <ul class="portallist">
+            <li class="list-1st"><a href="offer/post.php?typeid=2&industryid={$smarty.get.industryid}&areaid={$smarty.get.areaid}" title=""><span>{lang publish} {lang supply} {lang information}</span></a></li>
+            <li class="list-1st"><a href="offer/post.php?typeid=1&industryid={$smarty.get.industryid}&areaid={$smarty.get.areaid}" title=""><span>{lang publish} {lang buy} {lang information}</span></a></li>
+            <li class="list-1st"><a href="offer/post.php?typeid=5&industryid={$smarty.get.industryid}&areaid={$smarty.get.areaid}" title=""><span>{lang publish} {lang merchants} {lang information}</span></a></li>
+            <li class="list-1st"><a href="offer/post.php?typeid=11&industryid={$smarty.get.industryid}&areaid={$smarty.get.areaid}" title=""><span>{lang publish} {lang wholesale} {lang information}</span></a></li>
+            <li class="list-1st"><a href="help/" title=""><span>{lang help_center}</span></a></li>
+            <li class="list-2nd"><a href="service/" title=""><span>{lang customer_service}</span></a></li>
+			<!-- {foreach from=$member_types item=item} -->
+            <li class="list-2nd"><a href="{if $reg_filename!=''}{$reg_filename}{else}register.php{/if}?typename={$item|urlencode}" title="{$item}"><span>{lang register}{$item}</span></a></li>
+			<!-- {/foreach} -->
+            <li class="list-3rd"><a href="redirect.php?url=/virtual-office/ads.php" title=""><span>{lang online_ads}</span></a></li>
+        </ul>
+    </div>
+</div>
+<!-- {ads typeid=6 row=5} -->
+<div class="mod-img-3rd">
+    <h4 class="fd-hide">{$ads.title}</h4>
+    <div class="topic_content">
+        <dl class="cell-2nd">
+            <dt>
+                <a class="a-img" href="{$ads.url}" title="" linkf="ads">
+                    {$ads.thumb}
+                </a>
+            </dt>
+            <dd class="description"><a href="{$ads.url}" title="" linkf="ads">{$ads.title}</a></dd>
+        </dl>
+    </div>
+</div>
+<!-- {/ads} -->
+</div>
+<div class="grid-14">
+	<div class="mod-slider">
+    <h4 class="fd-hide">Slider</h4>
+    <div class="topic_content f-slider" id="js-slider">
+        <ul class="f-slider-list">
+            <li>
+                <a class="a-img" href="member.php" title="">
+					<!-- {if $topic.picture!=''} -->
+                    {the_attachment name=`$topic.picture`}"
+					<!-- {else} -->                    
+					<img src="attachment/sample/breathe-index1.jpg" alt="" />
+					<!-- {/if} -->
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>                                                
+<div class="mod-info">
+    <div class="cell-header common-header-1st">
+        <h3 class="title"><em>{lang latest_news}</em></h3>
+        <div class="fixed-rb"></div>
+        <div class="fd-right">
+            <a href="news/" title="{lang more}" class="btn-customize" id="js-customize-1st"><em>{lang more}</em></a>
+        </div>
+    </div>
+    <div class="topic_content" id="js-tab-1st">
+        <ul class="list-title">
+			<!-- {newstype row=5 level=1 name="item" titlelen=4} -->
+            <li class="f-tab-t"><a href="{the_url module=search do=news typeid=`$item.id`}" title="{$item.name}"><em>{$item.title}</em></a></li>
+			<a href=""></a>
+			<!-- {/newstype} -->
+        </ul>
+<div id="info-default" class="info-default">
+<div class="info-list">
+<ul class="cell-list-txt fd-clr">
+<!-- {news row=10 industryid=`$industry_id` areaid=`$area_id`} -->
+<li><span class="txt-2nd">{$news.link}</span><span class="date">{$news.created|date_format:"%m-%d"}</span></li>
+<!-- {if $news.rownum==4} -->
+</ul>
+</div>
+<div class="info-list">
+<ul class="cell-list-txt fd-clr">
+<!-- {/if} -->
+<!-- {/news} -->
+</ul>
+<div class="float-rt"><a class="more" title="{lang more}" href="{the_url module=search do=news typeid=1}">{lang more}</a></div>
+</div>
+
+</div>
+</div>
+</div>                                                
+<div class="mod-activity">
+    <div class="cell-header common-header-1st">
+        <h3 class="title"><em>{lang recommended}</em></h3>
+        <div class="fixed-rb"></div>
+    </div>
+    <div class="topic_content">
+        <div class="obj-activity-1st">
+            <ul class="list">
+				<!-- {product row=2 type="image" industryid=`$industry_id` areaid=`$area_id`} -->
+                <li>
+                    <dl class="cell-3rd">
+                        <dt>
+                           <a class="a-img" href="{$product.url}" title="{$product.title}">
+                                <img src="{$product.thumb}" alt="{$product.title} " />
+                            </a>
+                        </dt>
+                        <dd class="description">{$product.link}</dd>
+                        <dd class="txt">{$product.content|truncate_multi:25}</dd>
+                    </dl>
+                </li>
+				<!-- {/product} -->
+            </ul>
+        </div>
+        <div class="info-list">
+            <ul class="cell-list-txt">
+				<!-- {product row=5 industryid=`$industry_id` areaid=`$area_id`} -->
+                <li>
+                    <span class="txt">{$product.link}</span>
+                    <span class="date">{$product.created|date_format:"%m-%d"}</span>
+                </li>
+				<!-- {/product} -->
+            </ul>
+        </div>
+    </div>
+</div>                                                                        <div class="mod-showinfo">
+				<div class="cell-header common-header-2nd">
+					<h3 class="title">{lang fair_details}</h3>
+				</div>
+				<div class="topic_content">
+					<div class="obj-station">
+						<div class="cell-header">
+							<h3 class="title">{lang recommended_fair}</h3>
+							<div class="float-rt">
+								<a class="more" title="{lang more}" href="{the_url module=search do=fair}">{lang more}</a>
+							</div>
+						</div>
+						<div class="topic_content info-list">
+							<div class="obj-activity-1st">
+								<ul class="list">
+									<!-- {fair row=2 infolen=28 type=commend industryid=`$industry_id` areaid=`$area_id`} -->
+									<li>
+										<dl class="cell-3rd fd-clr">
+											<dt><a title="{$fair.name}" href="{$fair.url}" class="a-img"><img src="{$fair.thumb}" alt="{$fair.title}" border="0"></a></dt>
+											<dd class="description"><a title="{$fair.name}" href="{$fair.url}">{$fair.title}</a></dd>
+					
+											<dd class="txt">{$fair.content}</dd>
+										</dl>
+									</li>
+									<!-- {/fair} -->
+								</ul>
+					
+						  </div>
+						</div>
+					</div>
+					<div class="obj-station">
+						<div class="cell-header">
+							<h3 class="title">{lang new_fair}</h3>
+							<div class="float-rt">
+								<a class="more" title="{lang more}" href="fair/">{lang more}</a>
+							</div>
+						</div>
+						<div class="topic_content info-list">
+							<div class="obj-activity-1st">
+								<ul class="list">
+									<!-- {fair row=2 infolen=28 industryid=`$industry_id` areaid=`$area_id`} -->
+									<li>
+										<dl class="cell-3rd fd-clr">
+											<dt><a title="{$fair.name}" href="{$fair.url}" class="a-img"><img src="{$fair.thumb}" alt="{$fair.title}" border="0"></a></dt>
+											<dd class="description"><a title="{$fair.name}" href="{$fair.url}">{$fair.title}</a></dd>
+					
+											<dd class="txt">{$fair.content}</dd>
+										</dl>
+									</li>
+									<!-- {/fair} -->
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>                                                                                                
+	</div>
+	<div class="grid-6 grid-fixed">
+		<div class="mod-login-1st" id="js-login-1st">
+		<!--{if $pb_username eq ''}-->
+    <div class="cell-header">
+        <h4 class="title">{lang login_and_see_more}</h4>
+        <div class="btn-login" id="js-login-float">
+            <a href="logging.php" title="{lang user_login}" target="_self">{lang user_login}</a>
+        </div>
+    </div>
+	<!-- {/if} -->
+    <div class="topic_content">
+        <p class="tel">{lang service_hotline}<a class="value" href="#" title="">{$service_tel}</a></p>
+    </div>
+</div>                        
+<div class="mod-buyerdynamic">
+    <div class="cell-header common-header-2nd">
+        <h3 class="title">{lang offer_info}</h3>
+        <div class="fd-right">
+            <a title="{lang more} {lang offer_info}" href="offer/" class="btn-customize" id="js-customize-2nd"><em>{lang more}</em></a>
+        </div>
+    </div>
+    <div class="topic_content">
+        <div class="obj-buyerdynamic-1st">
+            <div class="cell-header">
+                <h4 class="title">{lang newest_sell}</h4>
+                <div class="float-rt">
+                    <a title="{lang more}" href="{the_url module=serach do=news}" class="more">{lang more}</a>
+                </div>
+            </div>
+			<div id="js-hotRender" class="topic_content">
+			<ol class="hotsearch">
+			<!-- {offer row=10 titlelen=5 industryid=`$industry_id` areaid=`$area_id`} -->
+			<li>{$offer.iteration}&nbsp;<a title="{$offer.title}" href="{$offer.url}">{$offer.title}</a></li>
+			<!-- {/offer} -->
+			</ol>
+			</div>
+        </div>
+        <div class="obj-buyerdynamic-2nd">
+            <div class="cell-header">
+                <h4 class="title">{lang newest_buy}</h4>
+                <div class="float-rt">
+                    <a title="{lang more}" href="{the_url module=serach do=news}" class="more">{lang more}</a>
+                </div>
+            </div>
+            <div class="topic_content" id="js-tab-2nd">
+                <div class="f-tab-b buying" id="buyingBox">
+				<ul class="cell-list-txt" id="buyingSubBox" style="height: 648px;">
+				<!-- {offer row=5 titlelen=12 industryid=`$industry_id` areaid=`$area_id`} -->
+				<li>{$offer.link}<span>{$offer.submit_time|date_format:"%m-%d"}</span></li>
+				<!-- {/offer} -->
+				</ul>
+				</div>
+            </div>
+        </div>
+    </div>
+</div>                                                
+<div class="mod-successstory">
+    <div class="cell-header common-header-2nd">
+        <h3 class="title">{lang commend} {lang seller}</h3>
+		<div class="float-rt">            
+            <a title="{lang more}" href="special/?type=area&areaid={$smarty.get.areaid}" class="more">{lang more}</a>
+        </div>
+    </div>
+    <div class="topic_content">
+        <ul class="cell-list-txt">
+			<!-- {pb:company row=5 titlelen=34 infolen=35 name="item" industryid=`$industry_id` areaid=`$area_id`} -->
+			<!-- {if $item.iteration==1 && $item.picture neq ''} -->
+			<li>
+				<dl class="cell-3rd">
+				<dt>
+						<a title="{$item.title}" href="{$item.url}" class="a-img">
+							<img alt="{$item.title}" src="{$item.logo}" />
+						</a>
+					</dt>
+					<dd class="description">{$item.link}</dd>
+					<dd class="txt">{$item.content}</dd>
+				</dl>
+			</li>
+			<!-- {else} -->
+            <li>{$item.link}</li>
+			<!-- {/if} -->
+			<!-- {/pb:company} -->
+        </ul>
+    </div>
+</div>                                                
+<div class="mod-commerce">
+    <div class="cell-header common-header-2nd">
+        <h3 class="title">{lang similars} {lang the_area}</h3>
+        <div class="float-rt">
+            <a title="{lang more}" href="special/?type=area&areaid={$smarty.get.areaid}" class="more">{lang more}</a>
+        </div>
+    </div>
+    <div class="topic_content">
+        <table cellspacing="0" cellpadding="0" class="tab-category">
+            <tbody>
+                <tr>
+					<!-- {area depth="-1"} -->
+                    <td class="{if $area.title eq ''}no-data{/if}"><a title="{$area.title}" href="special/?type=area&areaid={$area.id}&id={$area.id}&level={$area.level+1}">{$area.title}</a></td>
+					<!-- {if $area.iteration is div by 4} -->
+					</tr>
+					<tr>
+					<!-- {/if} -->
+					<!-- {/area} -->
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>                        
+			</div>
+		</div>
+	</div>
+</div>
+<!--{include file="`$theme_name`/footer.html"}-->

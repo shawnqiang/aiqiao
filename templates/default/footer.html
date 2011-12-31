@@ -1,0 +1,13 @@
+<div id="footer">
+	<div class="ins"> 
+		<!--{userpage row=15 sep="<span>|</span>"}-->
+			{$page.link}
+		<!--{/userpage}-->
+		<p>{$site_name} {lang copyright}&copy;&nbsp;{lang service_hotline} {$service_tel}&nbsp;{lang service_email}:{mailto text="`$service_email`" address="`$service_email`" encode="javascript"}&nbsp;<a href="javascript:;" onclick="{literal}$('html, body').animate({scrollTop: '0px'}, 300);return false;{/literal}">{lang go_top}</a>     </p>
+		<p>{$icp_number}</p>
+		<p class="footer_im"><!--{im type="qq" id="`$service_qq`"}{im type="msn" id="`$service_msn`"}--></p>
+		<p>Powered by {lang soft_name} &copy;2007-2011 <a href="http://www.phpb2b.com/" target="_blank"><strong>Ualink</strong></a> Inc.</p>
+	</div>
+</div>
+</body>
+</html>

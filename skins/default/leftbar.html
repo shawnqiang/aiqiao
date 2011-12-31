@@ -1,0 +1,31 @@
+		<div class="leftbar">
+			<div class="latest_news">
+				<div><img src="{$SpaceUrl}images/left-1.gif"/><p>{lang product_sort}</p><div class="clear"></div></div>
+				<ul>
+				<!--{foreach from=$ProductTypes name=ProductTypes item=item}-->
+					<li><a title="{$item.typename}" href="{the_url module=producttype typeid=`$item.typeid` userid=`$smarty.get.userid`}">{$item.typename}</a></li>
+				<!--{/foreach}-->
+				</ul>
+			</div>
+			<!-- plugin -->
+			<div class="latest_news">
+				<div><img src="{$SpaceUrl}images/left-2.gif"/><p>{lang friend_links}</p><div class="clear"></div></div>
+				<!--{if $Links}-->
+				<ul>
+					<!--{foreach from=$Links name=spacelink item=spacelink}-->
+					<li><a href="{$spacelink.url}" target="_blank">{$spacelink.title}</a></li>
+					<!--{/foreach}-->
+				</ul>
+				<!--{/if}-->
+			</div>
+			<div class="latest_news">
+				<div><img src="{$SpaceUrl}images/left-3.gif"/><p>{lang contact_method}</p><div class="clear"></div></div>
+				<ul>
+					<li>{lang contact_people}{$COMPANY.link_man}</li>
+					<li>{lang phone}{$COMPANY.tel}</li>
+					<li>{lang fax}{$COMPANY.fax}</li>
+					<li>{lang address}{$COMPANY.address}</li>
+					<li>{lang zip}{$COMPANY.zipcode}</li>
+				</ul>
+			</div>
+		</div>

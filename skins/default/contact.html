@@ -1,0 +1,25 @@
+<!--{include file="header.html" PageTitle="`$_contact_us`" cur="space_contact"}-->
+<!-- {get_cache var="options" name="typeoption"} -->
+<div class="wrapper">
+	<!--{include file="banner.html"}-->
+	<div class="content">
+	<!--{include file="leftbar.html"}-->
+	<div class="rightbarcontact">
+			<div class="playercontact">
+			<div class="playerheadcontact"><span class="playlistcontact">{lang contact_us}</span><span class="player_head_concontact"></span><img src="{$SpaceUrl}images/contactus_13.jpg" /></div>
+			<div class="clear"></div>
+			<div class="contact_list">
+				<p><span>{lang company_name}{lang colon}</span>{$COMPANY.name}</p>
+				<p><span>{lang contact_people}</span>{$COMPANY.link_man}</p>
+				<p><span>{lang phone}</span>{$COMPANY.tel}</p>
+				<p><span>{lang fax}</span>{$COMPANY.fax}</p>
+				<p><span>{lang email_addr}{lang colon}</span>{mailto address="`$COMPANY.email`" encode="javascript" text="`$COMPANY.email`"}</p>
+				<p><span>{lang address}</span>{$COMPANY.address}<br><!-- {the_map longti=`$COMPANY.map_longitude` lati=`$COMPANY.map_latitude`} --></p>
+				<p><span>{lang zip}</span>{$COMPANY.zipcode}</p>
+				<p><span>{lang website}{lang colon}</span>{$COMPANY.site_url}</p>
+			</div>
+		</div>
+	</div>
+	<div class="clear"></div>
+</div>
+<!--{include file="footer.html"}-->

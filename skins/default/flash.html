@@ -1,0 +1,12 @@
+{include file="`$SkinName`/header.html" PageTitle="`$page_title`"}
+{$redirect}
+<div class="wrapper">
+	{include file="`$SkinName`/banner.html"}
+	<div class="content">
+		{include file="`$SkinName`/leftbar.html"}
+			<div class="rightbarmore">
+						<p class="title">{$message|strip_tags}</p><br />
+			</div>
+			<div class="clear"></div>
+	</div>
+{include file="`$SkinName`/footer.html"}

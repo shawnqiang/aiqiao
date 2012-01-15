@@ -1,66 +1,86 @@
 <!--{include file="`$theme_name`/header.html" page_title="`$page_title`" nav_id="`$nav_id`"}-->
-<div class="wrapper">
-	<div class="content">
-	<div class="tips"><span>{$position}</span></div>
-    <div class="blank6"></div>
-	<div class="detailtop3">
-	    <div class="detailtop3left">
-			<h3><img src="{$theme_img_path}images/lhighs.gif" alt="" />{lang company}{lang colon}{$item.name}</h3>
-			<div class="detailtop3leftcon">
-               {$item.description|nl2br|stripslashes}
-			   <br>
-			   <p>[{lang area}{$item.area_names} {lang belong_industry}{$item.industry_names}]</p>
-			</div>				
-		    <div class="clear"></div>
-			<h3>{lang similars} {lang product}{lang lists}</h3>
-			<div class="detailtop3leftcon">
-				  <ul>
-				  <!-- {product row=10 companyid=`$item.id`} -->
-				  <li>{$offer.link}</li>
-				  <!-- {/product} -->
-				  </ul>
-			</div>				
-		    <div class="clear"></div>
-			<h3>{lang similars} {lang offer}{lang lists}</h3>
-			<div class="detailtop3leftcon">
-				  <ul>
-				  <!-- {offer row=10 companyid=`$item.id`} -->
-				  <li>{$offer.link}</li>
-				  <!-- {/offer} -->
-				  </ul>
-			</div>				
+<div id="main" class="container">
+	<div class="breadcrumb"><span>{$position}</span></div>
+	<div class="row">
+		<div class="span13">
+			<div class="mod">
+				<div class="mod-hd">
+					<h3>{lang company}{lang colon}{$item.name}</h3>
+				</div>
+				<div class="mod-bd">
+					<div>
+		               {$item.description|nl2br|stripslashes}
+					   <br>
+					   <p>[{lang area}{$item.area_names} {lang belong_industry}{$item.industry_names}]</p>
+					</div>				
+				   
+					<h3>{lang similars} {lang product}{lang lists}</h3>
+					<div>
+						  <ul>
+						  <!-- {product row=10 companyid=`$item.id`} -->
+						  <li>{$offer.link}</li>
+						  <!-- {/product} -->
+						  </ul>
+					</div>				
+				    
+					<h3>{lang similars} {lang offer}{lang lists}</h3>
+					<div>
+						  <ul>
+						  <!-- {offer row=10 companyid=`$item.id`} -->
+						  <li>{$offer.link}</li>
+						  <!-- {/offer} -->
+						  </ul>
+					</div>
+
+				</div>
+			</div>	
 		</div>
-		<div class="detailtop3right">
-            {if !$LoginCheck && $pb_username==""}
-			<div class="contacttype">
-				<p class="right1">{lang members_view}</p>
-				<p>{lang register_site_member} 
-                            <input type="button" name="btn_login" value="{lang login}" onclick="redirect('{$SiteUrl}logging.php?forward={$smarty.server.REQUEST_URI}');" class="btn_submit">{lang fenhao}</p>
-				<p>{lang not_register_site_member}<input type="button" name="btn_register" value="{lang free} {lang register}" class="btn_submit" onclick="redirect('{$SiteUrl}member.php');">{lang registered_site_member} 
-                </p>
-			</div>
+
+		<div class="span4">
+			{if !$LoginCheck && $pb_username==""}
+				<div class="mod">
+					<div class="mod-hd">
+						<h3>{lang members_view}</h3>
+					</div>
+					<div class="mod-bd">
+						<p>{lang register_site_member} 
+	                            <input type="button" name="btn_login" value="{lang login}" onclick="redirect('{$SiteUrl}logging.php?forward={$smarty.server.REQUEST_URI}');" class="btn_submit">{lang fenhao}</p>
+						<p>{lang not_register_site_member}<input type="button" name="btn_register" value="{lang free} {lang register}" class="btn_submit" onclick="redirect('{$SiteUrl}member.php');">{lang registered_site_member} 
+		                </p>
+					</div>
+				</div>
+				
             {else}
-			<div class="contacttype">
-				<h3>{lang contact}</h3>
-				<p>{lang address}{$item.address}<br /> 
-				   {lang zip}{$item.zipcode}<br /> 
-				   {lang phone}{$item.tel}<br />
-				   {lang fax}{$item.fax}<br /> 
-				   {lang mobile_number}{$item.mobile}<br /> 
-				   {lang website}{lang colon}{$item.site_url}</p>
-			</div>
+            	<div class="mod">
+            		<div class="mod-hd">
+            			<h3>{lang contact}</h3>
+            		</div>
+            		<div class="mod-bd">
+            			<p>
+	            			{lang address}{$item.address}<br /> 
+						   	{lang zip}{$item.zipcode}<br /> 
+						   	{lang phone}{$item.tel}<br />
+						   	{lang fax}{$item.fax}<br /> 
+						   	{lang mobile_number}{$item.mobile}<br /> 
+						   	{lang website}{lang colon}{$item.site_url}
+					   	</p>
+            		</div>
+            	</div>
             {/if}
-			<div class="contacttype">
-				<h3>{lang similars} {lang company}</h3>
-				<ul>
-                	{pb:company industryid=`$item.industry_id` areaid=`$item.area_id` row=10 name="item"}
-					<li><span class="title">{$item.link}</span></li>
-                    {/pb:company}
-				</ul>
-			</div>
+			<div class="mod">
+				<div class="mod-hd">
+					<h3>{lang similars} {lang company}</h3>
+				</div>
+				<div class="mod-bd">
+					<ul>
+	                	{pb:company industryid=`$item.industry_id` areaid=`$item.area_id` row=10 name="item"}
+						<li><span class="title">{$item.link}</span></li>
+	                    {/pb:company}
+					</ul>
+				</div>
+			</div>	
 		</div>
-		<div class="clear"></div>
-	</div>
+	</div>	
 </div>
 <script>
 $("#topMenuCompany").addClass("lcur");

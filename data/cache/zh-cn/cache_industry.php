@@ -1,8 +1,8 @@
 <?php
 /**
  * PHPB2B cache file, DO NOT change me!
- * Modified: Dec 31, 2011, 7:59
- * Id: 2a125b654b4804945312948371cd197a
+ * Modified: Jan 1, 2012, 6:03
+ * Id: 78ed9d6bad1318be2fd7f1701418d115
  */
 
 $_PB_CACHE['industry'] = array (

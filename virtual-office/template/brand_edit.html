@@ -17,65 +17,70 @@ jQuery(document).ready(function($) {
 })
 </script>
 <!--{/literal}-->
-<div class="wrap clearfix">
-    <div class="sidebar">
-       <div class="sidebar_menu">
+<div id="main" class="container">
+    <div class="row">
+       <div class="span4 side-bar">
          <!--{include file="menu.html"}-->
        </div>
-    </div>
-     <div class="main_content">
-     <div class="blank"></div>
-	 <div class="offer_banner"><img src="images/offer_01.gif" /></div>
-     <div class="offer_info_title"><h2>{lang brands}</h2></div>
-
-	  <form method="post" action="brand.php" enctype="multipart/form-data" onsubmit="$('#Save').attr('disabled',true);">
-	  <!-- {formhash} -->
-	  <input type="hidden" name="id" value="{$item.id}">
-	  <input type="hidden" name="formattribute_ids" value="{$item.formattribute_ids}">
-       <div class="hint">{lang must_input_with_star}</div>
-        <table class="offer_info_content">
-			  <tr>
-				<th><font class="red">*</font> {lang brand_name}</th>
-				<td class="tdright"><input name="data[brand][name]" type="text" id="dataBrandName" value="{$item.name}">
-				<font color="#666666">{lang words_length}</font></td>
-			  </tr>
-			  <tr>
-				<th> {lang brands}{lang alias_name}</th>
-				<td class="tdright"><input name="data[brand][alias_name]" type="text" id="dataBrandAliasName" value="{$item.alias_name}">
-			     </td>
-			  </tr>
-			  <tr>
-				<th>{lang brand_type}</th>
-				<td>
-					<select name="data[brand][type_id]" id="BrandTypeId">
-                           {$BrandtypeOptions}
-					</select>					
-				</td>
-			  </tr>
-			  <tr>
-			  <tr>
-                    <th>{lang description}</th>
-                    <td class="tdright"><textarea name="data[brand][description]" id="BrandDescription" rows="8" wrap="VIRTUAL" style="width:370px;">{$item.description}</textarea><div id="txtTips"></div></td>
-              </tr>
-			<tr>
-             <th>{lang brand_image}</th>
-                    <td>
-                        <input name="pic" type="file" id="uploadfile" onchange="preview()" />
-                         <span class="gray"><br>
-                            {lang image_size_format_provision}</span></td>
-                    </tr>
-                   <tr>
-				   <!--{if $item.image}-->
-                     <th></th>
-                      <td><a href="{$item.image|default:"javascript:;"}" id="uploadpic_hover" rel="lightbox"><img id="uploadpic" src="{$item.image}.small.jpg" alt="{$item.name}" width="75" height="75"/></a></td>
-					  <!--{/if}-->
-                    </tr>
-			  <tr>
-				<th class="circle_bottomleft"></th>
-				<td class="circle_bottomright"><input name="save" type="submit" id="save" value=" {lang confirm_submit} "></td>
-			  </tr>
-          </table>
-	</form>
+    
+     <div class="span12 main-content">
+    	<div class="page-header">
+    		<h2>{lang brands}</h2>
+    	</div>
+    	<div class="mod">
+    		<div class="mod-hd">
+    			 <div class="hint">{lang must_input_with_star}</div>
+    		</div>
+    		<div class="mod-bd">
+    			<form method="post" action="brand.php" enctype="multipart/form-data" onsubmit="$('#Save').attr('disabled',true);">
+				  <!-- {formhash} -->
+				  <input type="hidden" name="id" value="{$item.id}">
+				  <input type="hidden" name="formattribute_ids" value="{$item.formattribute_ids}">
+				  	<div class="clearfix">
+				  		<label for="data[brand][name]">{lang brand_name}</label>
+				  		<div class="input">
+				  			<input name="data[brand][name]" type="text" id="dataBrandName" value="{$item.name}">
+				  			<span>{lang words_length}</span>
+				  		</div>
+				  	</div>
+				  	<div class="clearfix">
+				  		<label for="data[brand][alias_name]">{lang brands}{lang alias_name}</label>
+				  		<div class="input">
+				  			<input name="data[brand][alias_name]" type="text" id="dataBrandAliasName" value="{$item.alias_name}">
+				  			
+				  		</div>
+				  	</div>
+				  	<div class="clearfix">
+				  		<label for="data[brand][type_id]">{lang brand_type}</label>
+				  		<div class="input">
+				  			<select name="data[brand][type_id]" id="BrandTypeId">
+			                           {$BrandtypeOptions}
+								</select>	
+				  		</div>
+				  	</div>
+				  	<div class="clearfix">
+				  		<label for="data[brand][description]">{lang description}</label>
+				  		<div class="input">
+				  			<textarea name="data[brand][description]" id="BrandDescription" wrap="VIRTUAL">{$item.description}</textarea><div id="txtTips"></div>
+				  		</div>
+				  	</div>
+				  	<div class="clearfix">
+				  		<label for="pic">{lang brand_image}</label>
+				  		<div class="input">
+				  			<input name="pic" type="file" id="uploadfile" onchange="preview()" />
+			                <p>{lang image_size_format_provision}</p>
+				  		</div>
+				  	</div>
+				  	<div class="actions">
+				  		<input name="save" type="submit" id="save" class="btn" value=" {lang confirm_submit} ">
+				  	</div>
+			      
+			        
+				</form>
+    		</div>
+    	</div>
+     
+</div>
 </div>
 </div>
 <!--{literal}-->

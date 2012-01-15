@@ -7,11 +7,7 @@
 <meta name ="keywords" content="{$metakeywords|strip_tags}">
 <meta name ="description" content="{$metadescription|strip_tags|truncate_multi:100}"> 
 <meta http-equiv="X-UA-Compatible" content="IE=7" />
-<link rel="stylesheet" type="text/css" href="{$theme_img_path}css/base.css" />
-<link rel="stylesheet" type="text/css" href="{$theme_img_path}css/general.css" />
-<link rel="stylesheet" type="text/css" href="{$theme_style_path}css/style.css" />
-<link rel="stylesheet" type="text/css" href="{$theme_img_path}css/layout.css" />
-<link rel="stylesheet" type="text/css" href="css/common.css" />
+<link rel="stylesheet" type="text/css" href="{$theme_img_path}css/basic.css" />
 <link rel="shorcut icon" type="image/x-ico" href="favicon.ico" />
 <link rel="bookmark" type="image/x-ico" href="favicon.ico" />
 <script src="scripts/jquery.js"></script>
@@ -67,61 +63,76 @@ $(document).ready(function() {
 <!--{/literal}-->
 </head>
 <body id="bd_{$smarty.const.CURSCRIPT}">
-<div id="header">
-    <div class="headtop">
-    <!--{cacheless}-->
-    <p class="headtopcon">
-        <a class="index" href="javascript:;" onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('{$SiteUrl}');">{lang set_home_page}</a>
-        <a href="{$smarty.server.REQUEST_URI}" onclick="javascript:window.external.addFavorite(this.href, this.title);return false;" rel="sidebar" title="{$site_name}">{lang add_favorite}</a>
-        <!--{if $pb_username!=""}-->
-        <span id="hdLoginBar"><em>{$_hello|sprintf:$pb_username}&nbsp;</em>
-        <a href="redirect.php?url=/virtual-office/" target="_blank">[{lang my_office_room}]</a>
-        {if $is_admin}<a href="pb-admin/login.php" target="_admin">[{lang control_pannel}]</a>{/if}
-        <a href="logging.php?action=logout">[{lang login_out}]</a></span>
-        <!--{else}-->
-        <span id="hdLoginBar"><em>{$_hello_welcome_to|sprintf:$site_name}</em>
-        <a href="logging.php">&nbsp;[{lang pls_login}]</a>
-        <a href="member.php" title="{lang register}" ><strong>[{lang free} {lang register}]</strong></a></span>
-        <!--{/if}-->
-        <a href="service/" style="float:right;">{lang customer_service}</a>
-        <a href="offer/post.php" style="float:right;">{lang free_post}</a>
-        <a href="standard/" style="float:right;">{lang standards}</a>
-        <span id="language_bar"><!--{get_cache name="language"}--></span>
-    </p>
-    <!--{/cacheless}-->
-    </div>
-    <div class="logo_search clearfix">
-        <h1 id="logo"><a href="{$site_url}"><img src="{$site_logo}" alt="{$site_banner_word}" /></a></h1>
-        <div class="search_bar">
-            <div class="search_nav">
-                <ul>
-                    <li id="topMenuProduct"><a href="product/"><span>{lang search_product}</span></a></li>
-                    <li id="topMenuCompany"><a href="company/"><span>{lang search_company}</span></a></li>
-                    <li id="topMenuOffer"><a href="offer/"><span>{lang search_offer}</span></a></li>
-                    <li id="topMenuNews"><a href="news/"><span>{lang search_news}</span></a></li>
-                </ul>
-                <a href="{the_url module=search}" class="fl lhighs">{lang adv_search}</a>
-            </div>
-            <form name="search_frm" id="SearchFrm" action="offer/list.php" method="get">
-            <input type="hidden" name="do" id="hdDo" value="search" />
-            <input type="hidden" name="act" id="hdAct" value="" />
-             <div class="search_panel">
-                 <span class="search_input_box">
-                    <input type="text" name="q" id="SearchKeyword" value="{$smarty.get.q|default:$_keywords_sample}" />
-                  </span>
-                  <span class="search_btn_box">
-                  <button type="submit" id="BtnSearch" value="{lang search}">{lang search}</button>
-                  <button type="submit" id="BtnCompany" value="{lang search}">{lang company_direct}</button>
-                  </span>
-                  <span class="history break underline"><strong>{lang latest_search}</strong><!--{tag row=3 flag=0 do=`$do`}-->{$tag.link}<!--{/tag}--></span> 
-             </div>
+<div id="shortcuts">
+    <div class="container">
+        <!--{cacheless}-->
+        <ul class="unstyled">
+            <li class="pull-left">
+                <a class="index" href="javascript:;" onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('{$SiteUrl}');">{lang set_home_page}</a>
+                <a href="{$smarty.server.REQUEST_URI}" onclick="javascript:window.external.addFavorite(this.href, this.title);return false;" rel="sidebar" title="{$site_name}">{lang add_favorite}</a>
+            </li>
+            <li class="pull-right">
+                <a href="service/">{lang customer_service}</a>
+                <a href="offer/post.php">{lang free_post}</a>
+                <a href="standard/">{lang standards}</a>
+                <span id="language_bar"><!--{get_cache name="language"}--></span>
+            </li>
+            <li style="text-align:center;">
+                <!--{if $pb_username!=""}-->
+                <span id="hdLoginBar"><em>{$_hello|sprintf:$pb_username}&nbsp;</em>
+                <a href="redirect.php?url=/virtual-office/" target="_blank">[{lang my_office_room}]</a>
+                {if $is_admin}<a href="pb-admin/login.php" target="_admin">[{lang control_pannel}]</a>{/if}
+                <a href="logging.php?action=logout">[{lang login_out}]</a></span>
+                <!--{else}-->
+                <span id="hdLoginBar"><em>{$_hello_welcome_to|sprintf:$site_name}</em>
+                <a href="logging.php">&nbsp;[{lang pls_login}]</a>
+                <a href="member.php" title="{lang register}" ><strong>[{lang free} {lang register}]</strong></a></span>
+                <!--{/if}-->
+            </li>
 
-            </form>
-        </div>
+            
+        </ul>
+        <!--{/cacheless}-->
     </div>
 </div>
-<div class="header_nav">    
-    <div id="nav_inner">
-        <ul><!-- {pb:get_cache name=nav} --></ul>
-	</div>
+<div id="header">
+    <div class="container">
+        <div class="logo_search row">
+            <h1 id="logo" class="span4"><a href="{$site_url}"><img src="{$site_logo}" alt="{$site_banner_word}" /></a></h1>
+            <div class="search_bar span8 offset5">
+                <div class="search_nav">
+                    <ul class="unstyled">
+                        <li id="topMenuProduct"><a href="product/"><span>{lang search_product}</span></a></li>
+                        <li id="topMenuCompany"><a href="company/"><span>{lang search_company}</span></a></li>
+                        <li id="topMenuOffer"><a href="offer/"><span>{lang search_offer}</span></a></li>
+                        <li id="topMenuNews"><a href="news/"><span>{lang search_news}</span></a></li>
+                        <li><a href="{the_url module=search}" class="fl lhighs">{lang adv_search}</a></li>
+                    </ul>
+                    
+                </div>
+                <form name="search_frm" id="SearchFrm" action="offer/list.php" method="get">
+                    <input type="hidden" name="do" id="hdDo" value="search" />
+                    <input type="hidden" name="act" id="hdAct" value="" />
+                    <div class="search_panel">
+                        <span class="search_input_box">
+                            <input type="text" name="q" id="SearchKeyword" value="{$smarty.get.q|default:$_keywords_sample}" />
+                        </span>
+                        <span class="search_btn_box">
+                        <button type="submit" id="BtnSearch" class="btn primary" value="{lang search}">{lang search}</button>
+                        <!--  <button type="submit" id="BtnCompany" class="btn" value="{lang search}">{lang company_direct}</button> -->
+                        </span>
+                        
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<div id="main_nav" class="header_nav">    
+    <div id="nav_inner" class="container">
+        <ul class="unstyled"><!-- {pb:get_cache name=nav} --></ul>
+    </div>
 </div>

@@ -13,16 +13,18 @@ jQuery(document).ready(function($) {
 })
 </script>
 <!--{/literal}-->
-<div class="wrapper">
-  <div class="content">
-    <div class="tips"><span>{$position}</span></div>
-    <div class="blank6"></div>
-   <div class="quhuimima">  
-      <div class="base_title">
-         <h2><span class="corner_t_l"></span><span class="corner_t_m title_mouse">{lang add_details}</span><span class="corner_t_r"></span><span class="title_telephone">{lang issue_contact}{$service_tel}</span></h2> 
-      </div>
-      <div class="messagecon">
-              <div class="messageconleft">
+<div id="main" class="container">
+  <div class="breadcrumb">
+      <span>{$position}</span>
+  </div>
+  <div class="row">
+    <div class="span7">
+      <div class="mod">
+        <div class="mod-hd">
+          <h2><span class="corner_t_m title_mouse">{lang add_details}</span><span class="title_telephone">{lang issue_contact}{$service_tel}</span></h2> 
+        </div>
+        <div class="mod-bd">
+          <div class="messageconleft">
               <form name="getpasswdfrm" id="getPasswdFrm" method="post" action="getpasswd.php">
                   <input type="hidden" name="action" value="getpasswd" />
                   <!-- {formhash} -->
@@ -42,17 +44,20 @@ jQuery(document).ready(function($) {
                       </tr>
                     </table>
                 </form>
-                </div>
-                <img src="{$theme_img_path}images/quhuuimima04.jpg" />
-                <div class="messageconright">
-                {if $ERRORS}
-                    <p>{$ERRORS}</p>
-                {else}
-                    {lang if_forget_password_pls_reset}
-                {/if}
-                </div>
-            </div>
+          </div>
+          <img src="{$theme_img_path}images/quhuuimima04.jpg" />
+          <div class="messageconright">
+            {if $ERRORS}
+                <p>{$ERRORS}</p>
+            {else}
+                {lang if_forget_password_pls_reset}
+            {/if}
+          </div>
+        </div>
+      </div>
     </div>
+    
   </div>
 </div>
+
 <!--{include file="`$theme_name`/footer.html"}-->

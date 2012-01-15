@@ -40,51 +40,58 @@ function () {
 </script>
 <!-- {/literal} -->
 <!-- {/if} -->
-<div class="wrapper">
-  <div class="content">
-    <div class="tips"><span>{$position}</span></div>
-    <div class="news_all clearfix">
-      <div class="news_all_left">
-       <div class="news_title">
-        <div class="title_bar_s4">
-          <span class="title_top_s4"><span></span></span>
-          <h2><span>{$item.title}</span>
-          <p>{lang source}<span class="gray">{$item.source|default:$site_name}</span> {lang post_time}<span class="gray">({$item.pubdate})</span>{lang categories}<span class="gray link-underline">{$item.typename}</span>{lang font_size}{lang colon}&nbsp;<a href="javascript:void(false);" onclick="doZoom(16);">{lang large}</a>&nbsp;<a href="javascript:void(false);" onclick="doZoom(14)">{lang middle}</a>&nbsp;<a href="javascript:void(false);" onclick="doZoom(10)">{lang small}</a></p>
-          </h2>
-       </div>
-       </div>
-        <div class="news_all_left_con">
-		  <div id="quoteFlash"></div>
-		  <div class="clear"></div>
-		  <!-- {if $item.picture} -->
-		  <p class="left1"><img src="{$item.image_url}" /></p>
-		  <!-- {/if} -->
-          <div id="content">{$item.content|nl2br}</div>
-		  <div class="clear"></div>
-		  <div><span><b>{lang prev_record}{lang colon}</b>{$item.prev_link}</a> </span><span><b>{lang next_record}{lang colon}</b>{$item.next_link} </span></div>
-          <div id="news_info">
-		  <!-- {if $item.attach_hashid} -->[<a href="misc.php?do=download&aid={$item.attach_hashid}" target="_blank"><img src="{$theme_img_path}images/download.gif" border="0" />{lang download_attach}</a>] <!-- {/if} -->
-		  <!-- {if $item.tag} -->[{lang tags}{lang colon}{$item.tag_link}] <!-- {/if} -->
-		  <!-- {if $item.download_article} -->[<a href="standard/detail.php?do=downloadtxt&id={$item.id}" target="_blank"><img src="{$theme_img_path}images/document.gif" border="0" />{lang download_article}</a>]<!-- {/if} --> [<a href="javascript:window.close()">{lang close_widow}</a>] [<a href="javascript: window.print();">{lang print_page}</a>] <!-- {if $item.clicked} -->{lang views}{$item.clicked|number_format}<!-- {/if} --></div>
+<div id="main" class="container">
+  <div class="breadcrumb"><span>{$position}</span></div>
+  <div class="row">
+    
+    <div class="span13">
+      <div class="mod article">
+        <div class="mod-hd">
+          <h2 class="title"><span>{$item.title}</span></h2>
+          <p class="info">{lang source}<span>{$item.source|default:$site_name}</span> {lang post_time}<span>({$item.pubdate})</span>{lang categories}<span>{$item.typename}</span>{lang font_size}{lang colon}&nbsp;<a href="javascript:void(false);" onclick="doZoom(16);">{lang large}</a>&nbsp;<a href="javascript:void(false);" onclick="doZoom(14)">{lang middle}</a>&nbsp;<a href="javascript:void(false);" onclick="doZoom(10)">{lang small}</a></p>
+        </div>
+        <div class="mod-bd">
+          <div id="quoteFlash"></div>
+     
+          <!-- {if $item.picture} -->
+          <p><img src="{$item.image_url}" /></p>
+          <!-- {/if} -->
+          <div class="a-content">{$item.content|nl2br}</div>
+      
+          
+          
+        </div>
+        <div class="mod-ft">
+          <div class="articles-nav">
+              <span class="pull-left"><b>{lang prev_record}{lang colon}</b>{$item.prev_link}</a></span>
+              <span class="pull-right"><b>{lang next_record}{lang colon}</b>{$item.next_link} </span>
+          </div>
+          <div class="article-action">
+            <!-- {if $item.attach_hashid} -->[<a href="misc.php?do=download&aid={$item.attach_hashid}" target="_blank"><img src="{$theme_img_path}images/download.gif" border="0" />{lang download_attach}</a>] <!-- {/if} -->
+            <!-- {if $item.tag} -->[{lang tags}{lang colon}{$item.tag_link}] <!-- {/if} -->
+            <!-- {if $item.download_article} -->[<a href="standard/detail.php?do=downloadtxt&id={$item.id}" target="_blank"><img src="{$theme_img_path}images/document.gif" border="0" />{lang download_article}</a>]<!-- {/if} --> [<a href="javascript:window.close()">{lang close_widow}</a>] [<a href="javascript: window.print();">{lang print_page}</a>] <!-- {if $item.clicked} -->{lang views}{$item.clicked|number_format}<!-- {/if} --></div>
         </div>
       </div>
-      <div class="all_right">
-       <div class="title_bar_s4">
-          <span class="title_top_s4"><span></span></span>
-          <h3>{lang related_info}</h3>
-       </div>
-        <div class="all_right_con">
-          <ul class="news_list">
+    </div>
+
+    <div class="span4">
+      <div class="mod">
+        <div class="mod-hd">
+           <h3>{lang related_info}</h3>
+        </div>
+        <div class="mod-bd">
+          <ul class="info-list">
           {news row=10 titlelen=32 typeid=$item.type_id name="r"}
             <li> {$r.link}</li>
           {/news}
           </ul>
         </div>
       </div>
-      <div class="clear"></div>
     </div>
   </div>
 </div>
+
+
 <script>
 $("#SearchFrm").attr("action","{the_url module=search}");
 $("#topMenuNews").addClass("lcur");

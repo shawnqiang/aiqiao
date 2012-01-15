@@ -24,66 +24,70 @@ jQuery(document).ready(function($) {
 })
 </script>
 <!--{/literal}-->
-<div class="wrapper">
-	<div class="content">
-        <div class="title_bar_s4">
-            <span class="title_top_s4"><span></span></span>
-             <h3><div class="price_step1"><span>{lang fill_inquiry_information}</span><span>{lang inquiry_successful}</span></div>{lang inquiry_steps}</h3>
-        </div>
-		<div class="pricecontent">
+<div id="main" class="container">
+	<div class="mod">
+		<div class="mod-hd">
+			<h3><div class="price_step1"><span>{lang fill_inquiry_information}</span><span>{lang inquiry_successful}</span></div>{lang inquiry_steps}</h3>
+		</div>
+		<div class="mod-bd">
 			<form name="xunjiafrm" id="PostFrm" action="{$smarty.env.PHP_SELF}" method="post">
 			<input type="hidden" name="id" value="{$smarty.get.id}">
 			<input type="hidden" name="to_member_id" value="{$item.member_id}">
 			<!-- {formhash} -->
 			<input type="hidden" name="do" value="inquery">
 			<p>{lang receiver}</p>
-			<div class="content1">
+			<div class="clearfix">
 				<img src="{$item.image}" alt="" />
 				<p>{lang product_name}{lang colon}<a href="{the_url id=`$item.id` module='product'}" target="_blank">{$item.name}</a><br />
 					{lang contact}{$CompanyUser}
 				</p>
-				<div class="clear"></div>
+				
 			</div>
 			<p>{lang inquiry_content}</p>
-			<div class="content2">
-				  <label class="title">{lang message_the_title}</label>
-				  <label class="text">
-				  <input name="title" type="text" value="{$item.names}" size="45" class="required" />
-				  </label><br />
-				  <div class="clear"></div>
-				  <label class="title">{lang additional_information}</label>
-				  <label>
-				  <textarea name="inquery[content]" id="Content" class="textaera2"></textarea><br><span id="txtTip" style="width: 300px;">
-				</span>
-				  </label>
-				 <div class="clear"></div>				
+			<div class="clearfix">
+				<label class="title">{lang message_the_title}</label>
+				<div class="input">
+					<input name="title" type="text" value="{$item.names}" size="45" class="required" />
+				</div>
+			</div>
+			<div class="clearfix">	
+				<label class="title">{lang additional_information}</label>
+				<div class="input">
+					<textarea name="inquery[content]" id="Content" class="textaera2"></textarea><br><span id="txtTip" style="width: 300px;"></span>
+				</div>
 			</div>
 			<p>{lang my_contacts}</p>
-			<div class="content3">
+			<div class="clearfix">
 				<label class="name">{lang name}</label>
-				<label>
+				<div class="input">
 				<input type="text" name="inquery[link_man]" class="required" />
-				</label><br />
-				<div class="clear"></div>
+				</div>
+			</div>
+			<div class="clearfix">
 				<label class="name">{lang email}</label>
-				<label>
-				<input name="inquery[link_email]" id="LinkEmail" type="text" class="required email">
-				</label><br />
-				<div class="clear"></div>
+				<div class="input">
+					<input name="inquery[link_email]" id="LinkEmail" type="text" class="required email">
+				</div>
+			</div>
+			<div class="clearfix">
 				<label class="name">{lang telephone}</label>
-				<label>
-				<input type="text" name="inquery[link_tel]" id="telnumber" value="" class="required">
-				</label><br />
-				<div class="clear"></div>
+				<div class="input">
+					<input type="text" name="inquery[link_tel]" id="telnumber" value="" class="required">
+				</div>
+				
+			</div>
+			<div class="actions">	
 				<label class="enquiry">
 				<input type="submit" value="{lang inquiry}" name="submit" id="Submit" {if !$pb_username} disabled="disbled" {/if}/>&nbsp;<input type="reset" value="{lang cancel}" />
 				</label>
-				<div class="clear"></div>	
+				
 			</div>
 			</form>
+
 		</div>
 	</div>
 </div>
+	
 <script src="scripts/jquery/jquery.validate.js"></script>
 <script>
 $("#SearchFrm").attr("action","{the_url module=search}");

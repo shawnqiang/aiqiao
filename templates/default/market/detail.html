@@ -7,40 +7,45 @@ $(document).ready(function(){
 });
 </script>
 <!--{/literal}-->
-<div class="wrapper">
-	<div class="content">
-	<div class="tips"><span>{$position}</span></div>
-	<div class="maincon clearfix">
-        <div class="all_left">
-            <div class="title_bar_s4">
-                <span class="title_top_s4"><span></span></span>
-                <h3>{$item.name}</h3>
+<div id="main" class="container">
+    <div class="breadcrumb"><span>{$position}</span></div>
+    <div class="row">
+        <div class="span13">
+            <div class="mod">
+                <div class="mod-hd">
+                     <h3>{$item.name}</h3>
+                </div>
+                <div class="mod-bd">
+                     <div><!-- {the_attachment name=`$item.picture`} --><br>{$item.content}</div>
+                </div>
+            </div>  
+        </div>
+
+        <div class="span4">
+            <div class="mod">
+                <div class="mod-hd">
+                    <h3>{lang news_market}</h3>
+                </div>
+                <div class="mod-bd">
+                    <!-- {pb:market row=10} -->
+                        <p>{$market.link}</p>
+                    <!-- {/pb:market} -->
+                </div>
             </div>
-        <div class="all_left_con"><!-- {the_attachment name=`$item.picture`} --><br>{$item.content}</div>
+            
+            <div class="mod">
+                <div class="mod-hd">
+                    <h3>{lang new_offer}</h3>
+                </div>
+                <div class="mod-bd">
+                    <!-- {pb:offer row=10 orderby="rand()" titlelen="15" name="item"} -->
+                        <p>{$item.link}</p>
+                    <!-- {/pb:offer} -->
+                </div>
+            </div>  
+
         </div>
-        <div class="all_right">
-           <div class="title_bar_s4">
-                <span class="title_top_s4"><span></span></span>
-                <h3>{lang news_market}</h3>
-            </div>
-           <div class="all_right_con">
-        <!-- {pb:market row=10} -->
-        <p>{$market.link}</p>
-        <!-- {/pb:market} -->
-        </div>
-		<div class="blank6"></div>
-        <div class="all_right">
-           <div class="title_bar_s4">
-                <span class="title_top_s4"><span></span></span>
-                <h3>{lang new_offer}</h3>
-            </div>
-           <div class="all_right_con">
-			<!-- {pb:offer row=10 orderby="rand()" titlelen="15" name="item"} -->
-			<p>{$item.link}</p>
-			<!-- {/pb:offer} -->
-        </div>
-        </div>
-    </div>
     </div>
 </div>
+
 <!--{include file="`$theme_name`/footer.html"}-->

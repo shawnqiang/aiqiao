@@ -9,16 +9,18 @@ $(document).ready(function() {
 });
 </script>
 {/literal}
-<div class="wrap clearfix">
-    <div class="sidebar">
-       <div class="sidebar_menu">
+<div id="main" class="container">
+  <div class="row">
+    
+  
+    <div class="span4 side-bar">
          <!--{include file="menu.html"}-->
-       </div>
     </div>
-     <div class="main_content">
-     <div class="blank"></div>
-	 <div class="offer_banner"><img src="images/offer_01.gif" /></div>
-     <div class="offer_info_title"><h2>{$page_title}</h2></div>
+     <div class="span12 main-content">
+     <div class="page-header">
+       <h2>{$page_title}</h2>
+     </div>
+     
      <div class="hint">{lang sure_and_select_action}</div>
 	  <form name="frm1" id="Frm1" action="" method="post">
 	  <!-- {formhash} -->
@@ -51,10 +53,11 @@ $(document).ready(function() {
 		  </tr>
           <tr>
              <th class="circle_bottomleft"></th>
-             <td class="circle_bottomright"><input name="send1" type=submit id="Submit1" value="{lang submit_order}">&nbsp;&nbsp;<input name="send1" type=submit id="Submit2" value="{lang submit_order_and_pay}" onclick="$('#Paynow').val('y');"></td>
+             <td class="circle_bottomright"><input name="send1" class="btn primary" type=submit id="Submit1" value="{lang submit_order}">&nbsp;&nbsp;<input name="send1" class="btn" type=submit id="Submit2" value="{lang submit_order_and_pay}" onclick="$('#Paynow').val('y');"></td>
           </tr>
         </table>
 	  </form>
+ </div>
  </div>
  </div> 
 <!--{include file="footer.html"}-->

@@ -1,27 +1,27 @@
 <!--{include file="`$theme_name`/header.html" page_title="`$_apply_friendlink`"}-->
-<div class="content">
-  <div class="tips"><span>{$position}</span></div>
-  <div class="blank6"></div>
-  <div class="add_link clearfix">
-    <div class="add_link_left">    
-         <div class="title_bar_s1">
-            <span class="title_top_s1"><span></span></span>
-            <h2>{lang friend_links}</h2>
-       </div>
-        <div class="add_link_leftcon">
+<div id="main" class="container">
+  <div class="breadcrumb"><span>{$position}</span></div>
+  <div class="row">
+    <div class="span4">
+      <div class="mod">
+        <div class="mod-hd">
+          <h2>{lang friend_links}</h2>
+        </div>
+        <div class="mod-bd">
           <ul>
-		  	<!-- {friendlink} -->
-            <li>{$link.link}</li>
-			<!-- {/friendlink} -->
+             <!-- {friendlink} -->
+              <li>{$link.link}</li>
+             <!-- {/friendlink} -->
           </ul>
         </div>
-    </div>
-    <div class="add_link_right">
-       <div class="title_bar_s1">
-            <span class="title_top_s1"><span></span></span>
-            <h2>{lang apply_friendlink}</h2>
       </div>
-      <div class="add_link_rightcon">
+    </div>
+    <div class="span13">
+      <div class="mod">
+        <div class="mod-hd">
+          <h2>{lang apply_friendlink}</h2>
+        </div>
+        <div class="mod-bd">
           <form action="friendlink.php" method="post" name="friendlink_frm" id="FriendlinkFrm">
           <!-- {formhash} -->
           <input type="hidden" name="do" value="apply_friendlink">
@@ -69,12 +69,15 @@
               
               <tr>
                 <th></th>
-                <td><input name="btn_friendlink" type="button" value="{lang submit}" class="btn_submit" onclick="$('#FriendlinkFrm').submit();"/>&nbsp;&nbsp;&nbsp;&nbsp;<input name="reset" type="reset" value="{lang reset}" class="btn_submit"/></td>
+                <td><input name="btn_friendlink" type="button" value="{lang submit}" class="btn" onclick="$('#FriendlinkFrm').submit();"/>&nbsp;&nbsp;&nbsp;&nbsp;<input name="reset" type="reset" value="{lang reset}" class="btn"/></td>
               </tr>
             </table>
           </form>
         </div>
       </div>
     </div>
+  </div>
 </div>
+
+
 <!--{include file="`$theme_name`/footer.html"}-->

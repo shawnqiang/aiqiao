@@ -3,15 +3,20 @@
 @import url({$theme_img_path}css/effect.css);
 </style>
 <script src="scripts/jquery.tools.js"></script>
-<div class="wrapper">
-	<div class="tips"><span>{$position}</span></div>  
-	<div class="blank6"></div>
-         <!-- the tabs -->
+<div id="main" class="container">
+	<div class="breadcrumb"><span>{$position}</span></div>
+
+			<div class="mod">
+				<div class="mod-hd">
+					
+				</div>
+				<div class="mod-bd">
+					         <!-- the tabs -->
         <ul class="tabs2 title_mouse">
               <li><a href="javascript:;"><span>{lang member_upgrade}</span></a></li>
         </ul>
         <!-- tab "panes" -->
-	<div class="panes box_bord">
+		<div class="panes box_bord">
 		<div class="charge_txt">
 			<table>
 				<form method="post" name="apply_frm" id="ApplyFrm" action="{$smarty.server.PHP_SELF}" target="_self" />
@@ -70,8 +75,12 @@
 				  </form>
 			</table>
 		</div>
-      </div>
+				</div>
+			</div>
+		
 </div>
+
+
 <script>
 var index_val = {$index|default:0};
 </script>

@@ -1,14 +1,16 @@
 <!--{assign var="page_title" value="`$_product_sort`"}-->
 <!--{include file="header.html"}-->
-<div class="wrap clearfix">
-    <div class="sidebar">
-       <div class="sidebar_menu">
-         <!--{include file="menu.html"}-->
-       </div>
+<div id="main" class="container">
+	<div class="row">
+		
+	
+    <div class="span4 side-bar">
+       
+        <!--{include file="menu.html"}-->
+       
     </div>
-     <div class="main_content">
-     <div class="blank"></div>
-	 <div class="offer_banner"><img src="images/offer_01.gif" /></div>
+    <div class="span12 main-content">
+     
      <div class="offer_info_title"><h2>{$page_title}</h2></div>
      <div class="blank"></div>
 		  <form name="prodtypeeditfrm" method="post" action="producttype.php" autocomplete="off">
@@ -22,6 +24,7 @@
 				  </tr>
           </table>
 		</form>		 
-</div>
+	</div>
+	</div>
 </div>
 <!--{include file="footer.html"}-->

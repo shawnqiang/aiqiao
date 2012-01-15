@@ -1,13 +1,13 @@
 <?php
 /**
  * PHPB2B cache file, DO NOT change me!
- * Created: Dec 31, 2011, 7:59
- * Id: 5cd053097bdaaea7a12e29e6f031323a
+ * Modified: Jan 1, 2012, 12:49
+ * Id: 8b17bd6f32a137ff9ac5a338cfc4e525
  */
 
 $_PB_CACHE['setting'] = array (
   'site_name' => '爱侨网',
-  'site_title' => '全球华商平台 - Powered By PHPB2B',
+  'site_title' => '全球华商平台',
   'site_banner_word' => '最专业的行业电子商务网站',
   'company_name' => '网站的版权者',
   'site_url' => 'http://dev.aiqiao.com/',
@@ -53,7 +53,7 @@ $_PB_CACHE['setting'] = array (
   'main_cache_check' => '0',
   'update_alert_type' => '1',
   'update_alert_lasttime' => '1301549982',
-  'theme' => 'red',
+  'theme' => 'default',
   'tag_check' => '0',
   'session_savepath' => '0',
   'offer_expire_method' => '1',

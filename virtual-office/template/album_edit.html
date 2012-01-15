@@ -20,58 +20,63 @@ jQuery(document).ready(function($) {
 })
 </script>
 <!--{/literal}-->
-<div class="wrap clearfix">
-    <div class="sidebar">
-       <div class="sidebar_menu">
+<div id="main" class="container">
+  <div class="row">
+    <div class="span4 side-bar">
          <!--{include file="menu.html"}-->
-       </div>
     </div>
-     <div class="main_content">
-     <div class="blank"></div>
-	 <div class="offer_banner"><img src="images/offer_01.gif" /></div>
-     <div class="offer_info_title"><h2>{$page_title}</h2></div>
-     <div class="hint">{lang must_input_with_star}</div>
+     <div class="span12 main-content">
+     <div class="page-header">
+       <h2>{$page_title}</h2>
+     </div>
+     <div class="mod">
+       <div class="mod-hd">
+         <div class="hint">{lang must_input_with_star}</div>
+       </div>
+       <div class="mod-bd">
+            <form name="edit_frm" method="post" action="album.php" enctype="multipart/form-data" onsubmit="$('#BtnSubmit').attr('disabled',true);">
+            <!-- {formhash} -->
+            <input type="hidden" name="id" value="{$item.id}">
+            <input type="hidden" name="do" value="save">
 
-	  <form name="edit_frm" method="post" action="album.php" enctype="multipart/form-data" onsubmit="$('#BtnSubmit').attr('disabled',true);">
-	  <!-- {formhash} -->
-	  <input type="hidden" name="id" value="{$item.id}">
-	  <input type="hidden" name="do" value="save">
-
-       <table class="offer_info_content">
-          <tr>
-            <th class="circle_left"><font class="red">*</font>{lang show_title}</th>
-            <td class="circle_right"><input type="text" name="album[title]" value="{$item.title}" /></td>
-          </tr>
-          <tr>
-            <th>{lang categories}</th>
-            <td><select name="album[type_id]">
-				{html_options options=$AlbumTypes selected=$item.type_id}
-            </select></td>
-          </tr>
-          <tr>
-            <th><font class="red">&nbsp; </font>{lang simple_description}</th>
-            <td><textarea name="album[description]" id="Content" cols="60" rows="8" wrap="VIRTUAL">{$item.description}</textarea><div id="txtTips"></div></td>
-          </tr>
-          <tr>
-            <th>{lang attachment_upload}</th>
-            <td>
-                <input name="pic" type="file" id="uploadfile" onchange="preview()" />
-                <span class="gray"><br>
-                  {lang image_size_format_provision}</span>
-             </td>
-          </tr>
-		  <!--{if $item.image}-->
-          <tr>
-           <th></th>
-             <td><a href="{$item.image}" id="uploadpic_hover" rel="lightbox"><img id="uploadpic" src="{$item.image}.small.jpg" alt="{$item.title}" width="80" height="80" border="0" /></a></td>
-          </tr>
-          <!--{/if}-->
-          <tr>
-           <th class="circle_bottomleft"></th>
-             <td class="circle_bottomright"><input name="btnSubmit" type="submit" id="BtnSubmit" value=" {lang confirm_submit} "></td>
-          </tr>
-       </table>
-	</form>
+               <table class="offer_info_content">
+                  <tr>
+                    <th class="circle_left"><font class="red">*</font>{lang show_title}</th>
+                    <td class="circle_right"><input type="text" name="album[title]" value="{$item.title}" /></td>
+                  </tr>
+                  <tr>
+                    <th>{lang categories}</th>
+                    <td><select name="album[type_id]">
+                {html_options options=$AlbumTypes selected=$item.type_id}
+                    </select></td>
+                  </tr>
+                  <tr>
+                    <th><font class="red">&nbsp; </font>{lang simple_description}</th>
+                    <td><textarea name="album[description]" id="Content" cols="60" rows="8" wrap="VIRTUAL">{$item.description}</textarea><div id="txtTips"></div></td>
+                  </tr>
+                  <tr>
+                    <th>{lang attachment_upload}</th>
+                    <td>
+                        <input name="pic" type="file" id="uploadfile" onchange="preview()" />
+                        <span class="gray"><br>
+                          {lang image_size_format_provision}</span>
+                     </td>
+                  </tr>
+              <!--{if $item.image}-->
+                  <tr>
+                   <th></th>
+                     <td><a href="{$item.image}" id="uploadpic_hover" rel="lightbox"><img id="uploadpic" src="{$item.image}.small.jpg" alt="{$item.title}" width="80" height="80" border="0" /></a></td>
+                  </tr>
+                  <!--{/if}-->
+                  <tr>
+                   <th class="circle_bottomleft"></th>
+                     <td class="circle_bottomright"><input class="btn primary" name="btnSubmit" type="submit" id="BtnSubmit" value=" {lang confirm_submit} "></td>
+                  </tr>
+               </table>
+          </form>
+       </div>
+     </div>
 	</div>
+  </div>
   </div>
 <!--{include file="footer.html"}-->

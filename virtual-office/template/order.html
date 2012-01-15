@@ -1,44 +1,54 @@
 <!--{assign var="page_title" value="`$_order_manage`"}-->
 <!--{include file="header.html"}-->
-<div class="wrap clearfix">
-    <div class="sidebar">
-       <div class="sidebar_menu">
-         <!--{include file="menu.html"}-->
-       </div>
-    </div>
-     <div class="main_content">
-     <div class="blank"></div>
-	 <div class="offer_banner"><img src="images/offer_01.gif" /></div>
-     <div class="offer_info_title"><h2>{$page_title}</h2></div>
-      <div class="hint">{lang order_manage}</div> 
-       <table cellspacing="0" id="dataTable" class="datas">
-		<thead>
-		<tr>
-			<td><p align="left">{lang trade_number}</p></td>
-			<td>{lang total_order_amount}</td>
-			<td>{lang order_status}</td>
-			<td>{lang pay_status}</td>
-			<td>{lang order_time}</td>
-			<td>{lang operation}</td>
-		</tr>
-		</thead>
-		<tbody>
-		  <!--{foreach from=$datas item=item}-->
-		  <tr class="{if $item.pay_status eq 1}selected{/if}">
-		  <td>{$item.trade_no}</td>
-		  <td>{$item.total_price}</td>
-		  <td>{$order_status[$item.status]}</td>
-		  <td>{$pay_status[$item.pay_status]}<br><small><i>{$item.pay_name}</i></small></td>
-		  <td>{$item.created|date_format:"%Y-%m-%d %H:%M"}</td>
-		  <td><!-- <a href="order.php?action=preview&tradeno={$item.trade_no}" style="text-decoration:underline;">{lang preview}</a> --><!-- {if $item.pay_status==0} -->&nbsp;&nbsp;<a href="../purchase.php?do=pay&tradeno={$item.trade_no}" style="text-decoration:underline;" target="_blank">{lang pay_now}</a>&nbsp;<a href="order.php?action=cancel&tradeno={$item.trade_no}" style="text-decoration:underline;">{lang cancel}</a><!-- {/if} --></td>
-		  </tr>
-		  <!--{foreachelse}-->
-		  <tr><td colspan="5"><div align="center">{lang no_datas_now}</div></td></tr>
-		  <!--{/foreach}-->
-		</tbody>
-	</table>
-	<div id="footer" style="margin-top: 40px;">{$ByPages}</div>
-	
+<div id="main" class="container">
+	<div class="row">
+		<div class="span4 sidebar">
+			<!--{include file="menu.html"}-->
+		</div>
+		<div class="span12">
+			<div class="page-header">
+				<h2>{$page_title}</h2>
+			</div>
+			<div class="mod">
+				<div class="mod-hd">
+					<h2>{lang order_manage}</h2>
+				</div>
+				<div class="mod-bd">
+					<table cellspacing="0" id="dataTable" class="datas">
+						<thead>
+						<tr>
+							<td><p align="left">{lang trade_number}</p></td>
+							<td>{lang total_order_amount}</td>
+							<td>{lang order_status}</td>
+							<td>{lang pay_status}</td>
+							<td>{lang order_time}</td>
+							<td>{lang operation}</td>
+						</tr>
+						</thead>
+						<tbody>
+						  <!--{foreach from=$datas item=item}-->
+						  <tr class="{if $item.pay_status eq 1}selected{/if}">
+						  <td>{$item.trade_no}</td>
+						  <td>{$item.total_price}</td>
+						  <td>{$order_status[$item.status]}</td>
+						  <td>{$pay_status[$item.pay_status]}<br><small><i>{$item.pay_name}</i></small></td>
+						  <td>{$item.created|date_format:"%Y-%m-%d %H:%M"}</td>
+						  <td><!-- <a href="order.php?action=preview&tradeno={$item.trade_no}" style="text-decoration:underline;">{lang preview}</a> --><!-- {if $item.pay_status==0} -->&nbsp;&nbsp;<a href="../purchase.php?do=pay&tradeno={$item.trade_no}" style="text-decoration:underline;" target="_blank">{lang pay_now}</a>&nbsp;<a href="order.php?action=cancel&tradeno={$item.trade_no}" style="text-decoration:underline;">{lang cancel}</a><!-- {/if} --></td>
+						  </tr>
+						  <!--{foreachelse}-->
+						  <tr><td colspan="5"><div align="center">{lang no_datas_now}</div></td></tr>
+						  <!--{/foreach}-->
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="">
+				{$ByPages}
+			</div>
+		</div>
+	</div>
 </div>
-</div>
+
+
+
 <!--{include file="footer.html"}-->

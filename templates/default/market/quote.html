@@ -1,147 +1,124 @@
 <!--{include file="`$theme_name`/header.html" page_title="`$page_title`" nav_id=6}-->
 <link href="scripts/jquery/ui.css" rel="stylesheet" type="text/css"/>
 <script src="scripts/jquery/ui.core.js"></script>
-<div class="wrapper">
-	<div class="place_price clearfix">
-		 <strong>{lang area_prices}</strong>
-		 <div>
+<div id="main" class="container">
+	<div class="mod">
+		<div class="mod-hd">
+			 <strong>{lang area_prices}</strong>
+		</div>
+		<div class="mod-bd">
 		 <!-- {category name="area" depth="1"} -->
 		 <!-- {foreach from=$category item=item} -->
 		 <a href='product/price.php?action=search&areaid={$item.id}'><span>{$item.name}</span></a>
 		 <!-- {/foreach} -->
-		 </div>
+		</div>
 	</div>
-	<div class="blank6"></div>        
-	<div class="content">
-		<div class="main_left_w180">
-			<div class="cornerbox">
-				<div class="title_bar_s6">
-					<span class="title_top_s6"><span></span></span>
+	<div class="row">
+		<div class="span4">
+			<div class="mod">
+				<div class="mod-hd">
 					<h2>{lang quotes} {lang categories}</h2>
 				</div>
-				<div class="price_menu_today clearfix">
+				<div class="mod-bd">
 					<ul>
 						<!-- {get from="type" name="quotetype" var="Categories"} -->
 						<!--{foreach from=`$Categories` item=item}-->
 						<li><a href="market/quote.php?catid={$item.id}" title="{$item.title}">{$item.title}</a></li>
 						<!--{/foreach}-->
-				  </ul>
-					<div class="blank"></div>
-					<div class="btn_price_all"><a href="market/quote.php">{lang the_all} {lang price_quotes}</a></div>
-					<div class="blank6"></div>
-			  </div>
-			   <div class="corner_bottom">
-					<div class="corner_bottom_l"></div>
-					<div class="corner_tottom_r"></div>
+				  	</ul>
+				  	<div class="btn_price_all"><a href="market/quote.php">{lang the_all} {lang price_quotes}</a></div>
 				</div>
 			</div>
-			<div class="blank6"></div>
-			<div class="cornerbox">
-				<div class="title_bar_s6">
-					<span class="title_top_s6"><span></span></span>
+			<div class="mod price-inquiry">
+				<div class="mod-hd">
 					<h2>{lang quote_search}</h2>
 				</div>
-				<div class="corner_content_s6">
-				   <div class="box_date_search">
+				<div class="mod-bd">
 					<form method="get" action="">
 					<input type="hidden" name="action" value="search" />
-					   <div>{lang searching_product}<input type="text" name="title" value="{$smarty.get.title}" class="s_input"></div>
-					   <div>{lang date_start}<input name="ds" id="date1" value="{$QuoteSearchFrom}" class="s_input"/></div>
-					   <div>{lang date_end}<input name="de" id="date2" value="{$QuoteSearchTo}" class="s_input"/></div>
-					   <div class="text_center"><input type="submit" class="btn_submit" value="{lang search}"></div>
-					</form> 
-					</div>                   
-				</div>
-			   <div class="corner_bottom">
-					<div class="corner_bottom_l"></div>
-					<div class="corner_tottom_r"></div>
+					   <div class="clearfix"><label for="title">{lang searching_product}</label><div class="input"><input type="text" name="title" value="{$smarty.get.title}" class="span2"></div></div>
+					   <div class="clearfix"><label for="ds">{lang date_start}</label><div class="input"><input name="ds" id="date1" value="{$QuoteSearchFrom}" class="span2"/></div></div>
+					   <div class="clearfix"><label for="de">{lang date_end}</label><div class="input"><input name="de" id="date2" value="{$QuoteSearchTo}" class="span2"/></div></div>
+					   <div class="actions"><input type="submit" class="btn primary" value="{lang search}"></div>
+					</form>
 				</div>
 			</div>
-			<div class="blank6"></div>
-			<div class="cornerbox">
-				<div class="title_bar_s6">
-					<span class="title_top_s6"><span></span></span>
+			<div class="mod">
+				<div class="mod-hd">
 					<h2>{lang pro_market}</h2>
 				</div>
-				<div class="corner_content_s6">
-				   <ul>
+				<div class="mod-bd">
+					<ul class="info-list">
 					<!-- {pb:market row=10 type="commend"} -->
 					 <li>{$market.link}</li>
 					<!-- {/pb:market} -->
-				   </ul>
-				</div>
-			   <div class="corner_bottom">
-					<div class="corner_bottom_l"></div>
-					<div class="corner_tottom_r"></div>
+				   	</ul>
 				</div>
 			</div>
-			<div class="blank6"></div>
-			<div class="cornerbox">
-				<div class="title_bar_s6">
-					<span class="title_top_s6"><span></span></span>
+			<div class="mod">
+				<div class="mod-hd">
 					<h2>{lang latest_price}</h2>
 				</div>
-				<div class="corner_content_s6">
-				   <ul>
-					{price row=9 name="item"}
-					  <li>{$item.link}</li>
-					 {/price}
-				   </ul>
-				</div>
-			   <div class="corner_bottom">
-					<div class="corner_bottom_l"></div>
-					<div class="corner_tottom_r"></div>
+				<div class="mod-bd">
+					<ul>
+						{price row=9 name="item"}
+					  	<li>{$item.link}</li>
+					 	{/price}
+				   	</ul>
 				</div>
 			</div>
-		  
+			
 		</div>
-		<div class="main_right_w770">
-			<div class="brand_hot">
-				<div class="title">
-					<h2><span class="corner_t_l"></span><span class="corner_t_m title_mouse">{lang commend} {lang product}</span><span class="corner_t_r"></span></h2>
+		<div class="span13">
+			<div class="mod">
+				<div class="mod-hd"><h2><span class="corner_t_l"></span><span class="corner_t_m title_mouse">{lang commend} {lang product}</span><span class="corner_t_r"></span></h2></div>
+				<div class="mod-bd">
+						<ul class="info-list media-list">
+						{pb:product row=6 type="image,commend" name="item"}
+						<li class="item-fifth"><a href="{$item.url}" class="name"><img src="{$item.src}" alt="{$item.name}" /></a>
+						<p class="title"><a href="{$item.name}">{$item.names}</a></p>
+						</li>
+					   {/pb:product}  
+						</ul>
 				</div>
-				 <div class="product_hot commend box_bord clearfix">
-				<ul>
-					{pb:product row=6 type="image,commend" name="item"}
-					<li><a href="{$item.url}"><img src="{$item.src}" alt="{$item.name}" /></a>
-					<p><a href="{$item.name}">{$item.names}</a></p>
-					</li>
-				   {/pb:product}  
-					</ul>
-				 </div>
 			</div>
-			<div class="blank6"></div>
-			<div class="product_brand_intro">
-				<table id="hacker">
-				 <thead>
-				  <tr>
-					<th>{lang the_title}</th>
-					<th>{$_post_time_n}</th>
-				  </tr>
-				  </thead>
-				  <!-- {foreach from=$items item=item} -->
-				  <tbody>
-				  <tr>
-					<td><a href="market/quote.php?action=chart&id={$item.id}" style="text-decoration:underline">{$item.title}</a></td>
-					<td class="pb_datetime">{$item.pubdate|date_format:"%Y-%m-%d"}</td>
-				  </tr>
-				  </tbody>
-				  <!-- {/foreach} -->
-				  <tfoot>
-				  <tr>
-					<th>{lang the_title}</th>
-					<th>{$_post_time_n}</th>
-				  </tr>
-				  </tfoot>
-				  <tr>
-					<td colspan="2" id="noborder"><div class="pagination2"><!-- {pager rowcount=`$paging.total`} --></div></td>
-				  </tr>
-				</table>
+			<div class="mod">
+				<div class="mod-hd">
+					
+				</div>
+				<div class="mod-bd">
+					<table id="hacker">
+							 <thead>
+							  <tr>
+								<th>{lang the_title}</th>
+								<th>{$_post_time_n}</th>
+							  </tr>
+							  </thead>
+							  <!-- {foreach from=$items item=item} -->
+							  <tbody>
+							  <tr>
+								<td><a href="market/quote.php?action=chart&id={$item.id}" style="text-decoration:underline">{$item.title}</a></td>
+								<td class="pb_datetime">{$item.pubdate|date_format:"%Y-%m-%d"}</td>
+							  </tr>
+							  </tbody>
+							  <!-- {/foreach} -->
+							  <tfoot>
+							  <tr>
+								<th>{lang the_title}</th>
+								<th>{$_post_time_n}</th>
+							  </tr>
+							  </tfoot>
+							  <tr>
+								<td colspan="2" id="noborder"><div class="pagination2"><!-- {pager rowcount=`$paging.total`} --></div></td>
+							  </tr>
+							</table>
+				</div>
 			</div>
 		</div>
-		<div class="clear"></div>
 	</div>
 </div>
+
+
 <!--{literal}-->
 <style> 
 #hacker tr:hover{ 

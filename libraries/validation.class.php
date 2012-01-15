@@ -130,7 +130,7 @@ class Validation extends PbObject {
 	{
 		$return = null;
 		if (!empty($model->validationErrors)) {
-			$return = '<div class="message messageFailure">';
+			$return = '<div class="alert-message error">';
 			foreach ($model->validationErrors as $key=>$val) {
 				$return.="<p>".$val."</p>";
 			}

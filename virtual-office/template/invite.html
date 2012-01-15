@@ -1,27 +1,30 @@
 <!--{assign var="page_title" value="`$_invitation_code`"}-->
 <!--{include file="header.html"}-->
-<div class="wrap clearfix">
-    <div class="sidebar">
-       <div class="sidebar_menu">
+<div id="main" class="container">
+    <div class="row">
+       <div class="span4 side-bar">
          <!--{include file="menu.html"}-->
        </div>
-    </div>
-     <div class="main_content">
-     <div class="blank"></div>
-	 <div class="offer_banner"><img src="images/offer_01.gif" /></div>
-     <div class="offer_info_title"><h2>{$page_title}</h2></div>
-      <div class="hint"><span class="orange">{lang friendly_tip}</span>{lang invitation_code_time}</div>
-		<table class="bgblue">
+    
+     <div class="span12 main-content">
+     <div class="page-header">
+     	<h2>{$page_title}</h2>
+     </div>
+     <div class="mod">
+     	<div class="mod-hd">
+     		<span class="orange">{lang friendly_tip}</span>{lang invitation_code_time}
+     	</div>
+     	<div class="mod-bd">
+     		<table class="bgblue">
             <tr align="center" class="bggray">
               <td width="60%" align="left"><div id="txt">{$InviteCode}</div></td>
               <td align="center"><a href="javascript:;" id="copy_invite">{lang copy}</a></td>
             </tr>
           </table>
-		<table class="trade_line">
-        <tr>
-          <td height="1" colspan="2" background="images/index_trade_line.gif"></td>
-        </tr>
-      </table>
+     	</div>
+     </div>
+    
+   </div>
    </div>
    </div>
 <script language="javascript">

@@ -4,15 +4,14 @@
 </style>
 <script src="scripts/jquery.tools.js"></script>
 <script src="scripts/jquery.hover.js"></script>
-<div class="wrapper">
-	<div class="content">
-		<div class="main_left_w180">
-			<div class="cornerbox">
-				<div class="title_bar_s6">
-					<span class="title_top_s6"><span></span></span>
+<div id="main" class="container">
+	<div class="row">
+		<div class="span4">
+			<div class="mod">
+				<div class="mod-hd">
 					<h2>{lang product_prices}</h2>
 				</div>
-				<div class="price_menu">
+				<div class="mod-bd">
 					<ul id="topnav">
 					<!--{foreach from=$Items item=item}-->
 						<li>
@@ -31,46 +30,35 @@
 						</li>
 					  <!--{/foreach}-->
 					</ul>
-					<div class="blank"></div>
 					<div class="btn_price_all"><a href="product/price.php?action=search">{lang all_product_categories}</a></div>
-					<div class="blank6"></div>
-				</div>
-				<div class="corner_bottom">
-					<div class="corner_bottom_l"></div>
-					<div class="corner_tottom_r"></div>
 				</div>
 			</div>
-			<div class="blank6"></div>
-			<div class="cornerbox">
-				<div class="title_bar_s6">
-					<span class="title_top_s6"><span></span></span>
+			<div class="mod">
+				<div class="mod-hd">
 					<h2>{lang latest_price}</h2>
 				</div>
-				<div class="corner_content_s6">
-				   <ul>
-					  {price row=9 name="item"}
-					  <li>{$item.link}</li>
-					 {/price}
-				   </ul>
+				<div class="mod-bd">
+					<ul>
+					  	{price row=9 name="item"}
+					  	<li>{$item.link}</li>
+					 	{/price}
+				   	</ul>
 				</div>
-			   <div class="corner_bottom">
-					<div class="corner_bottom_l"></div>
-					<div class="corner_tottom_r"></div>
-				</div>
-			</div><!--end-->
+			</div>
+			
 		</div>
-		<div class="main_right_w770">
-			 <div class="area_price clearfix">
+		<div class="span13">
+			<div class="area_price cl">
 				 <strong>{lang area_prices}</strong>
 				 <div>
-			 <!-- {category name="area" depth="1"} -->
-			 <!-- {foreach from=$category item=item} -->
-			 <a href='product/price.php?action=search&areaid={$item.id}'><span>{$item.name}</span></a>
-			 <!-- {/foreach} -->				 
+					 <!-- {category name="area" depth="1"} -->
+					 <!-- {foreach from=$category item=item} -->
+					 <a href='product/price.php?action=search&areaid={$item.id}'><span>{$item.name}</span></a>
+					 <!-- {/foreach} -->				 
 				 </div>
 			 </div>
-			 <div class="blank6"></div>
-			 <!-- the tabs -->
+			
+			<!-- the tabs -->
 			<ul class="tabs2 title_mouse">
 				  <li><a href="javascript:;"><span>{lang latest_new} {lang product}</span></a></li>
 				  <li><a href="javascript:;"><span>{lang latest_hot} {lang product}</span></a></li>
@@ -96,12 +84,13 @@
 					</ul>
 				 </div>
 			</div>
-			<div class="blank6"></div>
-			<div class="brand_hot">
-				<div class="title">
-					<h2><span class="corner_t_l"></span><span class="corner_t_m title_mouse">{lang product_category}</span><span class="corner_t_r"></span></h2>
+
+			<div class="mod">
+				<div class="mod-hd">
+					<h2><span class="corner_t_m title_mouse">{lang product_category}</span></h2>
 				</div>
-				<div class="letterindex clearfix">
+				<div class="mod-bd">
+					<div class="letterindex clearfix">
 					<h3>{lang sort_by_alpha}</h3>
 					 <ul id="letternav">
 						<!--{foreach from=$AlphabetSorts name=Alphabet item=item_alphabet key=key_alphabet}-->
@@ -145,13 +134,15 @@
 					  <tr><td colspan="2" class="padding0"><hr class="hr_dashed"/></td></tr>
 					  <!--{/foreach}-->
 					</table>    
-				</div>                     
-			</div><!--end-->
-		
+				</div>
+
+				</div>
+			</div>
 		</div>
-		<div class="clear"></div>
 	</div>
 </div>
+
+
 <!--{literal}-->
 <script>
 $(function() {

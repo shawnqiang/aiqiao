@@ -1,28 +1,42 @@
 <!--{include file="header.html" PageTitle="`$_home_page`" cur="space_index"}-->
-<div class="wrapper">
-	<!--{include file="banner.html"}-->
-	<div class="content">
-		<!--{include file="leftbar.html"}-->
-		<div class="rightbar">
-			<div class="welcome">
-				<img src="{$COMPANY.logo}"/>
-				<p><span class="title">{lang you_are_welcome}{$COMPANY.name}</span><br/><br/>  {$COMPANY.description|truncate:300}<br/><br/><span class="more"><a title="{lang more_company_info}" href="{$Menus.intro}">{lang more_company_info}>></a></span></p>
-				<div class="clear"></div>
-			</div>
-			<br clear="all"/>
-			<div class="player">
-				<div class="playerhead"><span class="playlist">{lang space_product}</span><span class="playerheadcon"><a href="{$Menus.product}" title="{lang space_product}"><img src="{$SpaceUrl}images/pic_08.gif"/></a></span><img src="{$SpaceUrl}images/contactus_13.jpg" /></div>
-				<div class="clear"></div>
-				<div class="playercon clearfix">
-					<ul>
-					<!-- {pb:product name="item" companyid="`$COMPANY.id`" memberid=`$MEMBER.id` row=12} -->
-						<li><a href="{the_url module=product id=`$item.id`}" target="_blank"><img src="{$WebRootUrl}attachment/{$item.picture}.small.jpg" alt="{$item.name}" width="80" height="80" border="0" /></a>
-						<p><a href="{$WebRootUrl}product/detail.php?id={$item.id}" target="_blank" title="{$item.name}">{$item.name}</a></p></li>
-					<!-- {/pb:product} -->
+<!--{include file="banner.html"}-->
+<div id="main" class="container">
+	
+	
+	<div class="mod welcome">
+		<img src="{$COMPANY.logo}"/>
+		<div class="info">
+			<p>{lang you_are_welcome}{$COMPANY.name}</p>
+			<p>{$COMPANY.description|truncate:300}</p>
+			<p><a title="{lang more_company_info}" href="{$Menus.intro}">{lang more_company_info}>></a></p>
+			<div class="semibg"></div>
+		</div>
+		
+				
+	</div>
+	<div class="row">
+		
+		<div class="span16">
+			<div class="mod">
+				<div class="mod-hd">
+					<h2>{lang space_product} <a href="{$Menus.product}" title="{lang space_product}" class="title-more">more</a></h2>
+				</div>
+				<div class="mod-bd">
+					<ul class="media-items-grid">
+						<!-- {pb:product name="item" companyid="`$COMPANY.id`" memberid=`$MEMBER.id` row=12} -->
+						<li class="media-item">
+						<a class="image" href="{the_url module=product id=`$item.id`}" target="_blank"><img src="{$WebRootUrl}attachment/{$item.picture}.small.jpg" alt="{$item.name}" width="80" height="80" border="0" /></a>
+						<p class="name">
+						<a href="{$WebRootUrl}product/detail.php?id={$item.id}" target="_blank" title="{$item.name}">{$item.name}</a></p>
+						</li>
+						<!-- {/pb:product} -->
 					</ul>
 				</div>
-			</div>
+			</div>		
+			
 		</div>
-		<div class="clear"></div>
+
 	</div>
+	<!--{include file="leftbar.html"}-->
+</div>
 <!--{include file="footer.html"}-->

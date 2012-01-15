@@ -13,18 +13,22 @@ jQuery(document).ready(function($) {
 })
 </script>
 <!--{/literal}-->
-<div class="wrap clearfix">
-    <div class="sidebar">
-       <div class="sidebar_menu">
+<div id="main" class="container">
+    <div class="row">
+       <div class="span4 side-bar">
          <!--{include file="menu.html"}-->
        </div>
-    </div>
-     <div class="main_content">
-     <div class="blank"></div>
-	 <div class="offer_banner"><img src="images/offer_01.gif" /></div>
-     <div class="offer_info_title"><h2>{$page_title}</h2></div>
-     <div class="blank"></div>
-	  <form name="addnewsfrm" id="Frm1" action="news.php" method="post">
+    
+     <div class="span12 main-content">
+     <div class="page-header">
+     	<h2>{$page_title}</h2>
+     </div>
+     <div class="mod">
+     	<div class="mod-hd">
+     		
+     	</div>
+     	<div class="mod-bd">
+     		<form name="addnewsfrm" id="Frm1" action="news.php" method="post">
 	  <!-- {formhash} -->
 	  <input type="hidden" name="newsid" value="{$item.id}">
          <table class="offer_info_content">
@@ -57,11 +61,13 @@ jQuery(document).ready(function($) {
              </tr>
 			<tr>
 				 <th class="circle_bottomleft"></th>
-				<td class="circle_bottomright"><input name="save" type="submit" id="save" value=" {lang confirm_submit} "></td>
+				<td class="circle_bottomright"><input name="save" type="submit" id="save" class="btn" value=" {lang confirm_submit} "></td>
              </tr>                                 
           </table>
 	</form>
-
+     	</div>
+     </div>
+</div>
 </div>
 </div>
 <!--{include file="footer.html"}-->

@@ -1,8 +1,8 @@
 /** Hover **/
-ul#topnav {width: 178px;position: relative;z-index:10;}
-ul#topnav li { float:left;margin: 0; padding: 0;position: relative;z-index:20;}
+ul#topnav {position: relative;z-index:10;}
+ul#topnav li { margin: 0; padding: 0;position: relative;z-index:20;}
 ul#topnav li:hover a, ul#topnav li a:hover { background-position: left bottom; }
-ul#topnav a {width: 133px;height:28px;line-height:28px;float:left;padding:0 20px 0 25px; overflow:hidden; display:block; }
+ul#topnav a {height:24px;line-height:24px;  overflow:hidden; display:block; }
 ul#topnav li .sub {position: absolute;top: -7px; left: 166px; padding: 0 0 0 13px;z-index:100;display:none; overflow:hidden;}
 ul#topnav li .row {clear: both; width:365px; border-left:none; background-color:#FFFFFF; padding:10px; overflow:hidden }
 ul#topnav li .sub ul{list-style: none;margin: 0; padding: 0; width: 360px;clear:both;}
@@ -251,7 +251,14 @@ ul.tabs a.current span, ul.tabs a.current:hover span, ul.tabs li.current a span 
 
 /*tabs style 2*/
 /* root element for tabs  */
-ul.tabs2 { list-style:none; margin:0 !important; padding:0;height:30px;}
+ul.tabs2 { list-style:none; margin:0; padding:0;height:34px; border-bottom: 2px solid #dddddd;}
+ul.tabs2 + .panes{
+    border:1px solid #ddd;
+    border-top:none;
+    padding:10px;
+}
+
+
 /* single tab */
 ul.tabs2 li { text-indent:0;padding:0;margin:0 !important;list-style-image:none !important; display:inline}
 /* when mouse enters the tab move the background image */
@@ -261,11 +268,11 @@ ul.tabs2 a.current, ul.tabs2 a.current:hover, ul.tabs2 li.current a {background-
 /* get rid of those system borders being generated for A tags */
 ul.tabs2 a:active {outline:none;}
 ul.tabs2 a:focus {-moz-outline-style:none;}
-ul.tabs2 a {float:left;display:block;height: 30px; line-height:30px;text-align:center;text-decoration:none;padding:0px;margin:0px;	position:relative;top:1px; font-weight:bold; margin-right:2px;}
+ul.tabs2 a {float:left;display:block;height: 34px; line-height:34px;text-align:center;text-decoration:none;padding: 0px;margin:0px; font-weight:bold; margin-right:2px;}
 ul.tabs2 a span { padding:0 20px;}
-ul.tabs2 a span { background-position:right -100px;display:block;}
-ul.tabs2 a:hover span { background-position:right -130px;}
-ul.tabs2 a.current span, ul.tabs2 a.current:hover span, ul.tabs2 li.current a span { background-position:right -160px;}
-ul.fxg_width a span {width:85px; height:30px; overflow:hidden; padding:0 10px;}
+ul.tabs2 a span { background-color: #eeeeee; display:block;}
+ul.tabs2 a:hover span { background-color: #dddddd;}
+ul.tabs2 a.current span, ul.tabs2 a.current:hover span, ul.tabs2 li.current a span { background-color: #dddddd;}
+
 
 

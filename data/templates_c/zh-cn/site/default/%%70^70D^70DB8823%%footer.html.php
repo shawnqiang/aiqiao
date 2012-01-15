@@ -1,9 +1,9 @@
-<?php /* Smarty version 2.6.18, created on 2011-12-31 06:59:06
+<?php /* Smarty version 2.6.18, created on 2012-01-02 08:08:02
          compiled from default/footer.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('block', 'userpage', 'default/footer.html', 3, false),array('function', 'mailto', 'default/footer.html', 6, false),array('function', 'im', 'default/footer.html', 8, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('block', 'userpage', 'default/footer.html', 3, false),array('function', 'mailto', 'default/footer.html', 6, false),)), $this); ?>
 <div id="footer">
-	<div class="ins"> 
+	<div class="container">
 		<?php $this->_tag_stack[] = array('userpage', array('row' => 15,'sep' => "<span>|</span>")); $_block_repeat=true;smarty_block_userpage($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>
 			<?php echo $this->_tpl_vars['page']['link']; ?>
 
@@ -19,11 +19,8 @@ smarty_core_load_plugins(array('plugins' => array(array('block', 'userpage', 'de
 </a>     </p>
 		<p><?php echo $this->_tpl_vars['icp_number']; ?>
 </p>
-		<p class="footer_im"><?php echo smarty_function_im(array('type' => 'qq','id' => ($this->_tpl_vars['service_qq'])), $this);?>
-<?php echo smarty_function_im(array('type' => 'msn','id' => ($this->_tpl_vars['service_msn'])), $this);?>
-</p>
-		<p>Powered by <?php echo $this->_tpl_vars['_soft_name']; ?>
- &copy;2007-2011 <a href="http://www.phpb2b.com/" target="_blank"><strong>Ualink</strong></a> Inc.</p>
+		
+		
 	</div>
 </div>
 </body>

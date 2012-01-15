@@ -374,6 +374,6 @@
   '_trade_no_error' => '订单编号有误',
   '_pay_success' => '恭喜您，付款成功！',
   '_pay_error' => '很抱歉，付款失败！',
-  '_error_occured' => '<a href=""></a> 已经将此出错信息详细记录, 由此给您带来的访问不便我们深感歉意。',
+  '_error_occured' => '<a href="http://dev.aiqiao.com/">http://dev.aiqiao.com/</a> 已经将此出错信息详细记录, 由此给您带来的访问不便我们深感歉意。',
   '_backup_and_wait' => '请不要关闭窗口，正在备份第-%s-卷数据库文件，如果停住不动，你可以点击这里<br><img src="images/loading.gif" />',
 ); ?>

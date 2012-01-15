@@ -14,61 +14,57 @@ $(document).ready(function() {
 });
 </script>
 <!--{/literal}-->
-<div class="wrap clearfix">
-    <div class="sidebar">
-       <div class="sidebar_menu">
-         <!--{include file="menu.html"}-->
-       </div>
+<div id="main" class="container">
+  <div class="row">
+    <div class="span4" class="side-bar">
+      <!--{include file="menu.html"}-->
     </div>
-   <div class="main_content">
-        <div class="main_content_left">
-          <div class="visit_time">
-            {lang my_honour}{$UserName|default:$smarty.session.MemberName}&nbsp;{$MemberInfo.gender_name}{lang the_last_visit_time_was}{$LastLogin}
-          </div>
-          <div class="base_info">
-              <h2>{lang basic_info}</h2>
-              <table class="base_member">
-               <tr>
-                <td colspan="3"><div class="blank"></div></td>
-              </tr>
-              <tr>
-                <td rowspan="3" class="avatar" ><img src="{$MemberInfo.avatar}"></td>
-                <td class="member_upgrade">{lang now_you_are}{$group.name}(<a href="../purchase.php?do=upgrade" title="" target="_blank">{lang upgrade_now}</a>)(<a href="../purchase.php?do=charge" title="" target="_blank">{lang charge_now}</a>)</td>
-                <td rowspan="3" width="100" title="{$group.name}"><img src="../images/group/{$group.image}" alt="{$group.name}" /></td>
-              </tr>
-              <tr>
-                <td>{lang year_service} {$MemberInfo.start_date}{lang arrive_to}{$MemberInfo.end_date}</td>
-                </tr>
-             <tr>
-                <td><div id="progressbar"></div>&nbsp;<!--{if $service_days>=100}--><strong>{lang been_expired}<a href="../purchase.php?do=upgrade" target="_blank">{lang upgrade_now}</a></strong><!--{/if}--></td>
-               </tr>
-              <tr>
-                <td colspan="3"><div class="blank"></div></td>
-              </tr>
-            </table>
-          </div> 
-           <div class="blank"></div>
-           <div class="count_info">
-              <h2>{lang statistics}</h2> 
-              <div class="count_info_content">
-                <p class="credit"><strong>{lang your_account}</strong>{lang balance_amount}<em>{$MemberInfo.balance_amount|default:0}</em> | {lang your_points}<em>{$MemberInfo.points|default:0}</em></p>
-                <p class="info"><strong>{lang information_n}</strong><!--{foreach from=$items_offer name=items_offer item=item key=key}-->{$key}{lang colon}<em>{$item}</em> {lang number}<!--{if !$smarty.foreach.items_offer.last}--> <!--{/if}--><!--{/foreach}--></p>
-                <p class="message"><strong>{lang messages}</strong>{lang common_message} <em>{$pm.user|default:0}</em> {lang number} | {lang system_message} <em>{$pm.system|default:0}</em> {lang number} | {lang query_message} <em>{$pm.inquery|default:0}</em> {lang number}</p>
-                <p class="collect"><strong>{lang favorites}</strong><a href="favor.php">{lang manage_favorite}</a></p>
-              </div>
-           </div> 
-         </div>
-        <div class="main_content_right">
+    <div class="span8" class="main-content">
+      <div class="mod vs-welcome">
+          {lang my_honour}{$UserName|default:$smarty.session.MemberName}&nbsp;{$MemberInfo.gender_name}{lang the_last_visit_time_was}{$LastLogin}
+      </div>
+      <div class="mod">
+        <div class="mod-hd">
+          <h2>{lang basic_info}</h2>
+        </div>
+        <div class="mod-bd">
+          <ul>
+            <li>{lang now_you_are}{$group.name}(<a href="../purchase.php?do=upgrade" title="" target="_blank">{lang upgrade_now}</a>)(<a href="../purchase.php?do=charge" title="" target="_blank">{lang charge_now}</a>)<img src="../images/group/{$group.image}" alt="{$group.name}" /></li>
+            <li>{lang year_service} {$MemberInfo.start_date}{lang arrive_to}{$MemberInfo.end_date}</li>
+            <li><div id="progressbar"></div>&nbsp;<!--{if $service_days>=100}--><strong>{lang been_expired}<a href="../purchase.php?do=upgrade" target="_blank">{lang upgrade_now}</a></strong><!--{/if}--></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mod">
+        <div class="mod-hd">
+          <h2>{lang statistics}</h2> 
+        </div>
+        <div class="mod-bd">
+          <p class="credit"><strong>{lang your_account}</strong>{lang balance_amount}<em>{$MemberInfo.balance_amount|default:0}</em> | {lang your_points}<em>{$MemberInfo.points|default:0}</em></p>
+          <p class="info"><strong>{lang information_n}</strong><!--{foreach from=$items_offer name=items_offer item=item key=key}-->{$key}{lang colon}<em>{$item}</em> {lang number}<!--{if !$smarty.foreach.items_offer.last}--> <!--{/if}--><!--{/foreach}--></p>
+          <p class="message"><strong>{lang messages}</strong>{lang common_message} <em>{$pm.user|default:0}</em> {lang number} | {lang system_message} <em>{$pm.system|default:0}</em> {lang number} | {lang query_message} <em>{$pm.inquery|default:0}</em> {lang number}</p>
+          <p class="collect"><strong>{lang favorites}</strong><a href="favor.php">{lang manage_favorite}</a></p>
+        </div>
+      </div>
+     
+        
+
+    </div>
+    <div class="span-4">
            <div class="notice">
               <h2>{lang announce}</h2>
               <ul>
-				{announce row=10}
-					<li><a href="{$SiteUrl}announce/detail.php?id={$announce.id}" target="_blank">{$announce.title}</a></li>
-				{/announce}
+        {announce row=10}
+          <li><a href="{$SiteUrl}announce/detail.php?id={$announce.id}" target="_blank">{$announce.title}</a></li>
+        {/announce}
               </ul>
            </div>
-        </div>
     </div>
+  </div>
+    
+   
+        
+    
 </div>
 <!--{include file="footer.html"}-->
 

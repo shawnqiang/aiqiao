@@ -18,76 +18,73 @@ $(document).ready( function() {
 });
 </script>
 <!-- {/literal} -->
-<div class="wrapper">
-  <div class="content  clearfix">
-	 <div class="tips"><span>{$position}</span></div>
-	 <div class="blank6"></div>
-	 <div class="ex_con">
-		 <div class="ex_con_left">
-		   <div class="ex_con_left_title"><p>{$item.name}</p></div>
-		   <div class="blank6"></div>
-		   <div class="ex_con_left_con">
-           <div class="base_title">
-            <h2><span class="corner_t_l"></span><span class="corner_t_m title_mouse">{lang fair_introduction}</span><span class="corner_t_r"></span></h2> 
-	       </div>
-		  <div class="ex_con_left_con_body">
-			<!-- {the_attachment name=`$item.picture`} -->
-			<p>{$item.description}</p>
-		  </div>
-		   </div>
-		   <div class="blank6"></div>
-		  <div class="ex_con_left_con">
-		       <div class="base_title">
-                    <h2><span class="corner_t_l"></span><span class="corner_t_m title_mouse">{lang fair_content}</span><span class="corner_t_r"></span></h2> 
-	           </div>
-		  <div class="ex_con_left_con_body">
-			{lang fair_time} {$item.begin_date} {lang arrive_to} {$item.end_date}<br />
-			{lang address} {$item.address}<br />
-			{lang fair_size} {$item.scope}<br />
-			{lang organizer}{$item.hosts}<br />
-			{lang sponsor} {$item.organisers}<br />
-			{lang support} {$item.sponsors}<br />
-			{lang co_organizer} {$item.co_organisers}<br />
-			{lang contact} {$item.contacts}<br />
-			{lang notes} {$item.important_notice}<br />
-            </div>
-		  </div>
-		 </div>
-	 
-	 <div class="ex_con_right">
-	<div class="ex_con_right_con">
-      <div class="title_bar_s4">
-          <span class="title_top_s4"><span></span></span>
-          <h3>{lang fair_enter_name}</h3>
-       </div>
-	  <div class="ex_con_right_con_body">
-      <form name="join_fair" id="JoinFair" action="virtual-office/fair.php" method="post">
-	  <!-- {formhash} -->
-      <input type="hidden" name="do" value="join" />
-      <input type="hidden" name="is_ajax" value="1" />
-      <input type="hidden" name="id" value="{$item.id}">
-	  <span style="display: inline-block">
-      <input type="button" name="btn_join_fair" id="btnJoinFair" class="submit_w91" value="{lang enter_name_fair}"/></span>
-	  &nbsp;&nbsp;<span id="rp" style="display: inline-block"><img src="images/loading.gif" /></span>
-      </form>
-      </div>
-	</div>
-	<div class="blank6"></div>
-	<div class="ex_con_right_con">
-       <div class="title_bar_s4">
-          <span class="title_top_s4"><span></span></span>
-          <h3>{lang fair_business}</h3>
-       </div>
-	  <div class="ex_con_right_con_body">
-		<ul class="ex_con_rightlist" >
-        <!--{foreach from=$Items name=expomember item=expomember}-->
-		 <li><a href="{the_url module=space userid=`$expomember.userid`}" target="_blank">{$expomember.name}</a></li>
-        <!--{/foreach}-->
-		</ul>
+<div id="main" class="container">
+	<div class="breadcrumb"><span>{$position}</span></div>
+	<div class="row">
+		<div class="span13 main-content">
+			<div class="page-heading">
+				<h1>{$item.name}</h1>
+			</div>
+
+			<div class="mod">
+				<div class="mod-hd">
+					<h2><span class="title_mouse">{lang fair_introduction}</span></h2> 
+				</div>
+				<div class="mod-bd">
+					<!-- {the_attachment name=`$item.picture`} -->
+					<p>{$item.description}</p>
+				</div>
+			</div>
+
+			<div class="mod">
+				<div class="mod-hd">
+					<h2><span class="title_mouse">{lang fair_content}</span></h2>  
+				</div>
+				<div class="mod-bd">
+					{lang fair_time} {$item.begin_date} {lang arrive_to} {$item.end_date}<br />
+					{lang address} {$item.address}<br />
+					{lang fair_size} {$item.scope}<br />
+					{lang organizer}{$item.hosts}<br />
+					{lang sponsor} {$item.organisers}<br />
+					{lang support} {$item.sponsors}<br />
+					{lang co_organizer} {$item.co_organisers}<br />
+					{lang contact} {$item.contacts}<br />
+					{lang notes} {$item.important_notice}<br />
+				</div>
+			</div>
 		</div>
-	</div>
-  </div>
+		<div class="span4 side-bar">
+			<div class="mod">
+				<div class="mod-hd">
+					<h3>{lang fair_enter_name}</h3>
+				</div>
+				<div class="mod-bd">
+					<form name="join_fair" id="JoinFair" action="virtual-office/fair.php" method="post">
+					  <!-- {formhash} -->
+				      <input type="hidden" name="do" value="join" />
+				      <input type="hidden" name="is_ajax" value="1" />
+				      <input type="hidden" name="id" value="{$item.id}">
+					  <span style="display: inline-block">
+				      <input type="button" name="btn_join_fair" id="btnJoinFair" class="submit_w91" value="{lang enter_name_fair}"/></span>
+					  &nbsp;&nbsp;<span id="rp" style="display: inline-block"><img src="images/loading.gif" /></span>
+				    </form>
+				</div>
+			</div>	
+			<div class="mod">
+				<div class="mod-hd">
+					<h3>{lang fair_business}</h3>
+				</div>
+				<div class="mod-bd">
+					<ul class="ex_con_rightlist" >
+				        <!--{foreach from=$Items name=expomember item=expomember}-->
+						<li><a href="{the_url module=space userid=`$expomember.userid`}" target="_blank">{$expomember.name}</a></li>
+				        <!--{/foreach}-->
+					</ul>
+				</div>
+			</div>	
+			
+		</div>
+	</div>	
 </div>
-</div>
-</div>
+
 <!--{include file="`$theme_name`/footer.html"}-->

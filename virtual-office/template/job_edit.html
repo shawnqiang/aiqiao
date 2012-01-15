@@ -6,23 +6,26 @@
 var allows_maximum_input = "{lang allows_maximum_input}";
 var can_also_enter = "{lang can_also_enter}";
 </script>
-<div class="wrap clearfix">
-    <div class="sidebar">
-       <div class="sidebar_menu">
+<div id="main" class="container">
+    <div class="row">
+       <div class="span4 side-bar">
          <!--{include file="menu.html"}-->
        </div>
-    </div>
-     <div class="main_content">
-     <div class="blank"></div>
-	 <div class="offer_banner"><img src="images/offer_01.gif" /></div>
-     <div class="offer_info_title"><h2>{$page_title}</h2></div>
-     <div class="hint">{lang must_input_with_star}</div>
-
-	  <form name="jobfrm" id="Frm1" action="job.php" method="post">
-	  <!-- {formhash} -->
-	  <input type="hidden" name="id" value="{$item.id}">
+    
+     <div class="span12 main-content">
+     <div class="page-header">
+       <h2>{$page_title}</h2>
+     </div>
+     <div class="mod">
+       <div class="mod-hd">
+         {lang must_input_with_star}
+       </div>
+       <div class="mod-bd">
+         <form name="jobfrm" id="Frm1" action="job.php" method="post">
+    <!-- {formhash} -->
+    <input type="hidden" name="id" value="{$item.id}">
       
-		  <table class="offer_info_content">       
+      <table class="offer_info_content">       
 
                       <tr>
                          <th class="circle_left">
@@ -52,28 +55,28 @@ var can_also_enter = "{lang can_also_enter}";
                       <tr>
                         <th>{lang salary}</th>
                         <td class="tdright"><select name="job[salary_id]">
-						{html_options options=$Salary selected=$item.salary_id}
-						</select></td>
+            {html_options options=$Salary selected=$item.salary_id}
+            </select></td>
                       </tr>
                       <tr>
                         <th>{lang industry}</th>
                         <td class="tdright">
-						<div id="dataIndustry">
-							<select name="industry[id][1]" id="dataCompanyIndustryId1" class="level_1" style="width:120px;" ></select>
-							<select name="industry[id][2]" id="dataCompanyIndustryId2" class="level_2" style="width:120px;"></select>
-							<select name="industry[id][3]" id="dataCompanyIndustryId3" class="level_3" style="width:120px;"></select>
-						</div>
-						</td>
+            <div id="dataIndustry">
+              <select name="industry[id][1]" id="dataCompanyIndustryId1" class="level_1" style="width:120px;" ></select>
+              <select name="industry[id][2]" id="dataCompanyIndustryId2" class="level_2" style="width:120px;"></select>
+              <select name="industry[id][3]" id="dataCompanyIndustryId3" class="level_3" style="width:120px;"></select>
+            </div>
+            </td>
                       </tr>
                       <tr>
                         <th>{lang location}</th>
                         <td class="tdright">
-						<div id="dataArea">
-							<select name="area[id][1]" id="dataCompanyAreaId1" class="level_1" style="width:120px;" ></select>
-							<select name="area[id][2]" id="dataCompanyAreaId2" class="level_2" style="width:120px;"></select>
-							<select name="area[id][3]" id="dataCompanyAreaId3" class="level_3" style="width:120px;"></select>
-						</div>
-						</td>
+            <div id="dataArea">
+              <select name="area[id][1]" id="dataCompanyAreaId1" class="level_1" style="width:120px;" ></select>
+              <select name="area[id][2]" id="dataCompanyAreaId2" class="level_2" style="width:120px;"></select>
+              <select name="area[id][3]" id="dataCompanyAreaId3" class="level_3" style="width:120px;"></select>
+            </div>
+            </td>
                       </tr>
                       <tr>
                         <th><font color="#FF6600">*</font>{lang job_address}</th>
@@ -82,16 +85,16 @@ var can_also_enter = "{lang can_also_enter}";
                       <tr>
                         <th><font color="#FF6600">*</font>{lang category}{lang colon}</th>
                         <td class="tdright">
-						<select name="job[jobtype_id]" id="JobtypeId">
+            <select name="job[jobtype_id]" id="JobtypeId">
         <option value="0">{lang select_category}</option>
         {$JobtypeOptions}
         </select>
-						</td>
+            </td>
                       </tr>
-					   <th>{lang job_nature}</th>
+             <th>{lang job_nature}</th>
                         <td class="tdright"><select name="job[worktype_id]">
-						{html_options options=$Worktype selected=$item.worktype_id}
-						</select></td>
+            {html_options options=$Worktype selected=$item.worktype_id}
+            </select></td>
                       </tr>
                       <tr>
                         <th>{lang due_date_n}</th>
@@ -104,10 +107,14 @@ var can_also_enter = "{lang can_also_enter}";
                       </tr>
                        <tr>
                         <th class="circle_bottomleft"></th>
-                        <td class="circle_bottomright"><input name="save" type="submit" id="save" value="{lang save}"></td>
+                        <td class="circle_bottomright"><input name="save" type="submit" class="btn primary" id="save" value="{lang save}"></td>
                       </tr>
             </table>
-	</form>
+  </form>
+       </div>
+     </div>
+    
+</div>
 </div>
 </div>
 <script>

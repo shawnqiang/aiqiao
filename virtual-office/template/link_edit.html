@@ -1,21 +1,22 @@
 <!--{assign var="page_title" value="`$_friendlink`"}-->
 <!--{include file="header.html"}-->
-<div class="wrap clearfix">
-    <div class="sidebar">
-       <div class="sidebar_menu">
+<div id="main" class="container">
+    <div class="row">
+       <div class="span4 side-bar">
          <!--{include file="menu.html"}-->
        </div>
-    </div>
-     <div class="main_content">
-     <div class="blank"></div>
-	 <div class="offer_banner"><img src="images/offer_01.gif" /></div>
-     <div class="offer_info_title"><h2>{$page_title}</h2></div>
-      <div class="tip_title">{lang changes_our}{lang friendlink}{lang colon}</div>
-        
-	  <form name="linkeditfrm" method="post" action="{$smarty.env.PHP_SELF}">
-	  <!-- {formhash} -->
-	  <input type="hidden" name="id" value="{$item.id}"/>
-	     <table class="offer_info_content">
+    
+     <div class="span12 main-content">
+     <div class="page-header">
+       <h2>{$page_title}</h2>
+     </div>
+     <div class="mod">
+       <div class="mod-hd"><h2>{lang changes_our}{lang friendlink}{lang colon}</h2></div>
+       <div class="mod-bd">
+         <form name="linkeditfrm" method="post" action="{$smarty.env.PHP_SELF}">
+    <!-- {formhash} -->
+    <input type="hidden" name="id" value="{$item.id}"/>
+       <table class="offer_info_content">
               <tr>
                 <th class="circle_left">{lang show_name}</th>
                  <td class="circle_right">
@@ -33,10 +34,15 @@
               </tr>
               <tr>
                 <th class="circle_bottomleft"></th>
-                <td class="circle_bottomright"><input type="submit" value= "{lang fill_submit}" name="save"></td>
+                <td class="circle_bottomright"><input type="submit" value= "{lang fill_submit}" class="btn primary" name="save"></td>
               </tr>
           </table>
-	  </form>
+    </form>
+
+       </div>
+     </div>
+     
    </div>
+   </div> 
    </div> 
 <!--{include file="footer.html"}-->

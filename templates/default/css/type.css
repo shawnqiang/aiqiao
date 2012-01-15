@@ -3,7 +3,7 @@ a:link,a:visited { color:#333333; text-decoration:none;}
 a:hover,a:active { color: #0688db}
 .underline a:hover {text-decoration:underline;}
 a.btn_free:hover,a:active { color:#000000; }
-.bg_hover:hover {background-color:#f4f8fb;border:2px solid #7cc0e3;margin:-2px;}
+.bg_hover:hover {background-color:#f7f7f7;}
 .title_color,.company_login_color { }
 .wrapper .title_link a { color:#0099ff}
 .wrapper .title_link { color:#666666}
@@ -23,7 +23,6 @@ a.btn_free:hover,a:active { color:#000000; }
 .corner_content_s7 li a { color:#0000ff}
 .subnav a { color:#929191; font-weight:normal;}
 .substation h3 a {color:#2376b3; }
-#nav_inner ul li a { color:#fff; }
 .tag a span { margin-left:15px; display:inline-block; color:#0066ff; cursor:pointer}
 .tips span a:hover {color: #0688db}
 /*font color*/
@@ -97,9 +96,6 @@ a.btn_free:hover,a:active { color:#000000; }
 
 .help_lcont h2{ font-size:14px; color:#4283BA; padding:15px;}
 
-.lookcompany,.recommendcompany{width:188px;border:1px solid #b8e3ff;height:auto;margin-top:6px;}
-.companylistsee{width:188px;border:1px solid #b8e3ff;height:auto;margin-top:6px;}
-.buymessage,.recommendcompany{width:188px;border:1px solid #b8e3ff;height:auto;margin-top:6px;}
 
 .letter_product_content th {background:#d1ecfd; width:20px; padding:10px; font-size:14px; font-weight:bold;}
 

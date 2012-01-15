@@ -1,17 +1,22 @@
 <!--{assign var="page_title" value="`$_brands`"}-->
 <!--{include file="header.html"}-->
-<div class="wrap clearfix">
-    <div class="sidebar">
-       <div class="sidebar_menu">
+<div id="main" class="container">
+    <div class="row">
+       <div class="span4 side-bar">
          <!--{include file="menu.html"}-->
        </div>
-    </div>
-     <div class="main_content">
-     <div class="blank"></div>
-	 <div class="offer_banner"><img src="images/offer_01.gif" /></div>
-     <div class="offer_info_title"><h2>{$page_title}</h2></div>
-      <div class="hint"><span class="btn_hint"><a href="brand.php?do=edit" class="btn_publish">{lang click_add}</a></span>{lang add_your_brands}</div>               
-     <table class="album" >
+    
+     <div class="span12 main-content">
+      <div class="page-header">
+        <h2 class="pull-left">{$page_title}</h2>
+        <p class="pull-right"><a href="brand.php?do=edit" class="btn">{lang click_add}</a></p>
+      </div>
+      <div class="mod">
+        <div class="mod-hd">
+          <h2>{lang add_your_brands}</h2>
+        </div>
+        <div class="mod-bd">
+          <table class="album" >
           <!--{foreach from=$Items item=item}-->
           <tr bgcolor="{cycle values="#CCFFCC,#ffffff"}">
           <th><a href="brand.php?do=edit&id={$item.id}" style="text-decoration: underline;"><img style="padding: 6px; border: 1px solid #CCC; background-color: #FFF;" src="{$item.image}" alt="" border="0" width="80" height="80" /></a></th>
@@ -28,12 +33,14 @@
           <!--{foreachelse}-->
           <tr><td colspan="2"><div align="center">{lang no_datas_now}</div></td></tr>
           <!--{/foreach}-->
-      </table>				
-     <table class="room_pages">
-          <tr>
-            <td>{$ByPages}</td>
-          </tr>
-     </table> 
+          </table>  
+        </div>
+      </div>
+      <div class="">
+        {$ByPages}
+      </div>
+     
+</div>
 </div>
 </div>
 <!--{include file="footer.html"}-->

@@ -5,110 +5,126 @@
 </style>
 <script src="scripts/jquery.tools.js"></script>
 <script src="scripts/jquery.hover.js"></script>
-<div class="blank6"></div>
-<div class="fullsrceen_ad"><!-- {pb:ads typeid=2} --><span>{$ads.link}</span><!-- {/pb:ads} --></div>
-<div class="blank6"></div>
-<div class="container clearfix">
-   <div class="main_left_w220">
-		<div class="cornerbox">
-			<div class="title_bar_s1">
-				<span class="title_top_s6"><span></span></span>
-				<h3>{lang product_category}</h3>
-			</div>
-			<div class="price_menu product_menu_list">
-				<ul id="topnav">
-				<!-- {get from="type" name="productcategory" var="Industry"} -->
-				<!--{foreach from=`$Industry` item=industry_item key=industry_key}-->
-					<li>
-						<a href="{the_url module=search do=product industryid=`$industry_key`}">{$industry_item.title}</a>
-						{if $industry_item.child}
-						<div class="sub">
-						   <div class="row clearfix">
-							 <ul>
-							 <!--{foreach from=$industry_item.child item=item_child}-->
-								<li><a href="{the_url module=search do=product industryid=`$item_child.id`}">{$item_child.title}</a></li>
-							  <!--{/foreach}-->
-							 </ul> 
-							</div>
-						</div>
-						{/if}
-					</li>
-				  <!--{/foreach}-->
-				</ul>
-                <div class="blank6"></div>
-			</div>
-			<!--<div class="corner_bottom">
-				<div class="corner_bottom_l"></div>
-				<div class="corner_tottom_r"></div>
-			</div>-->
-		</div>
-      <div class="blank6"></div>
-      <div class="title_bar_s1">
-        <span class="title_top_s1"><span></span></span>
-        <h3>{lang hot_product}</h3>
-      </div>
-	  <div>
-        <ul class="product_sort">
-        <!-- {pb:product type="hot" row=10 titlelen="10" name="item"} -->
-        <li><em>[{$item.hits}]</em>{$item.link}</li>
-        <!-- {/pb:product} -->
-       </ul>
-	  </div>
-      <div class="blank6"></div>
-      <div class="title_bar_s1">
-        <span class="title_top_s1"><span></span></span>
-        <h3>{lang standards}</h3>
-      </div>
-	  <div>
-        <ul class="product_sort">
-        <!-- {standard row=10 name="item"} -->
-        <li>{$item.link}111</li>
-        <!-- {/standard} -->
-       </ul>
-	  </div>
-   </div>
-   <div class="main_right_w730">  
-      <div class="product_reports">
-          <div class="product_reports_img">{pb:ads typeid=4}<!-- This text is replaced by the Flash movie. -->{/pb:ads}</div>
-          <div class="blank6"></div>
-          <div class="base_title">
-          <h2><span class="corner_t_l"></span><span class="corner_t_m title_mouse">{lang category_topics}</span><span class="corner_t_r"></span></h2>
-	     </div>
 
-        <div class="product_reports_content box_bord clearfix">
-         <h3><span class="find_product_blue">{lang maybe_browse_categories}</span>&nbsp;&nbsp;{industry topid=1}<a href="{the_url module=search do=product industryid=`$industry.id` level=`$industry.level`}" title="{$industry.title}">{$industry.title}</a> | {/industry}</h3>
-			<!--{foreach from=$IndustryProducts item=industry_product key=industry_product_key}-->         
-            {if $industry_product.sub}
-            <h2 class="find_product_blue"><span><a href="{the_url module=search do=product industryid=`$industry_product.id`}">{lang more}...</a></span>{$industry_product.name}</h2>
-            <ul>
-              <li>
-               	<ul class="product_reports_list clearfix">
-                <!--{foreach from=$industry_product.sub item=industry_subproduct key=industry_subproduct_key}--> 
-                <li><a href="{the_url id=`$industry_subproduct.id` module='product'}"><img src="{$industry_subproduct.image}" alt="{$industry_subproduct.name}" /></a><span><a href="{the_url id=`$industry_subproduct.id` module='product'}">{$industry_subproduct.name}</span></a></li> 
-                <!--{/foreach}-->
-                </ul>
-              </li>
-            </ul>
-            {/if}
-            <!--{/foreach}-->
-        </div>
-      </div>
-      <div class="find_product_right">
-      <div class="title_bar_s1">
-        <span class="title_top_s1"><span></span></span>
-        <h3>{lang recommended}</h3>
-       </div>
-       <ul class="nominate_content clearfix">
-		{pb:product row=8 type="image,commend" name="item"}
-		<li>
-		 <span class="nominate_img"><a href="{$item.url}"><img src="{$item.src}" width="80" height="80" alt="{$item.name}" /></a></span>
-		 <span class="nominate_text"><p><a href="{$item.url}" title="{$item.name}">{$item.names}</a></p><p title="{$item.companyname}">{$item.companynames}</p></span>
-		</li>
-      {/pb:product}
-    </ul>
-      </div>
-   
-   </div>
+
+<div id="main" class="container">
+	<div class="row">
+		<div class="span4 side-bar">
+			<div class="mod">
+				<div class="mod-hd">
+					<h3>{lang product_category}</h3>
+				</div>
+				<div class="mod-bd">
+					
+					<ul id="topnav" class="info-list">
+						<!-- {get from="type" name="productcategory" var="Industry"} -->
+						<!--{foreach from=`$Industry` item=industry_item key=industry_key}-->
+							<li>
+								<a href="{the_url module=search do=product industryid=`$industry_key`}">{$industry_item.title}</a>
+								{if $industry_item.child}
+								<div class="sub">
+								   <div class="row clearfix">
+									 <ul class="unstyled">
+									 <!--{foreach from=$industry_item.child item=item_child}-->
+										<li><a href="{the_url module=search do=product industryid=`$item_child.id`}">{$item_child.title}</a></li>
+									  <!--{/foreach}-->
+									 </ul> 
+									</div>
+								</div>
+								{/if}
+							</li>
+						<!--{/foreach}-->
+					</ul>
+                
+					
+				</div>
+			</div>	
+
+			
+			<div class="mod">
+				<div class="mod-hd">
+					<h3>{lang standards}</h3>
+				</div>
+				<div class="mod-bd">
+					<ul class="info-list">
+				        <!-- {standard row=10 name="item"} -->
+				        <li>{$item.link}111</li>
+				        <!-- {/standard} -->
+			       	</ul>
+
+				</div>
+
+			</div>	
+		</div>
+
+		<div class="span9 main-content">
+			<div class="product_reports_img">{pb:ads typeid=4}<!-- This text is replaced by the Flash movie. -->{/pb:ads}</div>
+
+			<div class="mod">
+				<div class="mod-hd">
+					<h2><span class="itle_mouse">{lang category_topics}</span></h2>
+				</div>
+				<div class="mod-bd">
+					<strong>{lang maybe_browse_categories}</strong>&nbsp;&nbsp;{industry topid=1}<a href="{the_url module=search do=product industryid=`$industry.id` level=`$industry.level`}" title="{$industry.title}">{$industry.title}</a> | {/industry}
+				</div>
+			</div>
+			<div class="base_title">
+         	 
+	     	</div>
+
+	       
+	         	
+				<!--{foreach from=$IndustryProducts item=industry_product key=industry_product_key}--> 
+				<div class="mod">      
+	            {if $industry_product.sub}
+	            <div class="mod-hd"><h2><span class="title_more"><a href="{the_url module=search do=product industryid=`$industry_product.id`}">{lang more}...</a></span>{$industry_product.name}</h2></div>
+	            <div class="mod-bd">
+	            	<ul class="info-list media-list">
+	                <!--{foreach from=$industry_product.sub item=industry_subproduct key=industry_subproduct_key}--> 
+	                <li class="item-quarter">
+	                <a class="image" href="{the_url id=`$industry_subproduct.id` module='product'}"><img src="{$industry_subproduct.image}" alt="{$industry_subproduct.name}" /></a>
+	                <p class="title"><a href="{the_url id=`$industry_subproduct.id` module='product'}">{$industry_subproduct.name}</a></p></li> 
+	                <!--{/foreach}-->
+	            	</ul>
+	            </div>
+	            {/if}
+	            </div>  
+	            <!--{/foreach}-->
+	        
+		</div>
+
+		<div class="span4 second-bar">
+			<div class="mod">
+				<div class="mod-hd">
+					 <h3>{lang recommended}</h3>
+				</div>
+				<div class="mod-bd">
+					<ul class="nominate_content clearfix">
+						{pb:product row=8 type="image,commend" name="item"}
+						<li>
+						 <span class="nominate_img"><a href="{$item.url}"><img src="{$item.src}" width="80" height="80" alt="{$item.name}" /></a></span>
+						 <span class="nominate_text"><p><a href="{$item.url}" title="{$item.name}">{$item.names}</a></p><p title="{$item.companyname}">{$item.companynames}</p></span>
+						</li>
+				      	{/pb:product}
+				    </ul>
+				</div>
+			</div>	
+			<div class="mod">
+				<div class="mod-hd">
+					<h3>{lang hot_product}</h3>
+				</div>
+				<div class="mod-bd">
+					<ul class="info-list">
+				        <!-- {pb:product type="hot" row=10 titlelen="10" name="item"} -->
+				        <li><em>[{$item.hits}]</em>{$item.link}</li>
+				        <!-- {/pb:product} -->
+				    </ul>
+
+				</div>
+
+			</div>	
+		</div>
+	</div>	
 </div>
 <!--{literal}-->
 <script type="text/javascript">

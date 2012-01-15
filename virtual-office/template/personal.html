@@ -1,20 +1,24 @@
 <!--{assign var="page_title" value="`$_profile`"}-->
 <!--{include file="header.html"}-->
-<div class="wrap clearfix">
-    <div class="sidebar">
-       <div class="sidebar_menu">
+<div id="main" class="container">
+    <div class="row">
+       <div class="span4 side-bar">
          <!--{include file="menu.html"}-->
        </div>
-    </div>
-     <div class="main_content">
-     <div class="blank"></div>
-	 <div class="offer_banner"><img src="images/offer_01.gif" /></div>
-     <div class="offer_info_title"><h2>{$page_title}</h2></div>
-     <div class="hint">{lang must_input_with_star}</div>
-	  <form name="companyeditfrm" id="Frm1" method="post" enctype="multipart/form-data">
-	  <!-- {formhash} -->
+    
+     <div class="span12 main-content">
+     <div class="page-header">
+       <h2>{$page_title}</h2>
+     </div>
+     <div class="mod">
+       <div class="mod-hd">
+         <div class="hint">{lang must_input_with_star}</div>
+       </div>
+       <div class="mod-bd">
+         <form name="companyeditfrm" id="Frm1" method="post" enctype="multipart/form-data">
+    <!-- {formhash} -->
 
-	       <table class="offer_info_content">
+         <table class="offer_info_content">
                       <tr>
                         <th class="circle_left"><font color="#FF6600">*</font>{lang vorname}</th>
                         <td class="circle_right"><input name="memberfield[first_name]" type="text" id="memberlastname" value="{$item.first_name}" size="5">&nbsp;<input name="memberfield[last_name]" type="text" id="memberlastname" value="{$item.last_name}" class="required" size="10"></td>
@@ -27,12 +31,12 @@
                       <tr>
                         <th>{lang provinces_city}</th>
                         <td>
-						<div id="dataArea">
-							<select name="area[id][1]" id="dataMemberfieldAreaId1" class="level_1" style="width:120px;" ></select>
-							<select name="area[id][2]" id="dataMemberfieldAreaId2" class="level_2" style="width:120px;"></select>
-							<select name="area[id][3]" id="dataMemberfieldAreaId3" class="level_3" style="width:120px;"></select>
-						</div>
-						</td>
+            <div id="dataArea">
+              <select name="area[id][1]" id="dataMemberfieldAreaId1" class="level_1" style="width:120px;" ></select>
+              <select name="area[id][2]" id="dataMemberfieldAreaId2" class="level_2" style="width:120px;"></select>
+              <select name="area[id][3]" id="dataMemberfieldAreaId3" class="level_3" style="width:120px;"></select>
+            </div>
+            </td>
                       </tr>
                       <tr>
                         <th><font color="#FF6600">*</font>{lang address}</th>
@@ -89,34 +93,40 @@
                       <tr>
                         <th>{lang highest_education}</th>
                         <td>
-						<select name="personal[max_education]" id="MaxEducation">
-						<!--{foreach from=$Educations name=Educations item=item1 key=key1}-->
-						<option value="{$key1}" {if $max_education==$key1}selected{/if}>{$item1}</option>
-						<!--{/foreach}-->
-						</select>
-						</td>
+            <select name="personal[max_education]" id="MaxEducation">
+            <!--{foreach from=$Educations name=Educations item=item1 key=key1}-->
+            <option value="{$key1}" {if $max_education==$key1}selected{/if}>{$item1}</option>
+            <!--{/foreach}-->
+            </select>
+            </td>
                       </tr>
                       <tr>
                         <th>{lang personal_picture}</th>
                         <td><input type="file" name="photo" id="MemberPhoto">
-						<!--{if $item.photo}--><br /><img src="{$item.image}" /><!--{/if}-->
-						</td>
+            <!--{if $item.photo}--><br /><img src="{$item.image}" /><!--{/if}-->
+            </td>
                       </tr>
                        <tr>
                         <th>{lang login_jump}</th>
                         <td><select name="member[office_redirect]" id="MemberOfficeRedirect">
-							<!--{foreach from=$OfficeRedirects name=office_redirect key=key1 item=item1}-->
-							<option value="{$key1}" {if $key1==$item.office_redirect}selected{/if}>{$item1}</option>
-							<!--{/foreach}-->
+              <!--{foreach from=$OfficeRedirects name=office_redirect key=key1 item=item1}-->
+              <option value="{$key1}" {if $key1==$item.office_redirect}selected{/if}>{$item1}</option>
+              <!--{/foreach}-->
                         </select></td>
                       </tr>
                       <tr>
-						<th class="circle_bottomleft"></th>
-                        <td class="circle_bottomright"><input name="save" type="submit" id="save" value="{lang save}"></td>
+            <th class="circle_bottomleft"></th>
+                        <td class="circle_bottomright"><input name="save" type="submit" id="save" class="btn primary" value="{lang save}"></td>
                       </tr>
                  </table>
-	</form>
+  </form>
+       </div>
+     </div>
+   
+     
+	  
   </div>
+ </div>
  </div>
 <script language="javascript">
 var enter_name = "{lang enter_name}";

@@ -16,19 +16,22 @@ clipboardData.setData('text',(str.text));
 }
 </script>
 <!--{/literal}-->
-<div class="wrap clearfix">
-    <div class="sidebar">
-       <div class="sidebar_menu">
+<div id="main" class="container">
+    <div class="row">
+       <div class="span4 side-bar">
          <!--{include file="menu.html"}-->
        </div>
-    </div>
-     <div class="main_content">
-     <div class="blank"></div>
-	 <div class="offer_banner"><img src="images/offer_01.gif" /></div>
-     <div class="offer_info_title"><h2>{$page_title}</h2></div>
-      <div class="hint">{lang must_input_with_star}</div>  
-	
-        <form name="TradeFrm" enctype="multipart/form-data" method="post" action="{$smarty.server.PHPSELF}">
+   
+     <div class="span12 main-content">
+     <div class="page-header">
+       <h2>{$page_title}</h2>
+     </div>
+     <div class="mod">
+       <div class="mod-hd">
+          <div class="hint">{lang must_input_with_star}</div>  
+       </div>
+       <div class="mod-bd">
+         <form name="TradeFrm" enctype="multipart/form-data" method="post" action="{$smarty.server.PHPSELF}">
         <!-- {formhash} -->
          <table class="card" >
               <tr>
@@ -80,31 +83,37 @@ clipboardData.setData('text',(str.text));
                 <tr>
                 <td colspan="2" align="right">
                 <div align="center">
-                  <input name="save" type="submit" id="save" value="{lang saving}">
+                  <input name="save" type="submit" id="save" class="btn primary" value="{lang saving}">
                 </div></td>
               </tr>                          
-			</table>
-			<table class="card" >
+      </table>
+      <table class="card" >
              <tr>
                 <th>{lang flash_card_code}</th>
                 <td style="width:370px;"><textarea name="flash_card" style="width:350px;overflow-y:visible;height:150px;font-family:Arial"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"  codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" id="FlashVars" width="460" height="250">  
-				<param name="movie" value="{$SiteUrl}images/cards/default.swf?instanceid={$item.id}">  
-				<param name="allowScriptAccess" value="sameDomain" />
-				<param name="FlashVars" value="" />
-				<param name="quality" value="high">   
-				<param name="bgcolor" value="#FFFFFF">
-				<!--[if !IE]> <-->  
-				<embed src="{$SiteUrl}images/cards/default.swf?instanceid={$item.id}" quality="high" bgcolor="#ffffff" width="550" height="400" name="FlashVars" align="middle" allowScriptAccess="sameDomain" FlashVars="foo=100000" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
-				FAIL (the browser should render some flash content, not this).  
-				</object>  
-				<!--> <![endif]-->  
-				</object></textarea></td>
+        <param name="movie" value="{$SiteUrl}images/cards/default.swf?instanceid={$item.id}">  
+        <param name="allowScriptAccess" value="sameDomain" />
+        <param name="FlashVars" value="" />
+        <param name="quality" value="high">   
+        <param name="bgcolor" value="#FFFFFF">
+        <!--[if !IE]> <-->  
+        <embed src="{$SiteUrl}images/cards/default.swf?instanceid={$item.id}" quality="high" bgcolor="#ffffff" width="550" height="400" name="FlashVars" align="middle" allowScriptAccess="sameDomain" FlashVars="foo=100000" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+        FAIL (the browser should render some flash content, not this).  
+        </object>  
+        <!--> <![endif]-->  
+        </object></textarea></td>
                 <td><a href="javascript:clip('TradeFrm.flash_card');" title="{lang copy_to_clipboard}">{lang copy_to_clipboard}</a></td>
                 <td>&nbsp;</td>
            </tr>                          
         </table>
         </form>
+       </div>
+     </div>
+       
+	
+        
  
 </div>
+ </div>
 </div>
 <!--{include file="footer.html"}-->

@@ -1,14 +1,14 @@
 <!--{include file="header.html" PageTitle="`$_space_album`" cur="space_album"}-->
-<div class="wrapper">
-	<!--{include file="banner.html"}-->
-	<div class="content">
-		<!--{include file="leftbar.html"}-->
-			<div class="rightbarcontact">
-					<div class="playercontact">
-					<div class="playerheadcontact"><span class="playlistcontact">{lang space_album}</span><span class="player_head_concontact"></span><img src="{$SpaceUrl}images/contactus_13.jpg" /></div>
-					<div class="clear"></div>
-					<div class="player_concontact clearfix">
-					<!--{if $Items}-->
+<!--{include file="banner.html"}-->
+<div id="main" class="container">
+	<div class="row">
+			<div class="span12">
+				<div class="mod">
+					<div class="mod-hd">
+						<h2>{lang space_album}</h2>
+					</div>
+					<div class="mod-bd">
+						<!--{if $Items}-->
 						<ul>
 						<!--{foreach from=$Items item=item}-->
 							<li><a href="{$item.middleimage}" rel="lightbox"><img src="{$item.image}" width="80" height="80" alt="{$item.title}" border="0"></a><p>{$item.title|truncate:20}</p></li>
@@ -16,10 +16,13 @@
 						</ul>
 						<div class="clear"></div>
 						<p class="page">{$ByPages}</p>
-					<!--{/if}-->
+						<!--{/if}-->
 					</div>
 				</div>
+					
 			</div>
-			<div class="clear"></div>
-		</div>
+			<!--{include file="sidebar.html"}-->
+	</div>
+	
+</div>
 <!--{include file="footer.html"}-->

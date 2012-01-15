@@ -1,4 +1,35 @@
-	<div class="head">
+	<!-- Topbar
+    ================================================== -->
+    <div id="header" class="space-header">
+      <div class="container">
+        
+          <a class="brand pull-left" href="#" >{$COMPANY.name}</a>
+         
+       	  <div class="header-info">
+       	  		
+       	  		<ul>
+       	  			<li><a href="javascript:;" onclick="javascript:$('#AddFriendFrm').submit();">{lang add_friend}</a></li>
+       	  			<li><a href="{$Menus.feedback}">{lang feed_back_to_company}</a></li>
+       	  		</ul>
+       	  </div>
+      </div>
+    </div>
+    <div id="main_nav" class="space-nav">
+    	<div id="nav_inner" class="container">
+    	 <ul class="nav">
+            <li id="space_index"><a href="{$Menus.index}">{lang home_page}</a></li>
+			<li id="space_intro"><a href="{$Menus.intro}">{lang space_intro}</a></li>
+			<li id="space_product"><a href="{$Menus.product}">{lang product_show}</a></li>
+			<li id="space_offer"><a href="{$Menus.offer}">{lang offer}</a></li>
+			<li id="space_news"><a href="{$Menus.news}">{lang space_news}</a></li>
+			<li id="space_album"><a href="{$Menus.album}">{lang space_album}</a></li>
+			<li id="space_hr"><a href="{$Menus.job}">{lang space_hr}</a></li>
+			<li id="space_contact"><a href="{$Menus.contact}">{lang contact_us}</a></li>
+          </ul>
+        </div>
+    </div>
+
+	<!-- <div class="head">
 		<ul class="list1">
 			<li class="company"><a href="javascript:;" onclick="javascript:$('#AddFriendFrm').submit();">{lang add_friend}</a></li>
 			<li class="message"><a href="{$Menus.feedback}">{lang feed_back_to_company}</a></li>
@@ -20,7 +51,7 @@
 		<div class="imgabsolute"><h1>{$COMPANY.name}{if $COMPANY.english_name}({$COMPANY.english_name}){/if}</h1></div>
 		<div class="imgabsolute2"><img src="{$GROUP.image}" alt="{$GROUP.name}" /></div>
 		<div id="tips">{lang current_position}<a href="{$WebRootUrl}">{$site_name}</a>&raquo;<a href="{$Menus.index}">{$COMPANY.name}</a></div>
-	</div>
+	</div> -->
 	<form name="add_friend_frm" id="AddFriendFrm" action="{$WebRootUrl}virtual-office/link.php" method="post" target="_blank">
 	<!-- {formhash} -->
 	<input type="hidden" name="save" value="save">

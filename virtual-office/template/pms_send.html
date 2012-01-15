@@ -23,19 +23,26 @@ jQuery(document).ready(function($) {
 })
 </script>
 <!--{/literal}-->
-<div class="wrap clearfix">
-    <div class="sidebar">
-       <div class="sidebar_menu">
+<div id="main" class="container">
+  <div class="row">
+    
+  
+    <div class="span4 side-bar">
+       
          <!--{include file="menu.html"}-->
-       </div>
+       
     </div>
-     <div class="main_content">
-     <div class="blank"></div>
-	 <div class="offer_banner"><img src="images/offer_01.gif" /></div>
-     <div class="offer_info_title"><h2>{$page_title}</h2></div>
-     <div class="hint">{lang must_input_with_star}</div>
-	  <form name="sendmsgfrm" id="Frm1" action="pms.php" method="post">
-	  <!-- {formhash} -->
+     <div class="span12 main-content">
+        <div class="page-header">
+          <h2>{$page_title}</h2>
+        </div>
+        <div class="mod">
+          <div class="mod-hd">
+            <div class="hint">{lang must_input_with_star}</div>
+          </div>
+          <div class="mod-bd">
+            <form name="sendmsgfrm" id="Frm1" action="pms.php" method="post">
+    <!-- {formhash} -->
        <table class="offer_info_content">
           <tr>
             <th class="circle_left"><font color="#FF6600">*</font>{lang send_to}</th>
@@ -51,11 +58,17 @@ jQuery(document).ready(function($) {
           </tr>
           <tr>
              <th class="circle_bottomleft"></th>
-             <td class="circle_bottomright"><input name="send" type=submit id="Send" value=" {lang send} ">&nbsp;&nbsp;<input name=reset type=reset id="reset" value=" {lang cancel} "></td>
+             <td class="circle_bottomright"><input name="send" type="submit" class="btn primary" id="Send" value=" {lang send} ">&nbsp;&nbsp;<input name=reset type=reset id="reset" class="btn" value=" {lang cancel} "></td>
           </tr>
            
         </table>
-	  </form>
+    </form>
+          </div>
+        </div>
+     
+     
+	  
+ </div>
  </div>
  </div> 
 <!--{include file="footer.html"}-->

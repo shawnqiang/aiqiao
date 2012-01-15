@@ -38,23 +38,27 @@ jQuery(document).ready(function($) {
 </script>
 <!--{/literal}-->
 <!--{editor type="tiny_mce"}-->
-<div class="wrap clearfix">
-    <div class="sidebar">
-       <div class="sidebar_menu">
+<div id="main" class="container">
+    <div class="row">
+       <div class="span4 side-bar">
          <!--{include file="menu.html"}-->
        </div>
-    </div>
-     <div class="main_content">
-     <div class="blank"></div>
-	 <div class="offer_banner"><img src="images/offer_01.gif" /></div>
-     <div class="offer_info_title"><h2>{$page_title}</h2></div>
-     <div class="hint">{lang must_input_with_star}</div>
-	  {$Errors}
-	  <form name="company_frm" id="CompanyFrm" action="{$smarty.server.PHP_SELF}" method="post" enctype="multipart/form-data">
-		 <input type="hidden" name="id" value="{$item.id}">        
-		 <input type="hidden" name="data[companyfield][company_id]" value="{$item.id}">        
-		 <!-- {formhash} -->        
-		 <input type="hidden" name="do" id="Do" value="save" />
+    
+     <div class="span12 main-content">
+     <div class="page-header">
+       <h2>{$page_title}</h2>
+     </div>
+	   <div class="mod">
+      <div class="mod-hd">
+        <div class="hint">{lang must_input_with_star}</div>
+      </div> 
+      <div class="mod-bd">
+        {$Errors}
+    <form name="company_frm" id="CompanyFrm" action="{$smarty.server.PHP_SELF}" method="post" enctype="multipart/form-data">
+     <input type="hidden" name="id" value="{$item.id}">        
+     <input type="hidden" name="data[companyfield][company_id]" value="{$item.id}">        
+     <!-- {formhash} -->        
+     <input type="hidden" name="do" id="Do" value="save" />
           <table class="offer_info_content">
               <tr>
                 <th class="circle_left"><font class="red">*</font> {lang company_name_n}</th>
@@ -97,7 +101,7 @@ jQuery(document).ready(function($) {
               </tr>
               <tr>
                 <th>{lang location}</th>
-                <td>						
+                <td>            
                 <div id="dataArea">
                     <select name="area[id][1]" id="dataCompanyAreaId1" class="level_1" style="width:120px;" ></select>
                     <select name="area[id][2]" id="dataCompanyAreaId2" class="level_2" style="width:120px;"></select>
@@ -216,11 +220,17 @@ jQuery(document).ready(function($) {
               </tr>
               <tr>
                <th class="circle_bottomleft"></th>
-               <td class="circle_bottomright"><input name="company_edit" type="submit" id="CompanyEdit" value="{lang confirm_submit}"></td>
+               <td class="circle_bottomright"><input name="company_edit" class="btn primary" type="submit" id="CompanyEdit" value="{lang confirm_submit}"></td>
               </tr>
           </table>
-	</form>
+  </form>
+      </div>
+     </div>
+     
+     
+	  
 
+</div>
 </div>
 </div>
 <script>

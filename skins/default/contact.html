@@ -1,14 +1,15 @@
 <!--{include file="header.html" PageTitle="`$_contact_us`" cur="space_contact"}-->
 <!-- {get_cache var="options" name="typeoption"} -->
-<div class="wrapper">
-	<!--{include file="banner.html"}-->
-	<div class="content">
-	<!--{include file="leftbar.html"}-->
-	<div class="rightbarcontact">
-			<div class="playercontact">
-			<div class="playerheadcontact"><span class="playlistcontact">{lang contact_us}</span><span class="player_head_concontact"></span><img src="{$SpaceUrl}images/contactus_13.jpg" /></div>
-			<div class="clear"></div>
-			<div class="contact_list">
+<!--{include file="banner.html"}-->
+<div id="main" class="container">
+	<div class="row">
+	
+	<div class="span12">
+		<div class="mod">
+			<div class="mod-hd">
+				<h2>{lang contact_us}</h2>
+			</div>
+			<div class="mod-bd">
 				<p><span>{lang company_name}{lang colon}</span>{$COMPANY.name}</p>
 				<p><span>{lang contact_people}</span>{$COMPANY.link_man}</p>
 				<p><span>{lang phone}</span>{$COMPANY.tel}</p>
@@ -20,6 +21,8 @@
 			</div>
 		</div>
 	</div>
-	<div class="clear"></div>
+	<!--{include file="sidebar.html"}-->
+	</div>
+	
 </div>
 <!--{include file="footer.html"}-->

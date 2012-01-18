@@ -1,9 +1,9 @@
 <!--{include file="header.html" PageTitle="`$_feed_back_to_company`" cur="space_index"}-->
 <!--{include file="banner.html"}-->
-<div id="main" class="container">
+<div id="content" class="container">
 	<div class="row">
 		
-		<div class="span16">
+		<div class="span12">
 			<div class="mod">
 				<div class="mod-hd">
 					<h2>{lang feed_back_to_company}</h2>
@@ -11,23 +11,25 @@
 				<div class="mod-bd">
 					<form name="feedfrm" action="" method="post">
 						<input type="hidden" name="companyid" value="{$COMPANY.id}">
-						  <label class="messagecon">{lang leave_content}</label>
-						  <label>
-						  <textarea name="feed[content]" class="textarea"><!--{if $pb_userid==""}-->{lang pls_login_first}...<!--{/if}--></textarea>
-						  </label>
-						  <div class="clear"></div>
-						  <label>
-						  <input type="submit" name="save" value="{lang submit}"  class="massage_button1" {if $pb_userid==""}disabled="disabled"{/if}/>
-						  </label>
-						  <label>
-						  <input type="submit" name="reset" value="{lang reset}"  class="massage_button"/>
-						  </label>
+						<div class="clearfix">
+							<label for="">{lang leave_content}</label>
+							<div class="input">
+								<textarea name="feed[content]" class="span8" rows="10"><!--{if $pb_userid==""}-->{lang pls_login_first}...<!--{/if}--></textarea>
+							</div>
+
+						</div>
+						<div class="actions">
+							 <input type="submit" name="save" value="{lang submit}"  class="btn primary" {if $pb_userid==""}disabled="disabled"{/if}/>
+							 <input type="submit" name="reset" value="{lang reset}"  class="btn"/>
+						</div>
+						 
 					</form>
 				</div>
 			</div>
 					
-		<!--{include file="sidebar.html"}-->	
 		</div>
+		<!--{include file="sidebar.html"}-->	
 	
+	</div>
 </div>
 <!--{include file="footer.html"}-->

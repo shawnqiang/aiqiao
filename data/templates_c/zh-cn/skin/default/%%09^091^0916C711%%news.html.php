@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-01-13 12:20:00
+<?php /* Smarty version 2.6.18, created on 2012-01-18 11:27:20
          compiled from news.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('block', 'companynews', 'news.html', 12, false),array('modifier', 'truncate', 'news.html', 14, false),array('function', 'pager', 'news.html', 16, false),)), $this); ?>
@@ -12,7 +12,7 @@ $this->_smarty_include(array('smarty_include_tpl_file' => "banner.html", 'smarty
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
-<div id="main" class="container">
+<div id="content" class="container">
 	<div class="row">
 		
 			<div class="span12">

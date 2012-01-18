@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.18, created on 2012-01-12 15:31:04
+<?php /* Smarty version 2.6.18, created on 2012-01-18 12:19:38
          compiled from index.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('modifier', 'truncate', 'index.html', 10, false),array('block', 'product', 'index.html', 26, false),array('function', 'the_url', 'index.html', 28, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'truncate', 'index.html', 14, false),array('block', 'product', 'index.html', 30, false),array('function', 'the_url', 'index.html', 32, false),)), $this); ?>
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => "header.html", 'smarty_include_vars' => array('PageTitle' => ($this->_tpl_vars['_home_page']),'cur' => 'space_index')));
 $this->_tpl_vars = $_smarty_tpl_vars;
@@ -12,23 +12,27 @@ $this->_smarty_include(array('smarty_include_tpl_file' => "banner.html", 'smarty
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
-<div id="main" class="container">
+<div id="content" class="container">
 	
 	
 	<div class="mod welcome">
-		<img src="<?php echo $this->_tpl_vars['COMPANY']['logo']; ?>
+		<div class="span12 pull-left">
+			<img height="240px" class="branding" src="<?php echo $this->_tpl_vars['COMPANY']['logo']; ?>
 "/>
-		<div class="info">
-			<p><?php echo $this->_tpl_vars['_you_are_welcome']; ?>
+		</div>
+		
+		<div class="companyInfo span4 pull-right">
+			<div>
+			<h1><?php echo $this->_tpl_vars['_you_are_welcome']; ?>
 <?php echo $this->_tpl_vars['COMPANY']['name']; ?>
-</p>
+</h1>
 			<p><?php echo ((is_array($_tmp=$this->_tpl_vars['COMPANY']['description'])) ? $this->_run_mod_handler('truncate', true, $_tmp, 300) : smarty_modifier_truncate($_tmp, 300)); ?>
 </p>
 			<p><a title="<?php echo $this->_tpl_vars['_more_company_info']; ?>
 " href="<?php echo $this->_tpl_vars['Menus']['intro']; ?>
 "><?php echo $this->_tpl_vars['_more_company_info']; ?>
 >></a></p>
-			<div class="semibg"></div>
+			</div>
 		</div>
 		
 				
@@ -45,7 +49,7 @@ unset($_smarty_tpl_vars);
 				</div>
 				<div class="mod-bd">
 					<ul class="media-items-grid">
-						<?php $this->_tag_stack[] = array('product', array('name' => 'item','companyid' => ($this->_tpl_vars['COMPANY']['id']),'memberid' => ($this->_tpl_vars['MEMBER']['id']),'row' => 12)); $_block_repeat=true;smarty_block_product($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>
+						<?php $this->_tag_stack[] = array('product', array('name' => 'item','companyid' => ($this->_tpl_vars['COMPANY']['id']),'memberid' => ($this->_tpl_vars['MEMBER']['id']),'row' => 15)); $_block_repeat=true;smarty_block_product($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>
 						<li class="media-item">
 						<a class="image" href="<?php echo smarty_function_the_url(array('module' => 'product','id' => ($this->_tpl_vars['item']['id'])), $this);?>
 " target="_blank"><img src="<?php echo $this->_tpl_vars['WebRootUrl']; ?>

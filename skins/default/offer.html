@@ -1,6 +1,6 @@
 <!--{include file="header.html" PageTitle="`$_space_offer`" cur="space_offer"}-->
 <!--{include file="banner.html"}-->
-<div id="main" class="container">
+<div id="content" class="container">
 	<div class="row">
 	
 		<div class="span12">
@@ -9,9 +9,10 @@
 					<h2>{lang space_offer}</h2>
 				</div>
 				<div class="mod-bd">
-					<ul>
-					<!--{pb:offer name="item" companyid=`$COMPANY.id` row=12}-->
-						<li><a href="{$WebRootUrl}{$item.url}" target="_blank"><img src="{$item.thumb}" width="80" height="80" alt="{$item.title}"></a><p>{$item.title|truncate:20}</p></li>
+					<ul class="media-items-grid">
+					<!--{pb:offer name="item" companyid=`$COMPANY.id` row=15}-->
+						<li class="media-item">
+						<a class="image" href="{$WebRootUrl}{$item.url}" target="_blank"><img src="{$item.thumb}"  alt="{$item.title}"></a><p class="name">{$item.title|truncate:20}</p></li>
 					<!--{/pb:offer}-->				
 					</ul>
 					

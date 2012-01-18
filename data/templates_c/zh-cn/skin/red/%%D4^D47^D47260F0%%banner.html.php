@@ -1,17 +1,12 @@
-<?php /* Smarty version 2.6.18, created on 2012-01-12 14:50:10
+<?php /* Smarty version 2.6.18, created on 2012-01-18 12:38:58
          compiled from banner.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('modifier', 'default', 'banner.html', 38, false),array('function', 'formhash', 'banner.html', 56, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'default', 'banner.html', 35, false),array('function', 'formhash', 'banner.html', 53, false),)), $this); ?>
 	<!-- Topbar
     ================================================== -->
     <div id="header" class="space-header">
       <div class="container">
-        
-          <a class="brand pull-left" href="#" ><?php echo $this->_tpl_vars['COMPANY']['name']; ?>
-</a>
-         
-       	  <div class="header-info">
-       	  		
+       	  <div class="shortcuts">
        	  		<ul>
        	  			<li><a href="javascript:;" onclick="javascript:$('#AddFriendFrm').submit();"><?php echo $this->_tpl_vars['_add_friend']; ?>
 </a></li>
@@ -22,8 +17,10 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'default', '
        	  </div>
       </div>
     </div>
-    <div id="mainNav" class="space-nav">
-    	<div class="container">
+    <div id="main_nav" class="space-nav">
+    	<div id="nav_inner" class="container">
+    	 <a class="brand pull-left" href="#" ><?php echo $this->_tpl_vars['COMPANY']['name']; ?>
+</a>
     	 <ul class="nav">
             <li id="space_index"><a href="<?php echo $this->_tpl_vars['Menus']['index']; ?>
 "><?php echo $this->_tpl_vars['_home_page']; ?>

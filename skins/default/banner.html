@@ -2,11 +2,7 @@
     ================================================== -->
     <div id="header" class="space-header">
       <div class="container">
-        
-          <a class="brand pull-left" href="#" >{$COMPANY.name}</a>
-         
-       	  <div class="header-info">
-       	  		
+       	  <div class="shortcuts">
        	  		<ul>
        	  			<li><a href="javascript:;" onclick="javascript:$('#AddFriendFrm').submit();">{lang add_friend}</a></li>
        	  			<li><a href="{$Menus.feedback}">{lang feed_back_to_company}</a></li>
@@ -16,6 +12,7 @@
     </div>
     <div id="main_nav" class="space-nav">
     	<div id="nav_inner" class="container">
+    	 <a class="brand pull-left" href="#" >{$COMPANY.name}</a>
     	 <ul class="nav">
             <li id="space_index"><a href="{$Menus.index}">{lang home_page}</a></li>
 			<li id="space_intro"><a href="{$Menus.intro}">{lang space_intro}</a></li>

@@ -1,6 +1,6 @@
 <!--{include file="header.html" PageTitle="`$_space_product`" cur="space_product"}-->
 <!--{include file="banner.html"}-->
-<div id="main" class="container">
+<div id="content" class="container">
 	<div class="row">
 		
 			<div class="span12">
@@ -9,9 +9,9 @@
 						<h2>{lang space_product}</h2>
 					</div>
 					<div class="mod-bd">
-						<ul>
-							<!-- {pb:product name="item" companyid="`$COMPANY.id`" typeid=`$smarty.get.typeid` row=12} -->
-							<li><a href="{the_url module=product id=`$item.id`}" target="_blank"><img src="{$WebRootUrl}attachment/{$item.picture}.small.jpg" width="80" height="80" alt="{$item.name}"></a><p>{$item.name}</p></li>
+						<ul class="media-items-grid">
+							<!-- {pb:product name="item" companyid="`$COMPANY.id`" typeid=`$smarty.get.typeid` row=15} -->
+							<li class="media-item"><a class="image" href="{the_url module=product id=`$item.id`}" target="_blank"><img src="{$WebRootUrl}attachment/{$item.picture}.small.jpg" alt="{$item.name}"></a><p class="name">{$item.name}</p></li>
 							<!-- {/pb:product} -->
 						</ul>
 						

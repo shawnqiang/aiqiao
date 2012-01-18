@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-01-13 12:17:50
+<?php /* Smarty version 2.6.18, created on 2012-01-18 11:00:44
          compiled from job.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'get_cache', 'job.html', 2, false),array('function', 'pager', 'job.html', 17, false),array('block', 'job', 'job.html', 13, false),array('modifier', 'truncate', 'job.html', 15, false),)), $this); ?>
@@ -14,7 +14,7 @@ $this->_smarty_include(array('smarty_include_tpl_file' => "banner.html", 'smarty
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
-<div id="main" class="container">
+<div id="content" class="container">
 	<div class="row">
 		
 			<div class="span12">

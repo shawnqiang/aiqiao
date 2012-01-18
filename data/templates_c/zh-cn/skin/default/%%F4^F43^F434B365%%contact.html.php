@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-01-13 12:13:52
+<?php /* Smarty version 2.6.18, created on 2012-01-18 11:00:46
          compiled from contact.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'get_cache', 'contact.html', 2, false),array('function', 'mailto', 'contact.html', 17, false),array('function', 'the_map', 'contact.html', 18, false),)), $this); ?>
@@ -14,7 +14,7 @@ $this->_smarty_include(array('smarty_include_tpl_file' => "banner.html", 'smarty
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
-<div id="main" class="container">
+<div id="content" class="container">
 	<div class="row">
 	
 	<div class="span12">

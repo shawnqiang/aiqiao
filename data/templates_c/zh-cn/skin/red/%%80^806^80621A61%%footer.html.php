@@ -1,8 +1,10 @@
-<?php /* Smarty version 2.6.18, created on 2012-01-04 06:51:35
+<?php /* Smarty version 2.6.18, created on 2012-01-18 12:38:58
          compiled from footer.html */ ?>
-	<div class="notice container">
-		<p><?php echo $this->_tpl_vars['_space_statement']; ?>
+	<div id="footer-top" class="container">
+		
+			<p class="statement"><?php echo $this->_tpl_vars['_space_statement']; ?>
 </p>
+		
 	</div>
 	<div id="footer" class="container">
 		<p>Copyright &copy; <?php echo $this->_tpl_vars['company_name']; ?>

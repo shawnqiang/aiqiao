@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-01-12 14:50:10
+<?php /* Smarty version 2.6.18, created on 2012-01-18 12:38:58
          compiled from leftbar.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'the_url', 'leftbar.html', 10, false),)), $this); ?>
@@ -27,7 +27,7 @@ if ($this->_foreach['ProductTypes']['total'] > 0):
 				
 				
 			</div>
-			<div class="span5 offset1">
+			<div class="span6">
 				<div class="mod">
 					<div class="mod-hd">
 						<h3><?php echo $this->_tpl_vars['_contact_method']; ?>
@@ -56,11 +56,11 @@ if ($this->_foreach['ProductTypes']['total'] > 0):
 				
 				
 			</div>
-			<div class="span4 offset1">
+			<div class="span5">
 				<div class="mod">
 					<div class="mod-hd">
-						<?php echo $this->_tpl_vars['_friend_links']; ?>
-
+						<h3><?php echo $this->_tpl_vars['_friend_links']; ?>
+</h3>
 					</div>
 					<div class="mod-bd">
 						<?php if ($this->_tpl_vars['Links']): ?>

@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.18, created on 2012-01-13 12:19:30
+<?php /* Smarty version 2.6.18, created on 2012-01-18 12:17:45
          compiled from offer.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('block', 'offer', 'offer.html', 13, false),array('modifier', 'truncate', 'offer.html', 14, false),array('function', 'pager', 'offer.html', 18, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('block', 'offer', 'offer.html', 13, false),array('modifier', 'truncate', 'offer.html', 15, false),array('function', 'pager', 'offer.html', 19, false),)), $this); ?>
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => "header.html", 'smarty_include_vars' => array('PageTitle' => ($this->_tpl_vars['_space_offer']),'cur' => 'space_offer')));
 $this->_tpl_vars = $_smarty_tpl_vars;
@@ -12,7 +12,7 @@ $this->_smarty_include(array('smarty_include_tpl_file' => "banner.html", 'smarty
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
-<div id="main" class="container">
+<div id="content" class="container">
 	<div class="row">
 	
 		<div class="span12">
@@ -22,13 +22,14 @@ unset($_smarty_tpl_vars);
 </h2>
 				</div>
 				<div class="mod-bd">
-					<ul>
-					<?php $this->_tag_stack[] = array('offer', array('name' => 'item','companyid' => ($this->_tpl_vars['COMPANY']['id']),'row' => 12)); $_block_repeat=true;smarty_block_offer($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>
-						<li><a href="<?php echo $this->_tpl_vars['WebRootUrl']; ?>
+					<ul class="media-items-grid">
+					<?php $this->_tag_stack[] = array('offer', array('name' => 'item','companyid' => ($this->_tpl_vars['COMPANY']['id']),'row' => 15)); $_block_repeat=true;smarty_block_offer($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>
+						<li class="media-item">
+						<a class="image" href="<?php echo $this->_tpl_vars['WebRootUrl']; ?>
 <?php echo $this->_tpl_vars['item']['url']; ?>
 " target="_blank"><img src="<?php echo $this->_tpl_vars['item']['thumb']; ?>
-" width="80" height="80" alt="<?php echo $this->_tpl_vars['item']['title']; ?>
-"></a><p><?php echo ((is_array($_tmp=$this->_tpl_vars['item']['title'])) ? $this->_run_mod_handler('truncate', true, $_tmp, 20) : smarty_modifier_truncate($_tmp, 20)); ?>
+"  alt="<?php echo $this->_tpl_vars['item']['title']; ?>
+"></a><p class="name"><?php echo ((is_array($_tmp=$this->_tpl_vars['item']['title'])) ? $this->_run_mod_handler('truncate', true, $_tmp, 20) : smarty_modifier_truncate($_tmp, 20)); ?>
 </p></li>
 					<?php $_block_content = ob_get_contents(); ob_end_clean(); $_block_repeat=false;echo smarty_block_offer($this->_tag_stack[count($this->_tag_stack)-1][1], $_block_content, $this, $_block_repeat); }  array_pop($this->_tag_stack); ?>				
 					</ul>

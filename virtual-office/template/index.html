@@ -16,10 +16,10 @@ $(document).ready(function() {
 <!--{/literal}-->
 <div id="main" class="container">
   <div class="row">
-    <div class="span4" class="side-bar">
+    <div class="side-bar l-col span4">
       <!--{include file="menu.html"}-->
     </div>
-    <div class="span8" class="main-content">
+    <div class="main-content c-col span8">
       <div class="mod vs-welcome">
           {lang my_honour}{$UserName|default:$smarty.session.MemberName}&nbsp;{$MemberInfo.gender_name}{lang the_last_visit_time_was}{$LastLogin}
       </div>
@@ -50,15 +50,17 @@ $(document).ready(function() {
         
 
     </div>
-    <div class="span-4">
-           <div class="notice">
-              <h2>{lang announce}</h2>
-              <ul>
-        {announce row=10}
-          <li><a href="{$SiteUrl}announce/detail.php?id={$announce.id}" target="_blank">{$announce.title}</a></li>
-        {/announce}
-              </ul>
-           </div>
+    <div class="side-bar r-col span4">
+      <div class="mod">
+        <div class="mod-hd"><h2>{lang announce}</h2></div>
+        <div class="mod-bd">
+            <ul class="info-list">
+                {announce row=10}
+                <li><a href="{$SiteUrl}announce/detail.php?id={$announce.id}" target="_blank">{$announce.title}</a></li>
+                {/announce}
+            </ul>
+        </div>
+      </div>
     </div>
   </div>
     

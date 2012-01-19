@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-01-15 08:00:23
+<?php /* Smarty version 2.6.18, created on 2012-01-19 10:02:52
          compiled from product.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'truncate', 'product.html', 62, false),array('modifier', 'default', 'product.html', 62, false),array('modifier', 'strip_tags', 'product.html', 62, false),array('function', 'the_url', 'product.html', 66, false),)), $this); ?>
@@ -12,14 +12,14 @@ unset($_smarty_tpl_vars);
   <div class="row">
     
   
-    <div class="span4 side-bar">
+    <div class="span4 side-bar l-col">
          <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => "menu.html", 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
     </div>
-    <div class="span12 main-content">
+    <div class="span12 main-content r-col">
       <div class="page-header" style="overflow:hidden;">
         <h2 class="pull-left"><?php echo $this->_tpl_vars['_product_management']; ?>
 </h2>

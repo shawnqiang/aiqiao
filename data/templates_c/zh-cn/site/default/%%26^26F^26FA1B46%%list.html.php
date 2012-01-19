@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-01-06 06:24:10
+<?php /* Smarty version 2.6.18, created on 2012-01-19 08:12:48
          compiled from default/fair/list.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'the_url', 'default/fair/list.html', 16, false),array('function', 'pager', 'default/fair/list.html', 24, false),array('modifier', 'date_format', 'default/fair/list.html', 18, false),array('modifier', 'sprintf', 'default/fair/list.html', 32, false),)), $this); ?>
@@ -11,7 +11,7 @@ unset($_smarty_tpl_vars);
   <div class="breadcrumb"><span><?php echo $this->_tpl_vars['position']; ?>
 </span></div>
   <div class="row">
-    <div class="span13">
+    <div class="main-content l-col span13">
       <div class="mod">
         <div class="mod-hd">
           <h2><span class="title_mouse"><?php echo $this->_tpl_vars['_search_result']; ?>
@@ -53,7 +53,7 @@ if ($this->_foreach['fair']['total'] > 0):
         </div>
       </div>  
     </div>
-    <div class="span4">
+    <div class="side-bar r-col span4">
         <div class="mod">
           <div class="mod-hd">
             <h3><?php echo ((is_array($_tmp=$this->_tpl_vars['_area_choose'])) ? $this->_run_mod_handler('sprintf', true, $_tmp, $this->_tpl_vars['the_area']) : sprintf($_tmp, $this->_tpl_vars['the_area'])); ?>

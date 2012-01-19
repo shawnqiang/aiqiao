@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-01-06 12:36:54
+<?php /* Smarty version 2.6.18, created on 2012-01-19 08:06:37
          compiled from default/offer/index.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('block', 'ads', 'default/offer/index.html', 6, false),array('block', 'offer', 'default/offer/index.html', 20, false),array('block', 'company', 'default/offer/index.html', 74, false),array('block', 'product', 'default/offer/index.html', 86, false),array('modifier', 'date_format', 'default/offer/index.html', 17, false),array('function', 'the_url', 'default/offer/index.html', 96, false),array('function', 'get', 'default/offer/index.html', 99, false),)), $this); ?>
@@ -16,7 +16,7 @@ unset($_smarty_tpl_vars);
   </div>
 
   <div class="row">
-    <div class="span5">
+    <div class="side-bar l-col span5">
       <div class="mod">
         <div class="mod-hd">
           <h2><?php echo $this->_tpl_vars['_new_offer']; ?>
@@ -44,10 +44,10 @@ unset($_smarty_tpl_vars);
       </div>
       
     </div>
-    <div class="span8">
+    <div class="main-content c-col span8">
       <div><?php $this->_tag_stack[] = array('ads', array('typeid' => 3)); $_block_repeat=true;smarty_block_ads($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?><!-- This text is replaced by the Flash movie. --><?php $_block_content = ob_get_contents(); ob_end_clean(); $_block_repeat=false;echo smarty_block_ads($this->_tag_stack[count($this->_tag_stack)-1][1], $_block_content, $this, $_block_repeat); }  array_pop($this->_tag_stack); ?></div>
     </div>
-    <div class="span4">
+    <div class="side-bar r-col span4">
       <div class="mod">
         <div class="mod-hd">
           <h5><?php echo $this->_tpl_vars['_welcome_join']; ?>
@@ -75,7 +75,7 @@ unset($_smarty_tpl_vars);
   </div>
 
   <div class="row">
-    <div class="span5">
+    <div class="side-bar l-col span5">
       <div class="mod">
         <div class="mod-hd">
           <h2><?php echo $this->_tpl_vars['_urgent_buy']; ?>
@@ -120,7 +120,7 @@ unset($_smarty_tpl_vars);
         </div>
       </div>    
     </div>
-    <div class="span12">
+    <div class="main-content r-col span12">
         <div class="mod">
           <div class="mod-hd">
             <h3><a href="<?php echo smarty_function_the_url(array('module' => 'search','industryid' => ($this->_tpl_vars['item0']['id']),'do' => 'offer'), $this);?>

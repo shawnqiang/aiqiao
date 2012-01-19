@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-01-06 06:39:07
+<?php /* Smarty version 2.6.18, created on 2012-01-19 08:29:45
          compiled from default/offer/detail.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'strip_tags', 'default/offer/detail.html', 33, false),array('modifier', 'nl2br', 'default/offer/detail.html', 72, false),array('modifier', 'stripslashes', 'default/offer/detail.html', 72, false),array('function', 'the_url', 'default/offer/detail.html', 53, false),array('block', 'offer', 'default/offer/detail.html', 139, false),)), $this); ?>
@@ -112,7 +112,7 @@ virtual-office/offer.php?do=edit&id=<?php echo $this->_tpl_vars['item']['id']; ?
 		
 
 	<div class="row">
-		<div class="span11">
+		<div class="main-content l-col span11">
 			<div class="mod">
 				<div class="mod-hd">
 					<h3><img src="<?php echo $this->_tpl_vars['theme_img_path']; ?>
@@ -149,7 +149,7 @@ if ($this->_foreach['op']['total'] > 0):
 			</div>
 		</div>	
 
-		<div class="span6">
+		<div class="side-bar r-col span6">
 
 			<?php if (! $this->_tpl_vars['LoginCheck'] && $this->_tpl_vars['pb_username'] == ""): ?>
 			<div class="mod">

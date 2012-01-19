@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-01-03 07:32:19
+<?php /* Smarty version 2.6.18, created on 2012-01-19 08:16:30
          compiled from default/company/detail.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'nl2br', 'default/company/detail.html', 12, false),array('modifier', 'stripslashes', 'default/company/detail.html', 12, false),array('block', 'product', 'default/company/detail.html', 20, false),array('block', 'offer', 'default/company/detail.html', 29, false),array('block', 'company', 'default/company/detail.html', 76, false),)), $this); ?>
@@ -8,10 +8,10 @@ $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
 <div id="main" class="container">
-	<div class="tips"><span><?php echo $this->_tpl_vars['position']; ?>
+	<div class="breadcrumb"><span><?php echo $this->_tpl_vars['position']; ?>
 </span></div>
 	<div class="row">
-		<div class="span13">
+		<div class="main-content l-col span13">
 			<div class="mod">
 				<div class="mod-hd">
 					<h3><?php echo $this->_tpl_vars['_company']; ?>
@@ -61,7 +61,7 @@ unset($_smarty_tpl_vars);
 			</div>	
 		</div>
 
-		<div class="span4">
+		<div class="side-bar r-col span4">
 			<?php if (! $this->_tpl_vars['LoginCheck'] && $this->_tpl_vars['pb_username'] == ""): ?>
 				<div class="mod">
 					<div class="mod-hd">

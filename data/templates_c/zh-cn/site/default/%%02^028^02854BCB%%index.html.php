@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-01-15 06:36:32
+<?php /* Smarty version 2.6.18, created on 2012-01-19 08:35:55
          compiled from default/product/index.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'get', 'default/product/index.html', 20, false),array('function', 'the_url', 'default/product/index.html', 23, false),array('block', 'standard', 'default/product/index.html', 50, false),array('block', 'ads', 'default/product/index.html', 61, false),array('block', 'industry', 'default/product/index.html', 68, false),array('block', 'product', 'default/product/index.html', 103, false),)), $this); ?>
@@ -18,7 +18,7 @@ css/effect.css);
 
 <div id="main" class="container">
 	<div class="row">
-		<div class="span4 side-bar">
+		<div class="side-bar l-col span4">
 			<div class="mod">
 				<div class="mod-hd">
 					<h3><?php echo $this->_tpl_vars['_product_category']; ?>
@@ -78,7 +78,7 @@ css/effect.css);
 			</div>	
 		</div>
 
-		<div class="span9 main-content">
+		<div class="main-content c-col span9">
 			<div class="product_reports_img"><?php $this->_tag_stack[] = array('ads', array('typeid' => 4)); $_block_repeat=true;smarty_block_ads($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?><!-- This text is replaced by the Flash movie. --><?php $_block_content = ob_get_contents(); ob_end_clean(); $_block_repeat=false;echo smarty_block_ads($this->_tag_stack[count($this->_tag_stack)-1][1], $_block_content, $this, $_block_repeat); }  array_pop($this->_tag_stack); ?></div>
 
 			<div class="mod">
@@ -131,7 +131,7 @@ css/effect.css);
 	        
 		</div>
 
-		<div class="span4 second-bar">
+		<div class="second-bar r-col span4">
 			<div class="mod">
 				<div class="mod-hd">
 					 <h3><?php echo $this->_tpl_vars['_recommended']; ?>

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-01-14 10:36:49
+<?php /* Smarty version 2.6.18, created on 2012-01-19 10:02:58
          compiled from company.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'default', 'company.html', 9, false),array('function', 'editor', 'company.html', 40, false),array('function', 'formhash', 'company.html', 60, false),array('function', 'html_checkboxes', 'company.html', 170, false),)), $this); ?>
@@ -58,7 +58,7 @@ jQuery(document).ready(function($) {
 
 <div id="main" class="container">
     <div class="row">
-       <div class="span4 side-bar">
+       <div class="span4 side-bar l-col">
          <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => "menu.html", 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;
@@ -66,7 +66,7 @@ unset($_smarty_tpl_vars);
  ?>
        </div>
     
-     <div class="span12 main-content">
+     <div class="span12 main-content r-col">
      <div class="page-header">
        <h2><?php echo $this->_tpl_vars['page_title']; ?>
 </h2>

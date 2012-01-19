@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-01-14 10:59:50
+<?php /* Smarty version 2.6.18, created on 2012-01-19 10:16:49
          compiled from pms_send.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'formhash', 'pms_send.html', 45, false),)), $this); ?>
@@ -39,7 +39,7 @@ jQuery(document).ready(function($) {
   <div class="row">
     
   
-    <div class="span4 side-bar">
+    <div class="span4 side-bar l-col">
        
          <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => "menu.html", 'smarty_include_vars' => array()));
@@ -48,7 +48,7 @@ unset($_smarty_tpl_vars);
  ?>
        
     </div>
-     <div class="span12 main-content">
+     <div class="span12 main-content r-col">
         <div class="page-header">
           <h2><?php echo $this->_tpl_vars['page_title']; ?>
 </h2>

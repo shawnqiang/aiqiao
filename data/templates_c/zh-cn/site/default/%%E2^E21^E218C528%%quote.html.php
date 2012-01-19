@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-01-06 16:18:32
+<?php /* Smarty version 2.6.18, created on 2012-01-19 09:20:24
          compiled from default/market/quote.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'category', 'default/market/quote.html', 10, false),array('function', 'get', 'default/market/quote.html', 24, false),array('function', 'pager', 'default/market/quote.html', 112, false),array('block', 'market', 'default/market/quote.html', 52, false),array('block', 'price', 'default/market/quote.html', 64, false),array('block', 'product', 'default/market/quote.html', 77, false),array('modifier', 'date_format', 'default/market/quote.html', 101, false),)), $this); ?>
@@ -28,7 +28,7 @@ unset($_smarty_tpl_vars);
 		</div>
 	</div>
 	<div class="row">
-		<div class="span4">
+		<div class="side-bar l-col span4">
 			<div class="mod">
 				<div class="mod-hd">
 					<h2><?php echo $this->_tpl_vars['_quotes']; ?>
@@ -105,7 +105,7 @@ unset($_smarty_tpl_vars);
 			</div>
 			
 		</div>
-		<div class="span13">
+		<div class="main-content r-col span13">
 			<div class="mod">
 				<div class="mod-hd"><h2><span class="corner_t_l"></span><span class="corner_t_m title_mouse"><?php echo $this->_tpl_vars['_commend']; ?>
  <?php echo $this->_tpl_vars['_product']; ?>

@@ -1,16 +1,12 @@
-<?php /* Smarty version 2.6.18, created on 2012-01-06 15:01:55
+<?php /* Smarty version 2.6.18, created on 2012-01-19 08:04:33
          compiled from default/offer/invest.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('block', 'brand', 'default/offer/invest.html', 10, false),array('block', 'offer', 'default/offer/invest.html', 57, false),array('block', 'industry', 'default/offer/invest.html', 96, false),array('function', 'category', 'default/offer/invest.html', 71, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('block', 'brand', 'default/offer/invest.html', 7, false),array('block', 'offer', 'default/offer/invest.html', 54, false),array('block', 'industry', 'default/offer/invest.html', 93, false),array('function', 'category', 'default/offer/invest.html', 68, false),)), $this); ?>
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => ($this->_tpl_vars['theme_name'])."/header.html", 'smarty_include_vars' => array('page_title' => ($this->_tpl_vars['_invest_info']),'nav_id' => 4)));
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
-<style type="text/css">
-@import url(<?php echo $this->_tpl_vars['theme_img_path']; ?>
-css/effect.css);
-</style>
 <script src="scripts/jquery.tools.js"></script>
 <script src="images/flipper/rotation.js"></script>
 <div id="flipper_div" align="center"></div>
@@ -59,7 +55,7 @@ fp_data.push(["attachment/<?php echo $this->_tpl_vars['brand']['picture']; ?>
 
 <div id="main" class="container">
 	<div class="row">
-		<div class="span4">
+		<div class="side-bar l-col span4">
 			<div class="mod">
 				<div class="mod-hd">
 					<h2><?php echo $this->_tpl_vars['_hot_invest_project']; ?>
@@ -75,11 +71,11 @@ fp_data.push(["attachment/<?php echo $this->_tpl_vars['brand']['picture']; ?>
 				</div>
 			</div>	
 		</div>
-		<div class="span13">
+		<div class="main-content r-col span13">
 			<div class="mod">
 				<div class="mod-hd">
-					 <strong><?php echo $this->_tpl_vars['_area_invest_info']; ?>
-</strong>
+					 <h2><?php echo $this->_tpl_vars['_area_invest_info']; ?>
+</h2>
 				</div>
 				
 				 <div class="mod-bd">

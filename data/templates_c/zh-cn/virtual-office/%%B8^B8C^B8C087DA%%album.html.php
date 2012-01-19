@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-01-15 08:06:37
+<?php /* Smarty version 2.6.18, created on 2012-01-19 10:02:59
          compiled from album.html */ ?>
 <?php $this->assign('page_title', ($this->_tpl_vars['_company_album'])); ?>
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
@@ -8,7 +8,7 @@ unset($_smarty_tpl_vars);
  ?>
 <div id="main" class="container">
     <div class="row">
-       <div class="span4 side-bar">
+       <div class="span4 side-bar l-col">
          <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => "menu.html", 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;
@@ -16,7 +16,7 @@ unset($_smarty_tpl_vars);
  ?>
        </div>
     
-     <div class="span12 main-content">
+     <div class="span12 main-content r-col">
       <div class="page-header">
         <h2 class="pull-left"><?php echo $this->_tpl_vars['page_title']; ?>
 </h2>

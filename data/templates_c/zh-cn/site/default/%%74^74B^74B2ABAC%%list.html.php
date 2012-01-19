@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-01-06 06:36:12
+<?php /* Smarty version 2.6.18, created on 2012-01-19 08:24:48
          compiled from default/job/list.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'the_url', 'default/job/list.html', 14, false),array('function', 'pager', 'default/job/list.html', 17, false),array('modifier', 'date_format', 'default/job/list.html', 14, false),array('block', 'company', 'default/job/list.html', 28, false),)), $this); ?>
@@ -11,7 +11,7 @@ unset($_smarty_tpl_vars);
 	<div class="breadcrumb"><span><?php echo $this->_tpl_vars['position']; ?>
 </span></div>
 	<div class="row">
-		<div class="span13">
+		<div class="main-content l-col span13">
 			<div class="mod">
 				<div class="mod-hd">
 					<h3><?php echo $this->_tpl_vars['_hr_information']; ?>
@@ -43,7 +43,7 @@ if ($this->_foreach['Items']['total'] > 0):
 				</div>
 			</div>
 		</div>
-		<div class="span4">
+		<div class="side-bar r-col span4">
 			<div class="mod">
 				<div class="mod-hd">
 					<h3><?php echo $this->_tpl_vars['_recommended_company']; ?>

@@ -3,7 +3,7 @@
 <div id="main" class="container">
     <div class="breadcrumb"><span>{$position}</span></div>  
     <div class="mod">
-            <div class="mod-hd"><span>{lang sort_choose}</span></div>
+            <div class="mod-hd"><h2>{lang sort_choose}</h2></div>
             <div class="mod-bd">
             <!--{foreach from=$Types item=item1}-->
                 <a href="brand/list.php?catid={$item1.id}"><span>&bull; {$item1.name}</span></a> 
@@ -12,7 +12,7 @@
     </div>
 
     <div class="row">
-        <div class="span13">
+        <div class="main-content l-col span13">
             <div class="mod">
                 <div class="mod-hd">
                     <div class="pagination2"><!-- {pager rowcount=`$paging.total`} --></div>
@@ -36,7 +36,7 @@
             </div>  
         </div>
 
-        <div class="span4">
+        <div class="side-bar r-col span4">
             <div class="mod">
                 <div class="mod-hd">
                     <h2>{lang latest_news}</h2>

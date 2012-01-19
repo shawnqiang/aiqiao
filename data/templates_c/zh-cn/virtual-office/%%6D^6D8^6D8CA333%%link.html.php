@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-01-14 10:54:59
+<?php /* Smarty version 2.6.18, created on 2012-01-19 10:18:06
          compiled from link.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'formhash', 'link.html', 19, false),)), $this); ?>
@@ -10,7 +10,7 @@ unset($_smarty_tpl_vars);
  ?>
 <div id="main" class="container">
     <div class="row">
-       <div class="span4 side-bar">
+       <div class="span4 side-bar l-col">
          <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => "menu.html", 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;
@@ -18,17 +18,17 @@ unset($_smarty_tpl_vars);
  ?>
        </div>
     
-     <div class="span12 main-content">
+     <div class="span12 main-content r-col">
      <div class="page-header">
        <h2><?php echo $this->_tpl_vars['page_title']; ?>
-</h2>
+<a href="link.php?do=edit"  class="btn pull-right"><?php echo $this->_tpl_vars['_add_partners']; ?>
+</a></h2>
      </div>
      <div class="mod">
        <div class="mod-hd">
          <div><strong><?php echo $this->_tpl_vars['_our_partners']; ?>
 </strong><?php echo $this->_tpl_vars['_colon']; ?>
-<a href="link.php?do=edit"  class="btn"><?php echo $this->_tpl_vars['_add_partners']; ?>
-</a></div>
+</div>
        </div>
        <div class="mod-bd">
          <form name="companylinkfrm" action="link.php" method="post">

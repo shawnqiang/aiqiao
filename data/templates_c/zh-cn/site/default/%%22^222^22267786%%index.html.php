@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-01-15 06:54:05
+<?php /* Smarty version 2.6.18, created on 2012-01-19 08:30:38
          compiled from default/news/index.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('block', 'newstype', 'default/news/index.html', 6, false),array('block', 'ads', 'default/news/index.html', 15, false),array('block', 'news', 'default/news/index.html', 23, false),array('block', 'topic', 'default/news/index.html', 63, false),array('function', 'the_url', 'default/news/index.html', 7, false),)), $this); ?>
@@ -21,7 +21,7 @@ unset($_smarty_tpl_vars);
   </div>
 
   <div class="row">
-    <div class="span4">
+    <div class="side-bar l-col span4">
       <div class="mod ads">
         <?php $this->_tag_stack[] = array('ads', array('type' => 'focus')); $_block_repeat=true;smarty_block_ads($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?><!-- This text is replaced by the Flash movie. --><?php $_block_content = ob_get_contents(); ob_end_clean(); $_block_repeat=false;echo smarty_block_ads($this->_tag_stack[count($this->_tag_stack)-1][1], $_block_content, $this, $_block_repeat); }  array_pop($this->_tag_stack); ?>
       </div>
@@ -40,7 +40,7 @@ unset($_smarty_tpl_vars);
         </div>
       </div>  
     </div>
-    <div class="span9">
+    <div class="main-content c-col span9">
         <div class="mod ads">
 
         </div>
@@ -61,7 +61,7 @@ unset($_smarty_tpl_vars);
           </div>
       </div>  
     </div>
-    <div class="span4 side-bar">
+    <div class="side-bar r-col span4">
         <div class="mod">
           <div class="mod-hd">
             <h2><?php echo $this->_tpl_vars['_industry_info']; ?>

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-01-06 16:00:02
+<?php /* Smarty version 2.6.18, created on 2012-01-19 08:18:40
          compiled from default/brand/detail.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'nl2br', 'default/brand/detail.html', 21, false),array('modifier', 'default', 'default/brand/detail.html', 21, false),array('function', 'the_url', 'default/brand/detail.html', 22, false),array('block', 'brand', 'default/brand/detail.html', 33, false),array('block', 'companynews', 'default/brand/detail.html', 65, false),array('block', 'product', 'default/brand/detail.html', 77, false),)), $this); ?>
@@ -17,7 +17,7 @@ css/effect.css);
 	<div class="breadcrumb"><span><?php echo $this->_tpl_vars['position']; ?>
 </span></div>
 	<div class="row">
-		<div class="span13">
+		<div class="main-content l-col span13">
 			<div class="mod">
 				<div class="mod-bd cl">
 					<div class="brand_grade">
@@ -89,7 +89,7 @@ css/effect.css);
 			</div>		
 		</div>
 
-		<div class="span4">
+		<div class="side-bar r-col span4">
 			<div class="mod">
 				<div class="mod-hd">
 					<h2><?php echo $this->_tpl_vars['_company_news']; ?>

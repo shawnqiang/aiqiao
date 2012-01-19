@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.18, created on 2012-01-01 05:58:22
+<?php /* Smarty version 2.6.18, created on 2012-01-18 15:37:12
          compiled from default/member.purchase.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'formhash', 'default/member.purchase.html', 18, false),array('block', 'good', 'default/member.purchase.html', 29, false),array('modifier', 'default', 'default/member.purchase.html', 76, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'formhash', 'default/member.purchase.html', 23, false),array('block', 'good', 'default/member.purchase.html', 34, false),array('modifier', 'default', 'default/member.purchase.html', 85, false),)), $this); ?>
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => ($this->_tpl_vars['theme_name'])."/header.html", 'smarty_include_vars' => array('page_title' => ($this->_tpl_vars['_select_buy_service']))));
 $this->_tpl_vars = $_smarty_tpl_vars;
@@ -12,17 +12,22 @@ unset($_smarty_tpl_vars);
 css/effect.css);
 </style>
 <script src="scripts/jquery.tools.js"></script>
-<div class="wrapper">
-	<div class="tips"><span><?php echo $this->_tpl_vars['position']; ?>
-</span></div>  
-	<div class="blank6"></div>
-         <!-- the tabs -->
+<div id="main" class="container">
+	<div class="breadcrumb"><span><?php echo $this->_tpl_vars['position']; ?>
+</span></div>
+
+			<div class="mod">
+				<div class="mod-hd">
+					
+				</div>
+				<div class="mod-bd">
+					         <!-- the tabs -->
         <ul class="tabs2 title_mouse">
               <li><a href="javascript:;"><span><?php echo $this->_tpl_vars['_member_upgrade']; ?>
 </span></a></li>
         </ul>
         <!-- tab "panes" -->
-	<div class="panes box_bord">
+		<div class="panes box_bord">
 		<div class="charge_txt">
 			<table>
 				<form method="post" name="apply_frm" id="ApplyFrm" action="<?php echo $_SERVER['PHP_SELF']; ?>
@@ -107,8 +112,12 @@ css/effect.css);
 				  </form>
 			</table>
 		</div>
-      </div>
+				</div>
+			</div>
+		
 </div>
+
+
 <script>
 var index_val = <?php echo ((is_array($_tmp=@$this->_tpl_vars['index'])) ? $this->_run_mod_handler('default', true, $_tmp, 0) : smarty_modifier_default($_tmp, 0)); ?>
 ;

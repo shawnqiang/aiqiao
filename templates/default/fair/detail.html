@@ -20,11 +20,12 @@ $(document).ready( function() {
 <!-- {/literal} -->
 <div id="main" class="container">
 	<div class="breadcrumb"><span>{$position}</span></div>
+	<div class="page-header">
+		<h2>{$item.name}</h2>
+	</div>
 	<div class="row">
-		<div class="span13 main-content">
-			<div class="page-heading">
-				<h1>{$item.name}</h1>
-			</div>
+		<div class="span13 main-content l-col ">
+			
 
 			<div class="mod">
 				<div class="mod-hd">
@@ -53,19 +54,19 @@ $(document).ready( function() {
 				</div>
 			</div>
 		</div>
-		<div class="span4 side-bar">
+		<div class="span4 side-bar r-col">
 			<div class="mod">
 				<div class="mod-hd">
 					<h3>{lang fair_enter_name}</h3>
 				</div>
 				<div class="mod-bd">
-					<form name="join_fair" id="JoinFair" action="virtual-office/fair.php" method="post">
+					<form name="join_fair" id="JoinFair" action="virtual-office/fair.php" method="post" style="margin-bottom:0;">
 					  <!-- {formhash} -->
 				      <input type="hidden" name="do" value="join" />
 				      <input type="hidden" name="is_ajax" value="1" />
 				      <input type="hidden" name="id" value="{$item.id}">
 					  <span style="display: inline-block">
-				      <input type="button" name="btn_join_fair" id="btnJoinFair" class="submit_w91" value="{lang enter_name_fair}"/></span>
+				      <input type="button" name="btn_join_fair" id="btnJoinFair" class="btn primary" value="{lang enter_name_fair}"/></span>
 					  &nbsp;&nbsp;<span id="rp" style="display: inline-block"><img src="images/loading.gif" /></span>
 				    </form>
 				</div>

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-01-06 13:51:53
+<?php /* Smarty version 2.6.18, created on 2012-01-19 08:03:04
          compiled from default/offer/wholesale.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'the_url', 'default/offer/wholesale.html', 8, false),array('function', 'get', 'default/offer/wholesale.html', 87, false),array('block', 'news', 'default/offer/wholesale.html', 12, false),array('block', 'industry', 'default/offer/wholesale.html', 44, false),array('block', 'offer', 'default/offer/wholesale.html', 53, false),)), $this); ?>
@@ -10,7 +10,7 @@ unset($_smarty_tpl_vars);
 <script src="scripts/swfobject1.5.js" type="text/javascript"></script>
 <div id="main" class="container">
 	<div class="row">
-		<div class="span4">
+		<div class="span4 side-bar l-col">
 			<div class="mod">
 				<div class="mod-hd">
 					<h3><span class="title_more"><a href="<?php echo smarty_function_the_url(array('module' => 'search','do' => 'news'), $this);?>
@@ -35,10 +35,10 @@ unset($_smarty_tpl_vars);
 				</div>
 			</div>	
 		</div>
-		<div class="span9">
+		<div class="span9 main-content c-col">
 			<div class="main_left_img" id="marketFocus"></div>
 		</div>
-		<div class="span4">
+		<div class="span4 side-bar r-col">
 			<div class="mod">
 				<div class="mod-hd">
 					<h2><?php echo $this->_tpl_vars['_after_free_reg']; ?>
@@ -65,7 +65,7 @@ unset($_smarty_tpl_vars);
 
 	<?php $this->_tag_stack[] = array('industry', array('include' => "1,2,3")); $_block_repeat=true;smarty_block_industry($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>
 	<div class="row">
-	   	<div class="span13">
+	   	<div class="span13 main-content l-col">
 	   		<div class="mod">
 	   			<div class="mod-hd">
 	   				<h3><span class="title_more"><a href="offer/list.php?industryid=<?php echo $this->_tpl_vars['industry']['id']; ?>
@@ -92,7 +92,7 @@ unset($_smarty_tpl_vars);
 	   		</div>	
 					  
 	   	</div>
-		<div class="span4">
+		<div class="span4 side-bar r-col">
 			<div class="mod">
 				<div class="mod-hd">
 					<h3><span class="title_more"><a href="offer/post.php?typeid=4&industryid=<?php echo $this->_tpl_vars['industry']['id']; ?>

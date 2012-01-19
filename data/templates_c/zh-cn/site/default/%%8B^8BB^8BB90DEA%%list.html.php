@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-01-06 13:41:30
+<?php /* Smarty version 2.6.18, created on 2012-01-19 08:01:47
          compiled from default/offer/list.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'get', 'default/offer/list.html', 12, false),array('function', 'the_url', 'default/offer/list.html', 13, false),array('function', 'pager', 'default/offer/list.html', 150, false),array('block', 'industry', 'default/offer/list.html', 21, false),array('block', 'area', 'default/offer/list.html', 28, false),array('block', 'offer', 'default/offer/list.html', 169, false),array('block', 'company', 'default/offer/list.html', 182, false),array('modifier', 'sprintf', 'default/offer/list.html', 26, false),array('modifier', 'truncate', 'default/offer/list.html', 107, false),)), $this); ?>
@@ -65,7 +65,7 @@ if ($this->_foreach['type']['total'] > 0):
 		</div>
 	</div>
 	<div class="row">
-		<div class="span13">
+		<div class="span13 main-content l-col">
 			<div class="mod result-filter">
 				<div class="mod-bd">
 					<form name="relate_frm" method="get" id="RelateFrm">
@@ -273,7 +273,7 @@ if ($this->_foreach['offer']['total'] > 0):
 				
 			</div>
 		</div>
-		<div class="span4">
+		<div class="span4 side-bar r-col">
 			<div class="mod">
 				<div class="mod-hd">
 					<h3><?php echo $this->_tpl_vars['_commend']; ?>

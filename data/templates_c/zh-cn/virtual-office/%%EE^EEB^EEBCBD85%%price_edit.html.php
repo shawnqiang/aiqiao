@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-01-14 09:43:16
+<?php /* Smarty version 2.6.18, created on 2012-01-18 15:35:42
          compiled from price_edit.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'formhash', 'price_edit.html', 26, false),array('function', 'html_options', 'price_edit.html', 46, false),)), $this); ?>
@@ -21,7 +21,7 @@ jQuery(document).ready(function($) {
 </script>
 '; ?>
 
-<div id="main" class="contianer">
+<div id="main" class="container">
     <div class="row">
        <div class="span4 side-bar">
          <?php $_smarty_tpl_vars = $this->_tpl_vars;

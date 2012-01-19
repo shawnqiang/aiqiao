@@ -20,13 +20,13 @@ jQuery(document).ready(function($) {
 <div id="main" class="container">
     <div class="breadcrumb"><span>{$position}</span></div>
     <div class="row">
-      <div class="span4">
+      <div class="side-bar l-col span4">
         <div class="mod">
           <div class="mod-hd">
             <h3>{lang recommended_market}</h3>
           </div>
           <div class="mod-bd">
-            <ul class="unstyled">
+            <ul class="info-list">
             <!-- {pb:market row=10} -->
             <li>{$market.link}</li>
             <!-- {/pb:market} -->
@@ -35,11 +35,12 @@ jQuery(document).ready(function($) {
         </div>
       </div>
 
-      <div class="span13">
+      <div class="main-content r-col span13">
         <div class="mod">
           <div class="mod-hd">
-            <span class="search_more" ><a href="{the_url module=search do=market}"><span class="raquo">&raquo;</span>{lang more} {lang market_info}</a></span>
-            <h2><span class="title_mouse">{lang added_market}</span></h2>
+            
+            <h2><span class="title_mouse">{lang added_market}</span>
+            <span class="title_more" ><a href="{the_url module=search do=market}"><span class="raquo">&raquo;</span>{lang more} {lang market_info}</a></span></h2>
           </div>
           <div class="mod-bd">
                     <form name="marketfrm" id="marketFrm" action="{$smarty.server.PHP_SELF}" method="post">
@@ -81,7 +82,7 @@ jQuery(document).ready(function($) {
                           <tr>
                             <td>&nbsp;</td>
                             <td height="30" valign="middle">
-                              <input name="image_button" type="button" id="addmarket" alt="{lang submit}" onclick="return checkFrm();" class="btn" value="{lang submit_market}" />
+                              <input name="image_button" type="button" id="addmarket" alt="{lang submit}" onclick="return checkFrm();" class="btn primary" value="{lang submit_market}" />
                             </td>
                           </tr>
                         </table>

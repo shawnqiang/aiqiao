@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-01-02 16:55:26
+<?php /* Smarty version 2.6.18, created on 2012-01-19 08:15:40
          compiled from default/company/index.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('block', 'company', 'default/company/index.html', 22, false),array('block', 'area', 'default/company/index.html', 36, false),array('function', 'get', 'default/company/index.html', 65, false),array('function', 'the_url', 'default/company/index.html', 68, false),)), $this); ?>
@@ -9,7 +9,7 @@ unset($_smarty_tpl_vars);
  ?>
 <div id="main" class="container">
     <div class="row">
-        <div class="span4 side-bar">
+        <div class="side-bar l-col span4">
             <div class="mod">
                 <div class="mod-hd">
                     <h3><?php echo $this->_tpl_vars['_yellow_page']; ?>
@@ -33,7 +33,7 @@ unset($_smarty_tpl_vars);
 </h3>
                 </div>
                 <div class="mod-bd">
-                    <ul>
+                    <ul class="info-list">
                         <?php $this->_tag_stack[] = array('company', array('row' => 11,'name' => 'item')); $_block_repeat=true;smarty_block_company($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>
                         <li><?php echo $this->_tpl_vars['item']['link']; ?>
 </li>
@@ -48,7 +48,7 @@ unset($_smarty_tpl_vars);
 </h3>
                 </div>
                 <div class="mod-bd">
-                    <ul>
+                    <ul class="info-list two-cols-list">
                     <?php $this->assign('do', 'company'); ?>
                     <?php $this->_tag_stack[] = array('area', array('level' => 1,'name' => 'area')); $_block_repeat=true;smarty_block_area($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>
                         <li><a href="<?php echo $this->_tpl_vars['area']['url']; ?>
@@ -65,7 +65,7 @@ unset($_smarty_tpl_vars);
 </h3>
                 </div>
                 <div class="mod-bd">
-                    <ul>
+                    <ul class="info-list">
                         <?php $this->_tag_stack[] = array('company', array('row' => 10,'name' => 'item')); $_block_repeat=true;smarty_block_company($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>
                         <li><?php echo $this->_tpl_vars['item']['link']; ?>
 </li>
@@ -77,7 +77,7 @@ unset($_smarty_tpl_vars);
 
         </div>
 
-        <div class="span13 main-content">
+        <div class="main-content r-col span13">
             <div class="mod">
                 <div class="mod-hd">
                     <h4><span class="titlebg_m title_mouse"><?php echo $this->_tpl_vars['_industry_sort']; ?>

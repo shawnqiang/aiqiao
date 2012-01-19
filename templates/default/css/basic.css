@@ -234,7 +234,7 @@ a {
   font-weight: inherit;
 }
 a:hover {
-  color: #cb1108;
+  color: #049cdb;
   text-decoration: underline;
 }
 .pull-right {
@@ -1713,7 +1713,7 @@ a.menu:after, .dropdown-toggle:after {
   color: #ffffff;
   text-decoration: none;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
-  background-color: #cb1108;
+  background-color: #049cdb;
 }
 .pills .active a {
   color: #ffffff;
@@ -1895,18 +1895,18 @@ footer {
 }
 .btn.primary {
   color: #ffffff;
-  background-color: #b20f07;
+  background-color: #048ac2;
   background-repeat: repeat-x;
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#cb1108), to(#b20f07));
-  background-image: -moz-linear-gradient(top, #cb1108, #b20f07);
-  background-image: -ms-linear-gradient(top, #cb1108, #b20f07);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #cb1108), color-stop(100%, #b20f07));
-  background-image: -webkit-linear-gradient(top, #cb1108, #b20f07);
-  background-image: -o-linear-gradient(top, #cb1108, #b20f07);
-  background-image: linear-gradient(top, #cb1108, #b20f07);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cb1108', endColorstr='#b20f07', GradientType=0);
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#049cdb), to(#048ac2));
+  background-image: -moz-linear-gradient(top, #049cdb, #048ac2);
+  background-image: -ms-linear-gradient(top, #049cdb, #048ac2);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #049cdb), color-stop(100%, #048ac2));
+  background-image: -webkit-linear-gradient(top, #049cdb, #048ac2);
+  background-image: -o-linear-gradient(top, #049cdb, #048ac2);
+  background-image: linear-gradient(top, #049cdb, #048ac2);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#049cdb', endColorstr='#048ac2', GradientType=0);
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  border-color: #b20f07 #b20f07 #690904;
+  border-color: #048ac2 #048ac2 #025577;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 }
 .btn.active, .btn:active {
@@ -2590,17 +2590,17 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
 }
 #main_nav {
   height: 36px;
-  background-color: #cb1108;
-  background-color: #b20f07;
+  background-color: #049cdb;
+  background-color: #048ac2;
   background-repeat: repeat-x;
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#cb1108), to(#b20f07));
-  background-image: -moz-linear-gradient(top, #cb1108, #b20f07);
-  background-image: -ms-linear-gradient(top, #cb1108, #b20f07);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #cb1108), color-stop(100%, #b20f07));
-  background-image: -webkit-linear-gradient(top, #cb1108, #b20f07);
-  background-image: -o-linear-gradient(top, #cb1108, #b20f07);
-  background-image: linear-gradient(top, #cb1108, #b20f07);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cb1108', endColorstr='#b20f07', GradientType=0);
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#049cdb), to(#048ac2));
+  background-image: -moz-linear-gradient(top, #049cdb, #048ac2);
+  background-image: -ms-linear-gradient(top, #049cdb, #048ac2);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #049cdb), color-stop(100%, #048ac2));
+  background-image: -webkit-linear-gradient(top, #049cdb, #048ac2);
+  background-image: -o-linear-gradient(top, #049cdb, #048ac2);
+  background-image: linear-gradient(top, #049cdb, #048ac2);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#049cdb', endColorstr='#048ac2', GradientType=0);
 }
 #nav_inner ul {
   height: 36px;
@@ -2618,23 +2618,29 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
   color: #ffffff;
   font-weight: bold;
   font-size: 14px;
-  border-left: 1px solid #cb1108;
-  border-right: 1px solid #b20f07;
+  border-left: 1px solid #049cdb;
+  border-right: 1px solid #048ac2;
 }
 #nav_inner li a:hover, #nav_inner li a:hover span {
-  background-color: #9a0d06;
+  background-color: #0378a9;
 }
 #nav_inner li a:hover {
-  border-left: 1px solid #9a0d06;
+  border-left: 1px solid #0378a9;
 }
 #nav_inner li.current_nav_item {
-  background-color: #9a0d06;
+  background-color: #0378a9;
 }
 #nav_inner li.current_nav_item a {
-  border-left: 1px solid #9a0d06;
+  border-left: 1px solid #0378a9;
 }
 #nav_inner li.current_nav_item span {
-  background-color: #9a0d06;
+  background-color: #0378a9;
+}
+#main .row {
+  margin-left: 0;
+}
+#main .row .l-col {
+  margin-left: 0;
 }
 #footer {
   border-top: 2px solid #e6e6e6;
@@ -2710,24 +2716,24 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
   border-color: #dddddd;
 }
 .mod {
-  border: 1px solid #f0f0f0;
+  border: 1px solid #e6e6e6;
   margin-bottom: 18px;
 }
 .mod .mod-hd {
-  font-size: 13px;
-  padding: 6px 9px 5px;
+  font-size: 14px;
+  padding: 4px 9px 4px;
   border-bottom: 1px solid #f0f0f0;
   background-color: #f0f0f0;
   background-color: #e6e6e6;
   background-repeat: repeat-x;
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#f0f0f0), to(#e6e6e6));
-  background-image: -moz-linear-gradient(top, #f0f0f0, #e6e6e6);
-  background-image: -ms-linear-gradient(top, #f0f0f0, #e6e6e6);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f0f0f0), color-stop(100%, #e6e6e6));
-  background-image: -webkit-linear-gradient(top, #f0f0f0, #e6e6e6);
-  background-image: -o-linear-gradient(top, #f0f0f0, #e6e6e6);
-  background-image: linear-gradient(top, #f0f0f0, #e6e6e6);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f0f0f0', endColorstr='#e6e6e6', GradientType=0);
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#fcfcfc), to(#e6e6e6));
+  background-image: -moz-linear-gradient(top, #fcfcfc, #e6e6e6);
+  background-image: -ms-linear-gradient(top, #fcfcfc, #e6e6e6);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fcfcfc), color-stop(100%, #e6e6e6));
+  background-image: -webkit-linear-gradient(top, #fcfcfc, #e6e6e6);
+  background-image: -o-linear-gradient(top, #fcfcfc, #e6e6e6);
+  background-image: linear-gradient(top, #fcfcfc, #e6e6e6);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#e6e6e6', GradientType=0);
   position: relative;
 }
 .mod .mod-hd h2,
@@ -2741,6 +2747,11 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
 .mod .mod-hd .title_more {
   position: absolute;
   right: 10px;
+}
+.mod .mod-hd .title_more a {
+  color: #666666;
+  font-size: 12px;
+  font-weight: normal;
 }
 .mod .mod-bd {
   padding: 9px;
@@ -2767,6 +2778,15 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
 }
 .mod .mod-ft {
   padding: 9px;
+}
+.main-content .mod .mod-hd {
+  font-size: 16px;
+}
+.main-content .mod .mod-hd h2,
+.main-content .mod .mod-hd h3,
+.main-content .mod .mod-hd h4,
+.main-content .mod .mod-hd h5 {
+  color: #049cdb;
 }
 .brands-grid {
   zoom: 1;
@@ -2837,7 +2857,7 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
   padding: 3px 10px;
 }
 .article {
-  border-top: 2px solid #cb1108;
+  border-top: 2px solid #049cdb;
 }
 .article .mod-hd {
   background-color: #ffffff;
@@ -2954,6 +2974,289 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
   padding: 3px 0 3px 70px;
   background-color: #ffffff;
   border: none;
+}
+/** Hover **/
+ul#topnav {
+  position: relative;
+  z-index: 10;
+}
+ul#topnav li {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 20;
+}
+ul#topnav li:hover a, ul#topnav li a:hover {
+  background-position: left bottom;
+}
+ul#topnav a {
+  height: 24px;
+  line-height: 24px;
+  overflow: hidden;
+  display: block;
+}
+ul#topnav li .sub {
+  position: absolute;
+  top: -7px;
+  left: 166px;
+  padding: 0 0 0 13px;
+  z-index: 100;
+  display: none;
+  overflow: hidden;
+}
+ul#topnav li .row {
+  clear: both;
+  width: 365px;
+  border-left: none;
+  background-color: #FFFFFF;
+  padding: 10px;
+  overflow: hidden;
+}
+ul#topnav li .sub ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 360px;
+  clear: both;
+}
+ul#topnav .sub ul li {
+  display: inline;
+  border-bottom: 1px dashed #ccc;
+}
+ul#topnav .sub ul li a {
+  float: left;
+  text-indent: 0;
+  /*--Reset text indent--*/
+
+  background: none;
+  padding: 0 5px 0 10px;
+  display: block;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  width: 155px;
+  overflow: hidden;
+}
+ul#topnav .sub ul li a:hover {
+  color: #0033ff;
+}
+/*style 2*/
+.brand_hot .letterindex li a:hover {
+  font-weight: bold;
+}
+ul#letternav {
+  width: 660px;
+  float: left;
+  padding: 6px 0 0 0;
+  display: block;
+}
+ul#letternav li {
+  float: left;
+  display: inline;
+}
+ul#letternav li a {
+  float: left;
+  display: block;
+  border-left: 1px solid #98d2f7;
+  font-size: 14px;
+}
+ul#letternav li:hover a, ul#letternav li a:hover {
+  border: 1px solid #98d2f7;
+  border-bottom: none;
+  background-color: #FFFFFF;
+  height: 23px;
+  position: relative;
+  z-index: 200;
+  margin: 0 -1px 0 0;
+  text-transform: uppercase;
+}
+ul#letternav a {
+  height: 16px;
+  line-height: 16px;
+  float: left;
+  padding: 0 7px;
+}
+ul#letternav li .sub {
+  float: left;
+  position: absolute;
+  top: 29px;
+  left: 0;
+  background: none;
+  z-index: 100;
+  display: none;
+  overflow: hidden;
+  border: 1px solid #98d2f7;
+}
+ul#letternav li .row {
+  clear: both;
+  background-color: #FFFFFF;
+  padding: 10px;
+  overflow: hidden;
+}
+ul#letternav li .sub ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  clear: both;
+  width: 766px;
+}
+ul#letternav .sub ul li {
+  background: none;
+  display: block;
+  overflow: hidden;
+  padding: 5px 5px 0 5px;
+  font-size: 14px;
+  font-weight: bold;
+  width: 115px;
+  height: auto;
+  float: left;
+}
+ul#letternav .sub ul li a {
+  text-indent: 0;
+  background: none;
+  text-decoration: none;
+  color: #000;
+  border: none;
+  height: auto;
+}
+ul#letternav .sub ul li a:hover {
+  color: #0033ff;
+  background: none;
+  border: none;
+  height: auto;
+}
+/*tabs*/
+/* root element for tabs  */
+ul.tabs {
+  list-style: none;
+  margin: 0 !important;
+  padding: 0;
+  border-bottom: 1px solid #0090ED;
+  height: 27px;
+}
+/* single tab */
+ul.tabs li {
+  text-indent: 0;
+  padding: 0;
+  margin: 0 !important;
+  list-style-image: none !important;
+  display: inline;
+}
+/* when mouse enters the tab move the background image */
+ul.tabs a:hover {
+  background-position: 0 -30px;
+}
+/* active tab uses a class name "current". it's highlight is also done by moving the background image. */
+ul.tabs a.current, ul.tabs a.current:hover, ul.tabs li.current a {
+  background-position: 0 -60px;
+  cursor: pointer;
+}
+/* initially all panes are hidden */div.panes div.pane {
+  display: none;
+}
+/* get rid of those system borders being generated for A tags */
+ul.tabs a:active {
+  outline: none;
+}
+a:active {
+  outline: none;
+}
+ul.tabs a:focus {
+  -moz-outline-style: none;
+}
+a.current, .current a {
+  outline: none;
+}
+ul.tabs a {
+  float: left;
+  display: block;
+  height: 27px;
+  line-height: 27px;
+  text-align: center;
+  text-decoration: none;
+  padding: 0px;
+  margin: 0px;
+  position: relative;
+  top: 1px;
+  font-weight: bold;
+}
+ul.tabs a span {
+  padding: 0 20px;
+}
+ul.tabs a span {
+  background-position: right -100px;
+  display: block;
+}
+ul.tabs a:hover span {
+  background-position: right -130px;
+}
+ul.tabs a.current span, ul.tabs a.current:hover span, ul.tabs li.current a span {
+  background-position: right -160px;
+}
+/*tabs style 2*/
+/* root element for tabs  */
+ul.tabs2 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 30px;
+  border-bottom: 2px solid #049cdb;
+}
+ul.tabs2 + .panes {
+  border: 1px solid #ddd;
+  border-top: none;
+  padding: 10px;
+}
+/* single tab */
+ul.tabs2 li {
+  text-indent: 0;
+  padding: 0;
+  margin: 0 !important;
+  list-style-image: none !important;
+  display: inline;
+}
+/* when mouse enters the tab move the background image */
+ul.tabs2 a:hover {
+  background-position: 0 -30px;
+}
+/* active tab uses a class name "current". it's highlight is also done by moving the background image. */
+ul.tabs2 a.current, ul.tabs2 a.current:hover, ul.tabs2 li.current a {
+  background-position: 0 -60px;
+  cursor: pointer;
+}
+/* get rid of those system borders being generated for A tags */
+ul.tabs2 a:active {
+  outline: none;
+}
+ul.tabs2 a:focus {
+  -moz-outline-style: none;
+}
+ul.tabs2 a {
+  float: left;
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  text-decoration: none;
+  padding: 0px;
+  margin: 0px;
+  font-weight: bold;
+  margin-right: 2px;
+}
+ul.tabs2 a span {
+  padding: 0 20px;
+}
+ul.tabs2 a span {
+  background-color: #e6e6e6;
+  display: block;
+}
+ul.tabs2 a:hover span {
+  background-color: #049cdb;
+  color: #ffffff;
+}
+ul.tabs2 a.current span, ul.tabs2 a.current:hover span, ul.tabs2 li.current a span {
+  background-color: #049cdb;
+  color: #ffffff;
 }
 #search_index #header {
   margin-bottom: 36px;

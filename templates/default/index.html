@@ -2,14 +2,10 @@
 <!-- {assign var="metadescription" value="`$site_description`"} -->
 <!-- {assign var="do" value="offer"} -->
 <!--{include file="`$theme_name`/header.html" page_title="`$_home_page` - `$site_name`" nav_id=1}-->
-<style type="text/css">
-@import url({$theme_img_path}css/effect.css);
-</style>
 
-
-<div class="container">
+<div id="main" class="container">
 	<div class="row">
-	   	<div class="side-bar span4">
+	   	<div class="side-bar span4 l-col">
         	<div class="mod">
            		<div class="mod-hd">
             		<h2><span class="title_more"><a href="announce/" title="{lang more}" target="_blank"><span class="raquo">&raquo;</span>{lang more}</a></span>{lang board}</h2>
@@ -23,10 +19,10 @@
 				</div>
 			</div>
 		</div>
-	   	<div class="main-content span9">
+	   	<div class="main-content span9 c-col">
 			<!--{pb:ads typeid=5}--><!-- This text is replaced by the Flash movie. --><!--{/pb:ads}-->
 		</div>
-       	<div class="side-bar span4">
+       	<div class="side-bar span4 r-col">
        		<div class="mod">
        			<div class="mod-hd">
        				<h2>{lang after_free_reg}</h2>
@@ -45,7 +41,7 @@
 	</div>
 	
 	<div class="row">
-		<div class="side-bar span4">
+		<div class="side-bar span4 l-col">
              <!--# the tabs #-->
             <ul class="tabs2 title_mouse">
                   <li><!-- {newstype id=4} --><a href="{$newstype.url}"><span>{$newstype.title}</span></a><!-- {/newstype} --></li>
@@ -78,7 +74,7 @@
             </div>
 			
 		</div>
-		<div class="main-content span9">
+		<div class="main-content span9 c-col">
 			<div class="mod hot-news">
 				<div class="mod-hd">
 					<h2><span class="title_more"><a href="{the_url module=search do=news type=hot}" title="{lang more}"><span class="raquo">&raquo;</span>{lang more}</a></span>{lang hot_news}</h2>
@@ -105,7 +101,7 @@
 				</div>
 			</div>	
 		</div>
-		<div class="side-bar span4">
+		<div class="side-bar span4 r-col">
 			<div class="mod special-news">
 				<div class="mod-hd">
 					<span class="title_more"><a href="{the_url module=search do=news type=topic}"><span class="raquo">&raquo;</span>{lang more}</a></span><h2>{lang topic_news}</h2>
@@ -125,7 +121,7 @@
 	</div>
 
 	<div class="row">
-		<div class="side-bar span4">
+		<div class="side-bar span4 l-col">
 			<div class="mod">
 				<div class="mod-hd">
 					<h2><span class="title_more"><a href="fair/list.php" title="{lang more}"><span class="raquo">&raquo;</span>{lang more}</a></span>{lang new_fair}</h2>
@@ -146,7 +142,7 @@
 				
 			    
 		</div>
-		<div class="main-content span9">
+		<div class="main-content span9 c-col">
 			
          		<ul class="tabs2 title_mouse">
                   	<li><a href="offer/list.php?typeid=2"><span>{lang newest_sell}</span></a></li>
@@ -192,7 +188,7 @@
          		</div>
         </div>
             
-		<div class="side-bar span4">
+		<div class="side-bar span4 r-col">
 			<div class="mod">
 				<div class="mod-hd">
 					<h2><span class="title_more"><a href="purchase.php">{lang member_upgrade}</a></span>{lang newest_company}</h2>
@@ -209,7 +205,7 @@
 
 	</div>
 	<div class="row">
-		<div class="main-content span17">
+		<div class="main-content span17 l-col">
 			<div class="mod">
 				<div class="mod-hd">
 					<h2>{lang new_products}</h2>
@@ -229,7 +225,7 @@
 	</div>
 	<div class="row">
 
-			<div class="main-content span13">
+			<div class="main-content span13 l-col">
 				<div class="mod category-index">
 					<div class="mod-hd">
 						<h4>{lang industry_sort}<span class="title_more">{lang select_industry_and_post}</span></h4>
@@ -263,7 +259,7 @@
 				</div>	
 			</div>
 				
-			<div class="side-bar span4">
+			<div class="side-bar span4 r-col">
 				<div class="mod">
 					<div class="mod-hd">
 						<h2><span class="title_more"><a href="redirect.php?url=/virtual-office/brand.php" title="{lang apply_industry_brand}" target="_blank">{lang apply_industry_brand}</a></span>{lang industry_brand}</h2>
@@ -355,7 +351,7 @@
 		   
 	</div>
 	<div class="row">
-		<div class="span17">
+		<div class="span17 l-col">
 			<div class="mod friend-links">
 				<div class="mod-hd">
 					<h4><a href="friendlink.php" title="{lang apply_friendlink}"><span class="raquo">&raquo;</span>{lang apply_friendlink}</a></h4>

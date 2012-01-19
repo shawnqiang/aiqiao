@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-01-07 01:02:33
+<?php /* Smarty version 2.6.18, created on 2012-01-19 08:20:09
          compiled from default/dict/index.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('block', 'dict', 'default/dict/index.html', 13, false),array('block', 'announce', 'default/dict/index.html', 81, false),array('function', 'the_url', 'default/dict/index.html', 39, false),)), $this); ?>
@@ -11,7 +11,7 @@ unset($_smarty_tpl_vars);
  ?>
 <div id="main" class="container">
 	<div class="row">
-		<div class="span13">
+		<div class="main-content l-col span13">
 			<div class="mod">
 				<div class="mod-hd">
 					<h2><?php echo $this->_tpl_vars['_latest_words']; ?>
@@ -79,7 +79,7 @@ if ($this->_foreach['SubDicttypes']['total'] > 0):
 			</div>
 			
 		</div>
-		<div class="span4">
+		<div class="side-bar r-col span4">
 			<div class="mod">
 				<div class="mod-hd">
 					<h3><?php echo $this->_tpl_vars['_dict_digest']; ?>

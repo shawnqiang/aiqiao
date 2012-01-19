@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-01-14 12:13:48
+<?php /* Smarty version 2.6.18, created on 2012-01-19 10:02:43
          compiled from offer_edit.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'editor', 'offer_edit.html', 9, false),array('function', 'formhash', 'offer_edit.html', 41, false),array('function', 'html_radios', 'offer_edit.html', 93, false),array('function', 'html_options', 'offer_edit.html', 180, false),array('function', 'the_url', 'offer_edit.html', 199, false),array('modifier', 'default', 'offer_edit.html', 93, false),)), $this); ?>
@@ -39,14 +39,14 @@ jQuery(document).ready(function($) {
 
 <div id="main" class="container">
   <div class="row">
-    <div class="span4 side-bar">
+    <div class="span4 side-bar l-col">
          <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => "menu.html", 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
     </div>
-    <div class="span12 main-content">
+    <div class="span12 main-content r-col">
     <div class="page-header">
       <h2><?php echo $this->_tpl_vars['page_title']; ?>
 </h2>

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-01-07 00:57:43
+<?php /* Smarty version 2.6.18, created on 2012-01-19 08:24:16
          compiled from default/job/index.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'get', 'default/job/index.html', 11, false),array('function', 'html_options', 'default/job/index.html', 44, false),array('modifier', 'count', 'default/job/index.html', 12, false),array('block', 'area', 'default/job/index.html', 95, false),array('block', 'job', 'default/job/index.html', 107, false),)), $this); ?>
@@ -12,7 +12,7 @@ unset($_smarty_tpl_vars);
 "></script>
 <div id="main" class="container">
 	<div class="row">
-		<div class="span4">
+		<div class="side-bar l-col span4">
 			<div class="mod">
 				<div class="mod-hd">
 					<h3><?php echo $this->_tpl_vars['_industry_sort']; ?>
@@ -52,9 +52,9 @@ if ($this->_foreach['IndustryList']['total'] > 0):
 				</div>
 			</div>
 		</div>
-		<div class="span13">
+		<div class="main-content r-col span13">
 			<div class="row">
-				<div class="span9">
+				<div class="l-col span9">
 					<div class="mod">
 						<div class="mod-hd">
 							<h2><?php echo $this->_tpl_vars['_jobs_search']; ?>
@@ -101,7 +101,7 @@ if ($this->_foreach['IndustryList']['total'] > 0):
 					</div>
 					
 				</div>
-				<div class="span4">
+				<div class="r-col span4">
 					<div class="mod">
 						<div class="mod-hd">
 							<h5><?php echo $this->_tpl_vars['_after_free_reg']; ?>

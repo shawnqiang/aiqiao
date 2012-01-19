@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-01-14 10:58:08
+<?php /* Smarty version 2.6.18, created on 2012-01-19 10:16:20
          compiled from pms.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'formhash', 'pms.html', 20, false),)), $this); ?>
@@ -10,7 +10,7 @@ unset($_smarty_tpl_vars);
  ?>
 <div id="main" class="container">
   <div class="row">
-    <div class="span4 side-bar">
+    <div class="span4 side-bar l-col">
        
          <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => "menu.html", 'smarty_include_vars' => array()));
@@ -18,16 +18,16 @@ $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
        
-    </div>
-     <div class="span12 main-bontent">
+    </div> 
+     <div class="span12 main-bontent r-col">
         <div class="page-header">
           <h2><?php echo $this->_tpl_vars['page_title']; ?>
-</h2>
+<a href="pms.php?do=send" class="btn pull-right"><?php echo $this->_tpl_vars['_send_message']; ?>
+</a></h2>
         </div>
         <div class="mod">
           <div class="mod-hd">
-            <div><a href="pms.php?do=send" class="btn"><?php echo $this->_tpl_vars['_send_message']; ?>
-</a><?php echo $this->_tpl_vars['_sms_tips']; ?>
+            <div><?php echo $this->_tpl_vars['_sms_tips']; ?>
 </div>
           </div>
           <div class="mod-bd">

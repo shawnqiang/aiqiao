@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.18, created on 2012-01-03 07:48:18
+<?php /* Smarty version 2.6.18, created on 2012-01-19 08:28:41
          compiled from default/market/add.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('block', 'market', 'default/market/add.html', 30, false),array('function', 'the_url', 'default/market/add.html', 41, false),array('function', 'formhash', 'default/market/add.html', 47, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('block', 'market', 'default/market/add.html', 30, false),array('function', 'the_url', 'default/market/add.html', 43, false),array('function', 'formhash', 'default/market/add.html', 48, false),)), $this); ?>
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => ($this->_tpl_vars['theme_name'])."/header.html", 'smarty_include_vars' => array('page_title' => ($this->_tpl_vars['_add_market']),'nav_id' => 7)));
 $this->_tpl_vars = $_smarty_tpl_vars;
@@ -32,17 +32,17 @@ jQuery(document).ready(function($) {
 '; ?>
 
 <div id="main" class="container">
-    <div class="tips"><span><?php echo $this->_tpl_vars['position']; ?>
+    <div class="breadcrumb"><span><?php echo $this->_tpl_vars['position']; ?>
 </span></div>
     <div class="row">
-      <div class="span4">
+      <div class="side-bar l-col span4">
         <div class="mod">
           <div class="mod-hd">
             <h3><?php echo $this->_tpl_vars['_recommended_market']; ?>
 </h3>
           </div>
           <div class="mod-bd">
-            <ul class="unstyled">
+            <ul class="info-list">
             <?php $this->_tag_stack[] = array('market', array('row' => 10)); $_block_repeat=true;smarty_block_market($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>
             <li><?php echo $this->_tpl_vars['market']['link']; ?>
 </li>
@@ -52,15 +52,16 @@ jQuery(document).ready(function($) {
         </div>
       </div>
 
-      <div class="span13">
+      <div class="main-content r-col span13">
         <div class="mod">
           <div class="mod-hd">
-            <span class="search_more" ><a href="<?php echo smarty_function_the_url(array('module' => 'search','do' => 'market'), $this);?>
+            
+            <h2><span class="title_mouse"><?php echo $this->_tpl_vars['_added_market']; ?>
+</span>
+            <span class="title_more" ><a href="<?php echo smarty_function_the_url(array('module' => 'search','do' => 'market'), $this);?>
 "><span class="raquo">&raquo;</span><?php echo $this->_tpl_vars['_more']; ?>
  <?php echo $this->_tpl_vars['_market_info']; ?>
-</a></span>
-            <h2><span class="title_mouse"><?php echo $this->_tpl_vars['_added_market']; ?>
-</span></h2>
+</a></span></h2>
           </div>
           <div class="mod-bd">
                     <form name="marketfrm" id="marketFrm" action="<?php echo $_SERVER['PHP_SELF']; ?>
@@ -109,7 +110,7 @@ jQuery(document).ready(function($) {
                             <td>&nbsp;</td>
                             <td height="30" valign="middle">
                               <input name="image_button" type="button" id="addmarket" alt="<?php echo $this->_tpl_vars['_submit']; ?>
-" onclick="return checkFrm();" class="btn" value="<?php echo $this->_tpl_vars['_submit_market']; ?>
+" onclick="return checkFrm();" class="btn primary" value="<?php echo $this->_tpl_vars['_submit_market']; ?>
 " />
                             </td>
                           </tr>

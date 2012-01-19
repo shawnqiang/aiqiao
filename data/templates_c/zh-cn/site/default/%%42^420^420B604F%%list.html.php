@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-01-06 16:06:20
+<?php /* Smarty version 2.6.18, created on 2012-01-19 08:18:35
          compiled from default/brand/list.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'pager', 'default/brand/list.html', 18, false),array('function', 'the_url', 'default/brand/list.html', 70, false),array('block', 'news', 'default/brand/list.html', 46, false),array('block', 'brand', 'default/brand/list.html', 59, false),)), $this); ?>
@@ -12,8 +12,8 @@ unset($_smarty_tpl_vars);
     <div class="breadcrumb"><span><?php echo $this->_tpl_vars['position']; ?>
 </span></div>  
     <div class="mod">
-            <div class="mod-hd"><span><?php echo $this->_tpl_vars['_sort_choose']; ?>
-</span></div>
+            <div class="mod-hd"><h2><?php echo $this->_tpl_vars['_sort_choose']; ?>
+</h2></div>
             <div class="mod-bd">
             <?php $_from = $this->_tpl_vars['Types']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
     foreach ($_from as $this->_tpl_vars['item1']):
@@ -26,7 +26,7 @@ unset($_smarty_tpl_vars);
     </div>
 
     <div class="row">
-        <div class="span13">
+        <div class="main-content l-col span13">
             <div class="mod">
                 <div class="mod-hd">
                     <div class="pagination2"><?php echo smarty_function_pager(array('rowcount' => ($this->_tpl_vars['paging']['total'])), $this);?>
@@ -59,7 +59,7 @@ unset($_smarty_tpl_vars);
             </div>  
         </div>
 
-        <div class="span4">
+        <div class="side-bar r-col span4">
             <div class="mod">
                 <div class="mod-hd">
                     <h2><?php echo $this->_tpl_vars['_latest_news']; ?>

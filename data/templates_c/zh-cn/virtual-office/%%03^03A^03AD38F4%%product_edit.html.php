@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-01-14 11:11:24
+<?php /* Smarty version 2.6.18, created on 2012-01-19 10:02:50
          compiled from product_edit.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'editor', 'product_edit.html', 8, false),array('function', 'formhash', 'product_edit.html', 44, false),array('function', 'html_radios', 'product_edit.html', 52, false),array('function', 'html_options', 'product_edit.html', 129, false),array('function', 'the_url', 'product_edit.html', 153, false),array('modifier', 'default', 'product_edit.html', 52, false),)), $this); ?>
@@ -39,7 +39,7 @@ jQuery(document).ready(function($) {
 
 <div id="main" class="container">
   <div class="row">
-    <div class="span4 side-bar">
+    <div class="span4 side-bar l-col">
       
          <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => "menu.html", 'smarty_include_vars' => array()));
@@ -48,7 +48,7 @@ unset($_smarty_tpl_vars);
  ?>
        
     </div>
-     <div class="span12 main-content">
+     <div class="span12 main-content r-col">
      <div class="page-header">
        <h2><?php echo $this->_tpl_vars['_product_management']; ?>
 </h2>

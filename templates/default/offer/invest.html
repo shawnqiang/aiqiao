@@ -1,7 +1,4 @@
 <!--{include file="`$theme_name`/header.html" page_title="`$_invest_info`" nav_id=4}-->
-<style type="text/css">
-@import url({$theme_img_path}css/effect.css);
-</style>
 <script src="scripts/jquery.tools.js"></script>
 <script src="images/flipper/rotation.js"></script>
 <div id="flipper_div" align="center"></div>
@@ -47,7 +44,7 @@ fp_data.push(["attachment/{$brand.picture}","{$brand.url}"]);
 
 <div id="main" class="container">
 	<div class="row">
-		<div class="span4">
+		<div class="side-bar l-col span4">
 			<div class="mod">
 				<div class="mod-hd">
 					<h2>{lang hot_invest_project}</h2>	
@@ -61,10 +58,10 @@ fp_data.push(["attachment/{$brand.picture}","{$brand.url}"]);
 				</div>
 			</div>	
 		</div>
-		<div class="span13">
+		<div class="main-content r-col span13">
 			<div class="mod">
 				<div class="mod-hd">
-					 <strong>{lang area_invest_info}</strong>
+					 <h2>{lang area_invest_info}</h2>
 				</div>
 				
 				 <div class="mod-bd">

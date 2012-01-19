@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-01-06 04:03:47
+<?php /* Smarty version 2.6.18, created on 2012-01-19 08:27:19
          compiled from default/market/detail.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'the_attachment', 'default/market/detail.html', 19, false),array('block', 'market', 'default/market/detail.html', 30, false),array('block', 'offer', 'default/market/detail.html', 41, false),)), $this); ?>
@@ -21,7 +21,7 @@ $(document).ready(function(){
     <div class="breadcrumb"><span><?php echo $this->_tpl_vars['position']; ?>
 </span></div>
     <div class="row">
-        <div class="span13">
+        <div class="main-content l-col span13">
             <div class="mod">
                 <div class="mod-hd">
                      <h3><?php echo $this->_tpl_vars['item']['name']; ?>
@@ -35,7 +35,7 @@ $(document).ready(function(){
             </div>  
         </div>
 
-        <div class="span4">
+        <div class="side-bar r-col span4">
             <div class="mod">
                 <div class="mod-hd">
                     <h3><?php echo $this->_tpl_vars['_news_market']; ?>

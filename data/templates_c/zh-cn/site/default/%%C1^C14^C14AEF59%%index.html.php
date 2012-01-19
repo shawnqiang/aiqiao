@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.18, created on 2012-01-15 06:39:38
+<?php /* Smarty version 2.6.18, created on 2012-01-19 07:34:52
          compiled from default/index.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('block', 'announce', 'default/index.html', 19, false),array('block', 'ads', 'default/index.html', 27, false),array('block', 'newstype', 'default/index.html', 51, false),array('block', 'news', 'default/index.html', 58, false),array('block', 'topic', 'default/index.html', 115, false),array('block', 'fair', 'default/index.html', 135, false),array('block', 'offer', 'default/index.html', 160, false),array('block', 'company', 'default/index.html', 202, false),array('block', 'product', 'default/index.html', 219, false),array('block', 'brand', 'default/index.html', 273, false),array('block', 'friendlink', 'default/index.html', 368, false),array('function', 'the_url', 'default/index.html', 84, false),array('function', 'the_attachment', 'default/index.html', 117, false),array('function', 'get', 'default/index.html', 238, false),array('function', 'formhash', 'default/index.html', 342, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('block', 'announce', 'default/index.html', 15, false),array('block', 'ads', 'default/index.html', 23, false),array('block', 'newstype', 'default/index.html', 47, false),array('block', 'news', 'default/index.html', 54, false),array('block', 'topic', 'default/index.html', 111, false),array('block', 'fair', 'default/index.html', 131, false),array('block', 'offer', 'default/index.html', 156, false),array('block', 'company', 'default/index.html', 198, false),array('block', 'product', 'default/index.html', 215, false),array('block', 'brand', 'default/index.html', 269, false),array('block', 'friendlink', 'default/index.html', 364, false),array('function', 'the_url', 'default/index.html', 80, false),array('function', 'the_attachment', 'default/index.html', 113, false),array('function', 'get', 'default/index.html', 234, false),array('function', 'formhash', 'default/index.html', 338, false),)), $this); ?>
 <?php $this->assign('metakeywords', ($this->_tpl_vars['site_description'])); ?>
 <?php $this->assign('metadescription', ($this->_tpl_vars['site_description'])); ?>
 <?php $this->assign('do', 'offer'); ?>
@@ -10,15 +10,10 @@ $this->_smarty_include(array('smarty_include_tpl_file' => ($this->_tpl_vars['the
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
-<style type="text/css">
-@import url(<?php echo $this->_tpl_vars['theme_img_path']; ?>
-css/effect.css);
-</style>
 
-
-<div class="container">
+<div id="main" class="container">
 	<div class="row">
-	   	<div class="side-bar span4">
+	   	<div class="side-bar span4 l-col">
         	<div class="mod">
            		<div class="mod-hd">
             		<h2><span class="title_more"><a href="announce/" title="<?php echo $this->_tpl_vars['_more']; ?>
@@ -36,10 +31,10 @@ css/effect.css);
 				</div>
 			</div>
 		</div>
-	   	<div class="main-content span9">
+	   	<div class="main-content span9 c-col">
 			<?php $this->_tag_stack[] = array('ads', array('typeid' => 5)); $_block_repeat=true;smarty_block_ads($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?><!-- This text is replaced by the Flash movie. --><?php $_block_content = ob_get_contents(); ob_end_clean(); $_block_repeat=false;echo smarty_block_ads($this->_tag_stack[count($this->_tag_stack)-1][1], $_block_content, $this, $_block_repeat); }  array_pop($this->_tag_stack); ?>
 		</div>
-       	<div class="side-bar span4">
+       	<div class="side-bar span4 r-col">
        		<div class="mod">
        			<div class="mod-hd">
        				<h2><?php echo $this->_tpl_vars['_after_free_reg']; ?>
@@ -65,7 +60,7 @@ css/effect.css);
 	</div>
 	
 	<div class="row">
-		<div class="side-bar span4">
+		<div class="side-bar span4 l-col">
              
             <ul class="tabs2 title_mouse">
                   <li><?php $this->_tag_stack[] = array('newstype', array('id' => 4)); $_block_repeat=true;smarty_block_newstype($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?><a href="<?php echo $this->_tpl_vars['newstype']['url']; ?>
@@ -110,7 +105,7 @@ css/effect.css);
             </div>
 			
 		</div>
-		<div class="main-content span9">
+		<div class="main-content span9 c-col">
 			<div class="mod hot-news">
 				<div class="mod-hd">
 					<h2><span class="title_more"><a href="<?php echo smarty_function_the_url(array('module' => 'search','do' => 'news','type' => 'hot'), $this);?>
@@ -146,7 +141,7 @@ css/effect.css);
 				</div>
 			</div>	
 		</div>
-		<div class="side-bar span4">
+		<div class="side-bar span4 r-col">
 			<div class="mod special-news">
 				<div class="mod-hd">
 					<span class="title_more"><a href="<?php echo smarty_function_the_url(array('module' => 'search','do' => 'news','type' => 'topic'), $this);?>
@@ -172,7 +167,7 @@ css/effect.css);
 	</div>
 
 	<div class="row">
-		<div class="side-bar span4">
+		<div class="side-bar span4 l-col">
 			<div class="mod">
 				<div class="mod-hd">
 					<h2><span class="title_more"><a href="fair/list.php" title="<?php echo $this->_tpl_vars['_more']; ?>
@@ -200,7 +195,7 @@ css/effect.css);
 				
 			    
 		</div>
-		<div class="main-content span9">
+		<div class="main-content span9 c-col">
 			
          		<ul class="tabs2 title_mouse">
                   	<li><a href="offer/list.php?typeid=2"><span><?php echo $this->_tpl_vars['_newest_sell']; ?>
@@ -258,7 +253,7 @@ css/effect.css);
          		</div>
         </div>
             
-		<div class="side-bar span4">
+		<div class="side-bar span4 r-col">
 			<div class="mod">
 				<div class="mod-hd">
 					<h2><span class="title_more"><a href="purchase.php"><?php echo $this->_tpl_vars['_member_upgrade']; ?>
@@ -278,7 +273,7 @@ css/effect.css);
 
 	</div>
 	<div class="row">
-		<div class="main-content span17">
+		<div class="main-content span17 l-col">
 			<div class="mod">
 				<div class="mod-hd">
 					<h2><?php echo $this->_tpl_vars['_new_products']; ?>
@@ -304,7 +299,7 @@ css/effect.css);
 	</div>
 	<div class="row">
 
-			<div class="main-content span13">
+			<div class="main-content span13 l-col">
 				<div class="mod category-index">
 					<div class="mod-hd">
 						<h4><?php echo $this->_tpl_vars['_industry_sort']; ?>
@@ -362,7 +357,7 @@ if ($this->_foreach['level_2_industry']['total'] > 0):
 				</div>	
 			</div>
 				
-			<div class="side-bar span4">
+			<div class="side-bar span4 r-col">
 				<div class="mod">
 					<div class="mod-hd">
 						<h2><span class="title_more"><a href="redirect.php?url=/virtual-office/brand.php" title="<?php echo $this->_tpl_vars['_apply_industry_brand']; ?>
@@ -487,7 +482,7 @@ if ($this->_foreach['level_2_industry']['total'] > 0):
 		   
 	</div>
 	<div class="row">
-		<div class="span17">
+		<div class="span17 l-col">
 			<div class="mod friend-links">
 				<div class="mod-hd">
 					<h4><a href="friendlink.php" title="<?php echo $this->_tpl_vars['_apply_friendlink']; ?>

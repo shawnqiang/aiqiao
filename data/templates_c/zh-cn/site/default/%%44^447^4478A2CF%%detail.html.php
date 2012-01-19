@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.18, created on 2012-01-06 06:20:55
+<?php /* Smarty version 2.6.18, created on 2012-01-19 08:12:16
          compiled from default/fair/detail.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'the_attachment', 'default/fair/detail.html', 34, false),array('function', 'formhash', 'default/fair/detail.html', 63, false),array('function', 'the_url', 'default/fair/detail.html', 80, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'the_attachment', 'default/fair/detail.html', 35, false),array('function', 'formhash', 'default/fair/detail.html', 64, false),array('function', 'the_url', 'default/fair/detail.html', 81, false),)), $this); ?>
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => ($this->_tpl_vars['theme_name'])."/header.html", 'smarty_include_vars' => array('page_title' => ($this->_tpl_vars['page_title']),'nav_id' => 5)));
 $this->_tpl_vars = $_smarty_tpl_vars;
@@ -30,12 +30,13 @@ $(document).ready( function() {
 <div id="main" class="container">
 	<div class="breadcrumb"><span><?php echo $this->_tpl_vars['position']; ?>
 </span></div>
+	<div class="page-header">
+		<h2><?php echo $this->_tpl_vars['item']['name']; ?>
+</h2>
+	</div>
 	<div class="row">
-		<div class="span13 main-content">
-			<div class="page-heading">
-				<h1><?php echo $this->_tpl_vars['item']['name']; ?>
-</h1>
-			</div>
+		<div class="span13 main-content l-col ">
+			
 
 			<div class="mod">
 				<div class="mod-hd">
@@ -88,14 +89,14 @@ $(document).ready( function() {
 				</div>
 			</div>
 		</div>
-		<div class="span4 side-bar">
+		<div class="span4 side-bar r-col">
 			<div class="mod">
 				<div class="mod-hd">
 					<h3><?php echo $this->_tpl_vars['_fair_enter_name']; ?>
 </h3>
 				</div>
 				<div class="mod-bd">
-					<form name="join_fair" id="JoinFair" action="virtual-office/fair.php" method="post">
+					<form name="join_fair" id="JoinFair" action="virtual-office/fair.php" method="post" style="margin-bottom:0;">
 					  <?php echo smarty_function_formhash(array(), $this);?>
 
 				      <input type="hidden" name="do" value="join" />
@@ -103,7 +104,7 @@ $(document).ready( function() {
 				      <input type="hidden" name="id" value="<?php echo $this->_tpl_vars['item']['id']; ?>
 ">
 					  <span style="display: inline-block">
-				      <input type="button" name="btn_join_fair" id="btnJoinFair" class="submit_w91" value="<?php echo $this->_tpl_vars['_enter_name_fair']; ?>
+				      <input type="button" name="btn_join_fair" id="btnJoinFair" class="btn primary" value="<?php echo $this->_tpl_vars['_enter_name_fair']; ?>
 "/></span>
 					  &nbsp;&nbsp;<span id="rp" style="display: inline-block"><img src="images/loading.gif" /></span>
 				    </form>

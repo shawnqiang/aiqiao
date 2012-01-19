@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-01-15 07:40:51
+<?php /* Smarty version 2.6.18, created on 2012-01-19 08:07:25
          compiled from default/offer/post.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'default', 'default/offer/post.html', 6, false),array('function', 'formhash', 'default/offer/post.html', 46, false),array('function', 'html_radios', 'default/offer/post.html', 120, false),array('function', 'html_options', 'default/offer/post.html', 170, false),)), $this); ?>
@@ -52,7 +52,7 @@ function htmlspecialchars(str) {
 </div>
 
   <div class="row">
-    <div class="span4">
+    <div class="side-bar l-col span4">
       <div class="mod">
         <div class="mod-hd">
           <h3><?php echo $this->_tpl_vars['_pls_login']; ?>
@@ -94,7 +94,7 @@ function htmlspecialchars(str) {
         </div>
       </div>  
     </div>
-    <div class="span13">
+    <div class="main-content r-col span13">
         <div class="page-header">
           <h2><?php echo $this->_tpl_vars['_base_info']; ?>
 </h2>

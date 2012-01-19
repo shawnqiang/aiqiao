@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-01-07 00:48:46
+<?php /* Smarty version 2.6.18, created on 2012-01-19 08:25:43
          compiled from default/market/index.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('block', 'area', 'default/market/index.html', 40, false),array('block', 'market', 'default/market/index.html', 49, false),array('function', 'the_url', 'default/market/index.html', 41, false),array('modifier', 'truncate_multi', 'default/market/index.html', 55, false),)), $this); ?>
@@ -31,7 +31,7 @@ function setImg(img,width,height){
 
 <div id="main" class="container">
 	<div class="row">
-		<div class="span4">
+		<div class="side-bar l-col span4">
 			<div class="mod">
 				<div class="mod-hd">
 					<h2><?php echo $this->_tpl_vars['_added_market']; ?>
@@ -59,7 +59,7 @@ function setImg(img,width,height){
 				</div>
 			</div>
 		</div>
-		<div class="span13">
+		<div class="main-content r-col span13">
 			<ul class="media-items-grid">
 			<?php $this->_tag_stack[] = array('market', array('row' => 12,'type' => 'image')); $_block_repeat=true;smarty_block_market($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>
 			<li class="media-item two-cols-item">

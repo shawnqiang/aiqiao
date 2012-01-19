@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.18, created on 2012-01-13 15:26:00
+<?php /* Smarty version 2.6.18, created on 2012-01-19 10:39:17
          compiled from index.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('modifier', 'default', 'index.html', 6, false),array('block', 'announce', 'index.html', 57, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'default', 'index.html', 6, false),array('block', 'announce', 'index.html', 58, false),)), $this); ?>
 <?php $this->assign('page_title', ($this->_tpl_vars['_office_homepage'])); ?>
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => "header.html", 'smarty_include_vars' => array()));
@@ -26,14 +26,14 @@ $(document).ready(function() {
 
 <div id="main" class="container">
   <div class="row">
-    <div class="span4" class="side-bar">
+    <div class="side-bar l-col span4">
       <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => "menu.html", 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
     </div>
-    <div class="span8" class="main-content">
+    <div class="main-content c-col span8">
       <div class="mod vs-welcome">
           <?php echo $this->_tpl_vars['_my_honour']; ?>
 <?php echo ((is_array($_tmp=@$this->_tpl_vars['UserName'])) ? $this->_run_mod_handler('default', true, $_tmp, @$_SESSION['MemberName']) : smarty_modifier_default($_tmp, @$_SESSION['MemberName'])); ?>
@@ -109,19 +109,21 @@ if ($this->_foreach['items_offer']['total'] > 0):
         
 
     </div>
-    <div class="span-4">
-           <div class="notice">
-              <h2><?php echo $this->_tpl_vars['_announce']; ?>
-</h2>
-              <ul>
-        <?php $this->_tag_stack[] = array('announce', array('row' => 10)); $_block_repeat=true;smarty_block_announce($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>
-          <li><a href="<?php echo $this->_tpl_vars['SiteUrl']; ?>
+    <div class="side-bar r-col span4">
+      <div class="mod">
+        <div class="mod-hd"><h2><?php echo $this->_tpl_vars['_announce']; ?>
+</h2></div>
+        <div class="mod-bd">
+            <ul class="info-list">
+                <?php $this->_tag_stack[] = array('announce', array('row' => 10)); $_block_repeat=true;smarty_block_announce($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>
+                <li><a href="<?php echo $this->_tpl_vars['SiteUrl']; ?>
 announce/detail.php?id=<?php echo $this->_tpl_vars['announce']['id']; ?>
 " target="_blank"><?php echo $this->_tpl_vars['announce']['title']; ?>
 </a></li>
-        <?php $_block_content = ob_get_contents(); ob_end_clean(); $_block_repeat=false;echo smarty_block_announce($this->_tag_stack[count($this->_tag_stack)-1][1], $_block_content, $this, $_block_repeat); }  array_pop($this->_tag_stack); ?>
-              </ul>
-           </div>
+                <?php $_block_content = ob_get_contents(); ob_end_clean(); $_block_repeat=false;echo smarty_block_announce($this->_tag_stack[count($this->_tag_stack)-1][1], $_block_content, $this, $_block_repeat); }  array_pop($this->_tag_stack); ?>
+            </ul>
+        </div>
+      </div>
     </div>
   </div>
     

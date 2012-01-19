@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-01-07 15:21:09
+<?php /* Smarty version 2.6.18, created on 2012-01-19 08:36:05
          compiled from default/product/detail.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'the_url', 'default/product/detail.html', 45, false),array('modifier', 'nl2br', 'default/product/detail.html', 62, false),array('modifier', 'stripslashes', 'default/product/detail.html', 62, false),array('block', 'product', 'default/product/detail.html', 117, false),array('block', 'price', 'default/product/detail.html', 133, false),)), $this); ?>
@@ -100,7 +100,7 @@ virtual-office/price.php?do=edit&productid=<?php echo $this->_tpl_vars['item']['
 		</div>
 	</div>
 	<div class="row">
-		<div class="span11">
+		<div class="main-content l-col span11">
 			<div class="mod">
 				<div class="mod-hd">
 					<h3><?php echo $this->_tpl_vars['_details']; ?>
@@ -135,7 +135,7 @@ if ($this->_foreach['op']['total'] > 0):
 				</div>
 			</div>
 		</div>
-		<div class="span6">
+		<div class="side-bar r-col span6">
 			
 			<?php if ($this->_tpl_vars['pb_username'] == ""): ?>
 			<div class="mod">

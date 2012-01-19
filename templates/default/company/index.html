@@ -1,7 +1,7 @@
 <!--{include file="`$theme_name`/header.html" page_title="`$_yellow_page`"}-->
 <div id="main" class="container">
     <div class="row">
-        <div class="span4 side-bar">
+        <div class="side-bar l-col span4">
             <div class="mod">
                 <div class="mod-hd">
                     <h3>{lang yellow_page}</h3>
@@ -18,7 +18,7 @@
                     <h3>{lang new_recommended_company}</h3>
                 </div>
                 <div class="mod-bd">
-                    <ul>
+                    <ul class="info-list">
                         {pb:company row=11 name="item"}
                         <li>{$item.link}</li>
                         {/pb:company}
@@ -31,7 +31,7 @@
                     <h3>{lang sub_area}</h3>
                 </div>
                 <div class="mod-bd">
-                    <ul>
+                    <ul class="info-list two-cols-list">
                     <!-- {assign var="do" value="company"} -->
                     <!-- {pb:area level=1 name="area"} -->
                         <li><a href="{$area.url}">{$area.title}</a></li>
@@ -45,7 +45,7 @@
                      <h3>{lang join_company}</h3>
                 </div>
                 <div class="mod-bd">
-                    <ul>
+                    <ul class="info-list">
                         {pb:company row=10 name="item"}
                         <li>{$item.link}</li>
                         {/pb:company}
@@ -56,7 +56,7 @@
 
         </div>
 
-        <div class="span13 main-content">
+        <div class="main-content r-col span13">
             <div class="mod">
                 <div class="mod-hd">
                     <h4><span class="titlebg_m title_mouse">{lang industry_sort}</span></h4>

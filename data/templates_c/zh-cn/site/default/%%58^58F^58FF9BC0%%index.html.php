@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-01-06 15:58:10
+<?php /* Smarty version 2.6.18, created on 2012-01-19 08:18:02
          compiled from default/brand/index.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'get', 'default/brand/index.html', 16, false),array('function', 'category', 'default/brand/index.html', 52, false),array('function', 'the_url', 'default/brand/index.html', 85, false),array('block', 'news', 'default/brand/index.html', 39, false),)), $this); ?>
@@ -15,7 +15,7 @@ css/effect.css);
 <div id="main" class="container">
 	
 	<div class="row">
-		<div class="span4">
+		<div class="side-bar l-col span4">
 			<div class="mod">
 				<div class="mod-hd">
 					<h2><?php echo $this->_tpl_vars['_brands']; ?>
@@ -68,11 +68,11 @@ if ($this->_foreach['brandtype']['total'] > 0):
 				</div>
 			</div>
 		</div>
-		<div class="span13">
+		<div class="main-content r-col span13">
 			<div class="mod">
 				<div class="mod-hd">
-					<strong><?php echo $this->_tpl_vars['_area_prices']; ?>
-</strong>
+					<h2><?php echo $this->_tpl_vars['_area_prices']; ?>
+</h2>
 				</div>
 				<div class="mod-bd">
 				 <?php echo smarty_function_category(array('name' => 'area','depth' => '1'), $this);?>

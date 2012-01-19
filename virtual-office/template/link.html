@@ -2,17 +2,17 @@
 <!--{include file="header.html"}-->
 <div id="main" class="container">
     <div class="row">
-       <div class="span4 side-bar">
+       <div class="span4 side-bar l-col">
          <!--{include file="menu.html"}-->
        </div>
     
-     <div class="span12 main-content">
+     <div class="span12 main-content r-col">
      <div class="page-header">
-       <h2>{$page_title}</h2>
+       <h2>{$page_title}<a href="link.php?do=edit"  class="btn pull-right">{lang add_partners}</a></h2>
      </div>
      <div class="mod">
        <div class="mod-hd">
-         <div><strong>{lang our_partners}</strong>{lang colon}<a href="link.php?do=edit"  class="btn">{lang add_partners}</a></div>
+         <div><strong>{lang our_partners}</strong>{lang colon}</div>
        </div>
        <div class="mod-bd">
          <form name="companylinkfrm" action="link.php" method="post">

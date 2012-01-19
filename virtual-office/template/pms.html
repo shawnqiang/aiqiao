@@ -2,18 +2,18 @@
 <!--{include file="header.html"}-->
 <div id="main" class="container">
   <div class="row">
-    <div class="span4 side-bar">
+    <div class="span4 side-bar l-col">
        
          <!--{include file="menu.html"}-->
        
-    </div>
-     <div class="span12 main-bontent">
+    </div> 
+     <div class="span12 main-bontent r-col">
         <div class="page-header">
-          <h2>{$page_title}</h2>
+          <h2>{$page_title}<a href="pms.php?do=send" class="btn pull-right">{lang send_message}</a></h2>
         </div>
         <div class="mod">
           <div class="mod-hd">
-            <div><a href="pms.php?do=send" class="btn">{lang send_message}</a>{lang sms_tips}</div>
+            <div>{lang sms_tips}</div>
           </div>
           <div class="mod-bd">
              <form name="pmsfrm" method="post" action="{$smarty.server.PHP_SELF}">

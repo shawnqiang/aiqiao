@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-01-07 15:03:46
+<?php /* Smarty version 2.6.18, created on 2012-01-19 08:31:55
          compiled from default/detail.default.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'default', 'default/detail.default.html', 51, false),array('modifier', 'nl2br', 'default/detail.default.html', 59, false),array('modifier', 'number_format', 'default/detail.default.html', 72, false),array('block', 'news', 'default/detail.default.html', 84, false),array('function', 'the_url', 'default/detail.default.html', 96, false),)), $this); ?>
@@ -55,7 +55,7 @@ function () {
 </span></div>
   <div class="row">
     
-    <div class="span13">
+    <div class="main-content l-col span13">
       <div class="mod article">
         <div class="mod-hd">
           <h2 class="title"><span><?php echo $this->_tpl_vars['item']['title']; ?>
@@ -118,7 +118,7 @@ images/document.gif" border="0" /><?php echo $this->_tpl_vars['_download_article
       </div>
     </div>
 
-    <div class="span4">
+    <div class="side-bar r-col span4">
       <div class="mod">
         <div class="mod-hd">
            <h3><?php echo $this->_tpl_vars['_related_info']; ?>

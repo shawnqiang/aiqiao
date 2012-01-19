@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-01-11 16:18:28
+<?php /* Smarty version 2.6.18, created on 2012-01-19 09:22:09
          compiled from default/logging.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'formhash', 'default/logging.html', 16, false),array('modifier', 'default', 'default/logging.html', 30, false),array('modifier', 'date_format', 'default/logging.html', 32, false),)), $this); ?>
@@ -30,7 +30,7 @@ label.error {
             <input type="hidden" name="forward" value="<?php echo $_GET['forward']; ?>
 " />
     <div class="row">
-        <div class="span7">
+        <div class="main-content l-col span7">
             <div class="mod">
                 <div class="mod-hd">
                     <h3><?php echo $this->_tpl_vars['_member_login']; ?>
@@ -116,7 +116,7 @@ label.error {
             </div>
            
         </div>
-        <div class="span10">
+        <div class="side-bar r-col span10">
             <div class="mod">
                 <div class="mod-hd">
                     <h3><?php echo $this->_tpl_vars['_free_register']; ?>

@@ -3286,6 +3286,7 @@ ul.tabs2 a.current span, ul.tabs2 a.current:hover span, ul.tabs2 li.current a sp
   font-weight: bold;
 }
 .search_search_form {
+  margin-bottom: 144px;
   zoom: 1;
 }
 .search_search_form:before, .search_search_form:after {

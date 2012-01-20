@@ -8,9 +8,9 @@ label.error {
 </style>
 <!--{/literal}-->
 <div id="main" class="container">
-    <div class="alert-message info">
-        {if $pb_username==""}<div>{lang your_ongoing_operations}<span>{lang pls_login}</span>{lang continue}</div>{/if}
-    </div>
+   <!--  <div class="alert-message info">
+       {if $pb_username==""}<div>{lang your_ongoing_operations}<span>{lang pls_login}</span>{lang continue}</div>{/if}
+   </div> -->
     <form name="loggingfrm" id="LoggingFrm" method="post" action="logging.php" autocomplete="off">
             <input type="hidden" name="action" value="logging">
             <!-- {formhash} -->
@@ -85,12 +85,12 @@ label.error {
                 </div>
                 <div class="mod-bd">
                     <ul class="info-list">
-                        <li><a><img src="{$theme_img_path}images/logging_01.gif" alt="" /><p><b>{lang products_show}</b><br />{lang illustrated_display_product}</p></a></li>
-                        <li><a><img src="{$theme_img_path}images/logging_02.gif" alt="" /><p><b>{lang online_business}</b><br />{lang internet_power_promotion}</p></a></li>
-                        <li><a><img src="{$theme_img_path}images/logging_03.gif" alt="" /><p><b>{lang hr}</b><br />{lang talents_join}</p></a></li>
-                        <li><a><img src="{$theme_img_path}images/logging_04.gif" alt="" /><p><b>{lang agent_join}</b><br />{lang development_agent_join}</p></a></li>
-                        <li><a><img src="{$theme_img_path}images/logging_05.gif" alt="" /><p><b>{lang company_news}</b><br />{lang display_company_news}</p></a></li>
-                        <li><a><img src="{$theme_img_path}images/logging_06.gif" alt="" /><p><b>{lang classifieds}</b><br />{lang free_classifieds}</p></a></li>
+                        <li class="span4 pull-left"><a><img style="margin-right:10px;" class="pull-left" src="{$theme_img_path}images/logging_01.gif" alt="" /><p><b>{lang products_show}</b><br />{lang illustrated_display_product}</p></a></li>
+                        <li class="span4 pull-right"><a><img style="margin-right:10px;" class="pull-left" src="{$theme_img_path}images/logging_02.gif" alt="" /><p><b>{lang online_business}</b><br />{lang internet_power_promotion}</p></a></li>
+                        <li class="span4 pull-left"><a><img style="margin-right:10px;" class="pull-left" src="{$theme_img_path}images/logging_03.gif" alt="" /><p><b>{lang hr}</b><br />{lang talents_join}</p></a></li>
+                        <li class="span4 pull-right"><a><img style="margin-right:10px;" class="pull-left" src="{$theme_img_path}images/logging_04.gif" alt="" /><p><b>{lang agent_join}</b><br />{lang development_agent_join}</p></a></li>
+                        <li class="span4 pull-left"><a><img style="margin-right:10px;" class="pull-left" src="{$theme_img_path}images/logging_05.gif" alt="" /><p><b>{lang company_news}</b><br />{lang display_company_news}</p></a></li>
+                        <li class="span4 pull-right"><a><img style="margin-right:10px;" class="pull-left" src="{$theme_img_path}images/logging_06.gif" alt="" /><p><b>{lang classifieds}</b><br />{lang free_classifieds}</p></a></li>
                     </ul>
                     <div class="member_reg">
                     {if $pb_username!=""}

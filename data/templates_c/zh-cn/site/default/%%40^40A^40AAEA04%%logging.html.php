@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-01-19 09:22:09
+<?php /* Smarty version 2.6.18, created on 2012-01-20 08:47:49
          compiled from default/logging.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'formhash', 'default/logging.html', 16, false),array('modifier', 'default', 'default/logging.html', 30, false),array('modifier', 'date_format', 'default/logging.html', 32, false),)), $this); ?>
@@ -17,12 +17,12 @@ label.error {
 '; ?>
 
 <div id="main" class="container">
-    <div class="alert-message info">
-        <?php if ($this->_tpl_vars['pb_username'] == ""): ?><div><?php echo $this->_tpl_vars['_your_ongoing_operations']; ?>
+   <!--  <div class="alert-message info">
+       <?php if ($this->_tpl_vars['pb_username'] == ""): ?><div><?php echo $this->_tpl_vars['_your_ongoing_operations']; ?>
 <span><?php echo $this->_tpl_vars['_pls_login']; ?>
 </span><?php echo $this->_tpl_vars['_continue']; ?>
 </div><?php endif; ?>
-    </div>
+   </div> -->
     <form name="loggingfrm" id="LoggingFrm" method="post" action="logging.php" autocomplete="off">
             <input type="hidden" name="action" value="logging">
             <?php echo smarty_function_formhash(array(), $this);?>
@@ -124,27 +124,27 @@ label.error {
                 </div>
                 <div class="mod-bd">
                     <ul class="info-list">
-                        <li><a><img src="<?php echo $this->_tpl_vars['theme_img_path']; ?>
+                        <li class="span4 pull-left"><a><img style="margin-right:10px;" class="pull-left" src="<?php echo $this->_tpl_vars['theme_img_path']; ?>
 images/logging_01.gif" alt="" /><p><b><?php echo $this->_tpl_vars['_products_show']; ?>
 </b><br /><?php echo $this->_tpl_vars['_illustrated_display_product']; ?>
 </p></a></li>
-                        <li><a><img src="<?php echo $this->_tpl_vars['theme_img_path']; ?>
+                        <li class="span4 pull-right"><a><img style="margin-right:10px;" class="pull-left" src="<?php echo $this->_tpl_vars['theme_img_path']; ?>
 images/logging_02.gif" alt="" /><p><b><?php echo $this->_tpl_vars['_online_business']; ?>
 </b><br /><?php echo $this->_tpl_vars['_internet_power_promotion']; ?>
 </p></a></li>
-                        <li><a><img src="<?php echo $this->_tpl_vars['theme_img_path']; ?>
+                        <li class="span4 pull-left"><a><img style="margin-right:10px;" class="pull-left" src="<?php echo $this->_tpl_vars['theme_img_path']; ?>
 images/logging_03.gif" alt="" /><p><b><?php echo $this->_tpl_vars['_hr']; ?>
 </b><br /><?php echo $this->_tpl_vars['_talents_join']; ?>
 </p></a></li>
-                        <li><a><img src="<?php echo $this->_tpl_vars['theme_img_path']; ?>
+                        <li class="span4 pull-right"><a><img style="margin-right:10px;" class="pull-left" src="<?php echo $this->_tpl_vars['theme_img_path']; ?>
 images/logging_04.gif" alt="" /><p><b><?php echo $this->_tpl_vars['_agent_join']; ?>
 </b><br /><?php echo $this->_tpl_vars['_development_agent_join']; ?>
 </p></a></li>
-                        <li><a><img src="<?php echo $this->_tpl_vars['theme_img_path']; ?>
+                        <li class="span4 pull-left"><a><img style="margin-right:10px;" class="pull-left" src="<?php echo $this->_tpl_vars['theme_img_path']; ?>
 images/logging_05.gif" alt="" /><p><b><?php echo $this->_tpl_vars['_company_news']; ?>
 </b><br /><?php echo $this->_tpl_vars['_display_company_news']; ?>
 </p></a></li>
-                        <li><a><img src="<?php echo $this->_tpl_vars['theme_img_path']; ?>
+                        <li class="span4 pull-right"><a><img style="margin-right:10px;" class="pull-left" src="<?php echo $this->_tpl_vars['theme_img_path']; ?>
 images/logging_06.gif" alt="" /><p><b><?php echo $this->_tpl_vars['_classifieds']; ?>
 </b><br /><?php echo $this->_tpl_vars['_free_classifieds']; ?>
 </p></a></li>

@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.18, created on 2012-01-04 05:59:13
+<?php /* Smarty version 2.6.18, created on 2012-01-20 08:40:37
          compiled from default/search.list.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('modifier', 'sprintf', 'default/search.list.html', 29, false),array('modifier', 'urldecode', 'default/search.list.html', 49, false),array('modifier', 'truncate', 'default/search.list.html', 105, false),array('modifier', 'truncate_multi', 'default/search.list.html', 164, false),array('function', 'the_url', 'default/search.list.html', 45, false),array('function', 'pager', 'default/search.list.html', 128, false),array('function', 'mailto', 'default/search.list.html', 197, false),array('block', 'industry', 'default/search.list.html', 83, false),array('block', 'company', 'default/search.list.html', 162, false),array('block', 'adword', 'default/search.list.html', 174, false),array('block', 'userpage', 'default/search.list.html', 194, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'sprintf', 'default/search.list.html', 29, false),array('modifier', 'urldecode', 'default/search.list.html', 49, false),array('modifier', 'truncate', 'default/search.list.html', 105, false),array('modifier', 'truncate_multi', 'default/search.list.html', 158, false),array('function', 'the_url', 'default/search.list.html', 45, false),array('function', 'pager', 'default/search.list.html', 128, false),array('function', 'mailto', 'default/search.list.html', 191, false),array('block', 'industry', 'default/search.list.html', 82, false),array('block', 'company', 'default/search.list.html', 156, false),array('block', 'adword', 'default/search.list.html', 168, false),array('block', 'userpage', 'default/search.list.html', 188, false),)), $this); ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -86,48 +86,46 @@ if ($this->_foreach['module']['total'] > 0):
 " name="q" id="kw" size="42" maxlength="90"> <input type="hidden" name="do" value="<?php echo $_GET['do']; ?>
 "> <span class="btn_wr"><input type="submit" onmouseout="this.className='btn'" onmousedown="this.className='btn btn_h'" class="btn" id="su" value="<?php echo $this->_tpl_vars['_search_now']; ?>
 "></span>
-
         </form>
       </div>
     </div>
   </div>
 </div>
 <div id="main" class="container">
-  <div class="search_option cl">
-    <div id="gxszHead" class="pull-left"><a href="javascript:;" onclick="$('#tbd').toggle();"><?php echo $this->_tpl_vars['_hide_or_show_option']; ?>
-</a></div>
-    <div class="pull-right"><?php echo ((is_array($_tmp=$this->_tpl_vars['_search_result_paging'])) ? $this->_run_mod_handler('sprintf', true, $_tmp, ($this->_tpl_vars['highlight_str']), ($this->_tpl_vars['paging']['total']), ($this->_tpl_vars['paging']['from']), ($this->_tpl_vars['paging']['to']), ($this->_tpl_vars['TimeSpend'])) : sprintf($_tmp, ($this->_tpl_vars['highlight_str']), ($this->_tpl_vars['paging']['total']), ($this->_tpl_vars['paging']['from']), ($this->_tpl_vars['paging']['to']), ($this->_tpl_vars['TimeSpend']))); ?>
-</div>
-  </div>
-
   <div class="row">
-    <div class="span4">
-      
-      <?php $_from = $this->_tpl_vars['modules']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }$this->_foreach['module'] = array('total' => count($_from), 'iteration' => 0);
+    <div class="span4 side-bar l-col">
+      <div id="gxszHead"><a href="javascript:;" onclick="$('#tbd').toggle();"><?php echo $this->_tpl_vars['_hide_or_show_option']; ?>
+</a></div>
+        <ul class="info-list">
+          <?php $_from = $this->_tpl_vars['modules']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }$this->_foreach['module'] = array('total' => count($_from), 'iteration' => 0);
 if ($this->_foreach['module']['total'] > 0):
     foreach ($_from as $this->_tpl_vars['key'] => $this->_tpl_vars['module']):
         $this->_foreach['module']['iteration']++;
 ?>
-      <?php if ($this->_foreach['module']['iteration'] == 1): ?>
-        <div class="tbos" id="all_cats"><a href="javascript:;" id="link_all_cats" class="q"><?php echo $this->_tpl_vars['_all_of']; ?>
+          <?php if ($this->_foreach['module']['iteration'] == 1): ?>
+            <li><dl>
+            <dt id="all_cats"><a href="javascript:;" id="link_all_cats" class="q"><?php echo $this->_tpl_vars['_all_of']; ?>
 <?php echo $this->_tpl_vars['module']; ?>
-</a></div>
-        <div id="sub_cats">
-          <?php $_from = $this->_tpl_vars['cats']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
+</a></dt>
+              <dd>
+              <ul id="sub_cats" class="info-list">
+              <?php $_from = $this->_tpl_vars['cats']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
     foreach ($_from as $this->_tpl_vars['key1'] => $this->_tpl_vars['item1']):
 ?>
-          <div class="tbou"><a href="<?php echo smarty_function_the_url(array('module' => 'list','extra' => "typeid,".($this->_tpl_vars['key1'])."|pos|total_count"), $this);?>
+              <li class="tbou"><a href="<?php echo smarty_function_the_url(array('module' => 'list','extra' => "typeid,".($this->_tpl_vars['key1'])."|pos|total_count"), $this);?>
 " class="q" style="<?php if ($_GET['typeid'] == $this->_tpl_vars['key1']): ?>font-weight:bold;<?php endif; ?>"><?php echo $this->_tpl_vars['item1']; ?>
-</a></div>
-          <?php endforeach; endif; unset($_from); ?>
-        </div>
-        <?php else: ?>
-      <div class="tbos2"><a href="<?php echo smarty_function_the_url(array('module' => 'list','extra' => "do,".($this->_tpl_vars['key'])."|typeid|pos|total_count"), $this);?>
+</a></li>
+              <?php endforeach; endif; unset($_from); ?>
+              </ul>
+              </dd> 
+            </dl></li>
+            <?php else: ?>
+            <li><a href="<?php echo smarty_function_the_url(array('module' => 'list','extra' => "do,".($this->_tpl_vars['key'])."|typeid|pos|total_count"), $this);?>
 " class="q"><?php echo $this->_tpl_vars['module']; ?>
-</a></div>
-      <?php endif; ?>
-      <?php endforeach; endif; unset($_from); ?>
-
+</a></li>
+          <?php endif; ?>
+          <?php endforeach; endif; unset($_from); ?>
+        </ul>
       <div class="mod">
         <div class="mod-hd">
           <h3><?php echo $this->_tpl_vars['_sort_screening']; ?>
@@ -156,7 +154,9 @@ if ($this->_foreach['module']['total'] > 0):
       </div>
       
     </div>
-    <div class="span9">
+    <div class="span9 main-content c-col">
+      <div><?php echo ((is_array($_tmp=$this->_tpl_vars['_search_result_paging'])) ? $this->_run_mod_handler('sprintf', true, $_tmp, ($this->_tpl_vars['highlight_str']), ($this->_tpl_vars['paging']['total']), ($this->_tpl_vars['paging']['from']), ($this->_tpl_vars['paging']['to']), ($this->_tpl_vars['TimeSpend'])) : sprintf($_tmp, ($this->_tpl_vars['highlight_str']), ($this->_tpl_vars['paging']['total']), ($this->_tpl_vars['paging']['from']), ($this->_tpl_vars['paging']['to']), ($this->_tpl_vars['TimeSpend']))); ?>
+</div>
       <div id="res" class="med">
         <div>
           <ol>
@@ -238,20 +238,10 @@ if ($this->_foreach['similar']['total'] > 0):
             </table>
           </div>
         </div>
-
-        <div style="margin-top: 1.4em; text-align: center;" class="clr">
-            <div style="clear: both; padding-left: 130px; background: none repeat scroll 0% 0% rgb(255, 255, 255); overflow: hidden; height: 50px; text-align: left;">
-            <form name="f1" action="<?php echo $_SERVER['PHP_SELF']; ?>
-"><span style="margin-bottom: 7px; height: 22px;"><input value="<?php echo ((is_array($_tmp=$_GET['q'])) ? $this->_run_mod_handler('urldecode', true, $_tmp) : urldecode($_tmp)); ?>
-" name="q" id="kw" rel="kw" size="42" maxlength="90"> <input type="hidden" name="do" value="<?php echo $_GET['do']; ?>
-"> <span class="btn_wr"><input type="submit" onmouseout="this.className='btn'" onmousedown="this.className='btn btn_h'" class="btn" id="su" value="<?php echo $this->_tpl_vars['_search_now']; ?>
-"></span></form></div>
-        </div>
-        
       </div>
     </div>
 
-    <div class="span4">
+    <div class="span4 side-bar r-col">
         <ol>
           <?php $this->_tag_stack[] = array('company', array('row' => 5)); $_block_repeat=true;smarty_block_company($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>
           <li style="height: auto; overflow: hidden;">

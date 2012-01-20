@@ -47,34 +47,33 @@ $(document).ready(function(){
               <!-- {/foreach} -->
             </div>
             <input value="{$smarty.get.q|urldecode}" name="q" id="kw" size="42" maxlength="90"> <input type="hidden" name="do" value="{$smarty.get.do}"> <span class="btn_wr"><input type="submit" onmouseout="this.className='btn'" onmousedown="this.className='btn btn_h'" class="btn" id="su" value="{lang search_now}"></span>
-
         </form>
       </div>
     </div>
   </div>
 </div>
 <div id="main" class="container">
-  <div class="search_option cl">
-    <div id="gxszHead" class="pull-left"><a href="javascript:;" onclick="$('#tbd').toggle();">{lang hide_or_show_option}</a></div>
-    <div class="pull-right">{$_search_result_paging|sprintf:"`$highlight_str`":"`$paging.total`":"`$paging.from`":"`$paging.to`":"`$TimeSpend`"}</div>
-  </div>
-
   <div class="row">
-    <div class="span4">
-      
-      <!-- {foreach from=$modules name=module item=module key=key} -->
-      <!-- {if $smarty.foreach.module.iteration==1} -->
-        <div class="tbos" id="all_cats"><a href="javascript:;" id="link_all_cats" class="q">{lang all_of}{$module}</a></div>
-        <div id="sub_cats">
-          <!-- {foreach from=$cats item=item1 key=key1} -->
-          <div class="tbou"><a href="{the_url module=list extra=typeid,`$key1`|pos|total_count}" class="q" style="{if $smarty.get.typeid eq $key1}font-weight:bold;{/if}">{$item1}</a></div>
+    <div class="span4 side-bar l-col">
+      <div id="gxszHead"><a href="javascript:;" onclick="$('#tbd').toggle();">{lang hide_or_show_option}</a></div>
+        <ul class="info-list">
+          <!-- {foreach from=$modules name=module item=module key=key} -->
+          <!-- {if $smarty.foreach.module.iteration==1} -->
+            <li><dl>
+            <dt id="all_cats"><a href="javascript:;" id="link_all_cats" class="q">{lang all_of}{$module}</a></dt>
+              <dd>
+              <ul id="sub_cats" class="info-list">
+              <!-- {foreach from=$cats item=item1 key=key1} -->
+              <li class="tbou"><a href="{the_url module=list extra=typeid,`$key1`|pos|total_count}" class="q" style="{if $smarty.get.typeid eq $key1}font-weight:bold;{/if}">{$item1}</a></li>
+              <!-- {/foreach} -->
+              </ul>
+              </dd> 
+            </dl></li>
+            <!-- {else} -->
+            <li><a href="{the_url module=list extra=do,`$key`|typeid|pos|total_count}" class="q">{$module}</a></li>
+          <!-- {/if} -->
           <!-- {/foreach} -->
-        </div>
-        <!-- {else} -->
-      <div class="tbos2"><a href="{the_url module=list extra=do,`$key`|typeid|pos|total_count}" class="q">{$module}</a></div>
-      <!-- {/if} -->
-      <!-- {/foreach} -->
-
+        </ul>
       <div class="mod">
         <div class="mod-hd">
           <h3>{lang sort_screening}</h3>
@@ -96,7 +95,8 @@ $(document).ready(function(){
       </div>
       
     </div>
-    <div class="span9">
+    <div class="span9 main-content c-col">
+      <div>{$_search_result_paging|sprintf:"`$highlight_str`":"`$paging.total`":"`$paging.from`":"`$paging.to`":"`$TimeSpend`"}</div>
       <div id="res" class="med">
         <div>
           <ol>
@@ -148,16 +148,10 @@ $(document).ready(function(){
             </table>
           </div>
         </div>
-
-        <div style="margin-top: 1.4em; text-align: center;" class="clr">
-            <div style="clear: both; padding-left: 130px; background: none repeat scroll 0% 0% rgb(255, 255, 255); overflow: hidden; height: 50px; text-align: left;">
-            <form name="f1" action="{$smarty.server.PHP_SELF}"><span style="margin-bottom: 7px; height: 22px;"><input value="{$smarty.get.q|urldecode}" name="q" id="kw" rel="kw" size="42" maxlength="90"> <input type="hidden" name="do" value="{$smarty.get.do}"> <span class="btn_wr"><input type="submit" onmouseout="this.className='btn'" onmousedown="this.className='btn btn_h'" class="btn" id="su" value="{lang search_now}"></span></form></div>
-        </div>
-        
       </div>
     </div>
 
-    <div class="span4">
+    <div class="span4 side-bar r-col">
         <ol>
           <!-- {pb:company row=5} -->
           <li style="height: auto; overflow: hidden;">

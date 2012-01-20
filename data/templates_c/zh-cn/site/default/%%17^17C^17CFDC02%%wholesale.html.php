@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-01-19 08:03:04
+<?php /* Smarty version 2.6.18, created on 2012-01-20 09:02:01
          compiled from default/offer/wholesale.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'the_url', 'default/offer/wholesale.html', 8, false),array('function', 'get', 'default/offer/wholesale.html', 87, false),array('block', 'news', 'default/offer/wholesale.html', 12, false),array('block', 'industry', 'default/offer/wholesale.html', 44, false),array('block', 'offer', 'default/offer/wholesale.html', 53, false),)), $this); ?>
@@ -130,7 +130,7 @@ var var_url = "<?php echo $this->_tpl_vars['slides']['url']; ?>
 ";
 var var_info = "<?php echo $this->_tpl_vars['slides']['info']; ?>
 ";
-var myflash = new SWFObject("images/slide.swf", "27", 472, 220, "7", "#F3F3F3");
+var myflash = new SWFObject("images/slide.swf", "27", 520, 240, "7", "#F3F3F3");
 myflash.addParam("quality", "high");
 myflash.addParam("wmode", "opaque");
 myflash.addVariable("image",var_image);

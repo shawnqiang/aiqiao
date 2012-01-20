@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2012-01-15 07:43:39
+<?php /* Smarty version 2.6.18, created on 2012-01-20 08:43:16
          compiled from default/register.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'formhash', 'default/register.html', 22, false),array('modifier', 'urldecode', 'default/register.html', 24, false),)), $this); ?>
@@ -134,7 +134,7 @@ images/gongqiu03.jpg" class="registerpic2" id="exchange_imgcapt" /></a></p></spa
 			
             <div class="actions">
             	<input type="submit" name="Submit" id="Submit" value="<?php echo $this->_tpl_vars['_register']; ?>
-" class="btn" />
+" class="btn primary" />
             </div>
 
 			</form>
